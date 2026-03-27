@@ -1,0 +1,187 @@
+{
+  "network": {
+    "rpcUrl": "ws://127.0.0.1:9944",
+    "containerName": "vibenet-local-chain",
+    "image": "ghcr.io/opentensor/subtensor-localnet:devnet-ready",
+    "fastBlocks": true,
+    "forcedSubnetLockCostRao": "1000000000000",
+    "dockerPorts": [
+      "127.0.0.1:9944:9944",
+      "127.0.0.1:9945:9945"
+    ]
+  },
+  "wallets": {
+    "controllerMnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+    "delegatorMnemonic": "legal winner thank year wave sausage worth useful legal winner thank yellow",
+    "delegatorCount": 20,
+    "seederMnemonic": "letter advice cage absurd amount doctor acoustic avoid letter advice cage above",
+    "seederCount": 16,
+    "validatorMnemonic": "zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo zoo wrong",
+    "validatorCount": 17
+  },
+  "funding": {
+    "useSudoForceSetBalance": true,
+    "funderUris": [
+      "//Alice",
+      "//Bob",
+      "//Charlie",
+      "//Dave",
+      "//Eve",
+      "//Ferdie"
+    ],
+    "controllerTargetFreeRao": "9000000000000000000",
+    "pureProxyTargetFreeRao": "5000000000",
+    "delegatorTargetTotalRao": "100000000000",
+    "delegatorTopUpToleranceRao": "500000000",
+    "minimumFreeAfterStakingRao": "20000000000",
+    "liquiditySeederBufferRao": "50000000000"
+  },
+  "proxy": {
+    "pureProxyType": "Any",
+    "delegatorProxyType": "Staking",
+    "delay": 0,
+    "index": 0
+  },
+  "root": {
+    "enableSubtokenViaSudo": true,
+    "rootStakeDelegatorCount": 1,
+    "rootStakePerDelegatorRao": "1000000000"
+  },
+  "liquidity": {
+    "useSudoSetReserves": true,
+    "bootstrapSeederStakeRao": "25000000000"
+  },
+  "portfolio": {
+    "baseStakePlanRao": [
+      "1500000000",
+      "1000000000",
+      "500000000"
+    ],
+    "rotationOffsets": [
+      0,
+      5,
+      10
+    ],
+    "overweightEvery": 4,
+    "overweightExtraRao": "500000000"
+  },
+  "verification": {
+    "reserveToleranceBps": 500,
+    "priceToleranceBps": 300,
+    "delegatorTotalToleranceRao": "25000000000"
+  },
+  "subnets": [
+    {
+      "netuid": 1,
+      "label": "apex-01",
+      "targetPoolTao": "200000",
+      "targetAlphaPriceTao": "0.1",
+      "depthTier": "mega-deep"
+    },
+    {
+      "netuid": 2,
+      "label": "deep-02",
+      "targetPoolTao": "100000",
+      "targetAlphaPriceTao": "0.05",
+      "depthTier": "deep"
+    },
+    {
+      "netuid": 3,
+      "label": "deep-03",
+      "targetPoolTao": "50000",
+      "targetAlphaPriceTao": "0.04",
+      "depthTier": "deep"
+    },
+    {
+      "netuid": 4,
+      "label": "mid-04",
+      "targetPoolTao": "25000",
+      "targetAlphaPriceTao": "0.03",
+      "depthTier": "deep"
+    },
+    {
+      "netuid": 5,
+      "label": "mid-05",
+      "targetPoolTao": "15000",
+      "targetAlphaPriceTao": "0.025",
+      "depthTier": "mid"
+    },
+    {
+      "netuid": 6,
+      "label": "mid-06",
+      "targetPoolTao": "10000",
+      "targetAlphaPriceTao": "0.02",
+      "depthTier": "mid"
+    },
+    {
+      "netuid": 7,
+      "label": "mid-07",
+      "targetPoolTao": "7500",
+      "targetAlphaPriceTao": "0.0175",
+      "depthTier": "mid"
+    },
+    {
+      "netuid": 8,
+      "label": "mid-08",
+      "targetPoolTao": "5000",
+      "targetAlphaPriceTao": "0.015",
+      "depthTier": "mid"
+    },
+    {
+      "netuid": 9,
+      "label": "shallow-09",
+      "targetPoolTao": "5000",
+      "targetAlphaPriceTao": "0.012",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 10,
+      "label": "shallow-10",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.01",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 11,
+      "label": "shallow-11",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.008",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 12,
+      "label": "shallow-12",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.006",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 13,
+      "label": "shallow-13",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.005",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 14,
+      "label": "shallow-14",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.004",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 15,
+      "label": "shallow-15",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.003",
+      "depthTier": "shallow"
+    },
+    {
+      "netuid": 16,
+      "label": "very-shallow-16",
+      "targetPoolTao": "2500",
+      "targetAlphaPriceTao": "0.002",
+      "depthTier": "very-shallow"
+    }
+  ]
+}

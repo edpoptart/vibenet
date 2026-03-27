@@ -1,0 +1,11 @@
+{
+  "name": "vibenet-localnet",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "localnet:up": "bash scripts/localnet/bootstrap-chain.sh up",
+    "localnet:seed": "NODE_PATH=../trusted-stake-api/node_modules node scripts/localnet/seed-state.js",
+    "localnet:verify": "NODE_PATH=../trusted-stake-api/node_modules node scripts/localnet/verify-state.js",
+    "localnet:down": "bash scripts/localnet/bootstrap-chain.sh down"
+  }
+}
