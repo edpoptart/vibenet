@@ -18,6 +18,7 @@ Defaults:
 - Websocket RPC: `ws://127.0.0.1:9944`
 - Docker container: `vibenet-local-chain`
 - Fast blocks: enabled
+- Pure proxy controllers: the primary controller plus 8 deterministic additional controller wallets with `ProxyType=Any`
 
 Notes:
 

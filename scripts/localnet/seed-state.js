@@ -63,6 +63,39 @@ async function addProxyIfMissing(api, delegator, pureProxyAddress, manifest, txL
   });
 }
 
+async function addPureProxyControllerIfMissing(api, controller, pureProxyAddress, additionalController, manifest, txLog) {
+  const exists = await hasProxyDelegation(
+    api,
+    pureProxyAddress,
+    additionalController.address,
+    manifest.proxy.pureProxyType,
+  );
+  if (exists) {
+    return;
+  }
+
+  const addProxyCall = api.tx.proxy.addProxy(
+    additionalController.address,
+    manifest.proxy.pureProxyType,
+    manifest.proxy.delay,
+  );
+  const receipt = await signAndSend(
+    api,
+    api.tx.proxy.proxy(pureProxyAddress, manifest.proxy.pureProxyType, addProxyCall),
+    controller.pair,
+    `proxy.proxy(${additionalController.label}.addProxy)`,
+  );
+
+  txLog.push({
+    kind: 'proxy.addPureProxyController',
+    controller: additionalController.label,
+    pureProxy: pureProxyAddress,
+    proxyType: manifest.proxy.pureProxyType,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+  });
+}
+
 async function registerSubnet(api, controller, sudoSigner, manifest, netuid, hotkey, label, txLog) {
   const existing = await queryExistingNetuids(api);
   if (existing.includes(netuid)) {
@@ -309,6 +342,10 @@ async function main() {
     report.controller = { address: accounts.controller.address };
     report.addresses = {
       controller: accounts.controller.address,
+      additionalControllers: accounts.additionalControllers.map((entry) => ({
+        label: entry.label,
+        address: entry.address,
+      })),
       funders: accounts.funders.map((entry) => ({
         label: entry.label,
         address: entry.address,
@@ -394,6 +431,17 @@ async function main() {
 
     for (const delegator of accounts.delegators) {
       await addProxyIfMissing(api, delegator, pureProxy.address, manifest, txLog);
+    }
+
+    for (const additionalController of accounts.additionalControllers) {
+      await addPureProxyControllerIfMissing(
+        api,
+        accounts.controller,
+        pureProxy.address,
+        additionalController,
+        manifest,
+        txLog,
+      );
     }
 
     if (manifest.root.enableSubtokenViaSudo) {
@@ -529,8 +577,21 @@ async function main() {
       proxyType: manifest.proxy.delegatorProxyType,
       delay: manifest.proxy.delay,
     }));
+    report.pureProxyControllerLinks = accounts.additionalControllers.map((controller) => ({
+      controller: controller.address,
+      pureProxy: pureProxy.address,
+      proxyType: manifest.proxy.pureProxyType,
+      delay: manifest.proxy.delay,
+    }));
 
     report.wallets.controller = await summarizeWallet(api, accounts.controller.address);
+    report.wallets.additionalControllers = [];
+    for (const controller of accounts.additionalControllers) {
+      report.wallets.additionalControllers.push({
+        label: controller.label,
+        ...(await summarizeWallet(api, controller.address)),
+      });
+    }
     report.wallets.delegators = [];
     for (const delegator of accounts.delegators) {
       report.wallets.delegators.push({

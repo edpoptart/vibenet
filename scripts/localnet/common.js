@@ -286,6 +286,13 @@ async function deriveAccounts(manifest) {
     'controller',
     `${manifest.wallets.controllerMnemonic}//controller`,
   );
+  const additionalControllerCount = Number(manifest.wallets.additionalControllerCount || 0);
+  const additionalControllers = Array.from({ length: additionalControllerCount }, (_, index) =>
+    make(
+      `controller-${String(index + 2).padStart(2, '0')}`,
+      `${manifest.wallets.controllerMnemonic}//controller//${String(index + 2).padStart(2, '0')}`,
+    ),
+  );
 
   const funderUris = Array.isArray(manifest.funding.funderUris)
     ? manifest.funding.funderUris
@@ -328,6 +335,7 @@ async function deriveAccounts(manifest) {
     funders,
     funder,
     controller,
+    additionalControllers,
     delegators,
     seeders,
     validatorByNetuid,
@@ -787,6 +795,7 @@ function reportSkeleton(manifest, runtime, rpcUrl) {
     pureProxy: null,
     addresses: {},
     proxyLinks: [],
+    pureProxyControllerLinks: [],
     wallets: {},
     subnets: [],
   };

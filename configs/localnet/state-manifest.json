@@ -12,6 +12,7 @@
   },
   "wallets": {
     "controllerMnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+    "additionalControllerCount": 8,
     "delegatorMnemonic": "legal winner thank year wave sausage worth useful legal winner thank yellow",
     "delegatorCount": 20,
     "seederMnemonic": "letter advice cage absurd amount doctor acoustic avoid letter advice cage above",

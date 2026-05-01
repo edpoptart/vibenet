@@ -76,6 +76,24 @@ async function main() {
     }
 
     const proxyChecks = [];
+    const pureProxyControllerChecks = [];
+    for (const controller of accounts.additionalControllers) {
+      const ok = await hasProxyDelegation(
+        api,
+        prior.pureProxy.address,
+        controller.address,
+        manifest.proxy.pureProxyType,
+      );
+      if (!ok) {
+        fail(`pure proxy ${prior.pureProxy.address} is missing its Any proxy to controller ${controller.address}`);
+      }
+      pureProxyControllerChecks.push({
+        controller: controller.address,
+        pureProxy: prior.pureProxy.address,
+        proxyType: manifest.proxy.pureProxyType,
+      });
+    }
+
     for (const delegator of accounts.delegators) {
       const ok = await hasProxyDelegation(
         api,
@@ -102,9 +120,16 @@ async function main() {
 
     const walletSummaries = {
       controller: await summarizeWallet(api, accounts.controller.address),
+      additionalControllers: [],
       delegators: [],
       seeders: [],
     };
+    for (const controller of accounts.additionalControllers) {
+      walletSummaries.additionalControllers.push({
+        label: controller.label,
+        ...(await summarizeWallet(api, controller.address)),
+      });
+    }
 
     for (const delegator of accounts.delegators) {
       walletSummaries.delegators.push({
@@ -122,6 +147,11 @@ async function main() {
 
     if (walletSummaries.delegators.length !== 20) {
       fail(`expected 20 delegators, found ${walletSummaries.delegators.length}`);
+    }
+    if (walletSummaries.additionalControllers.length !== Number(manifest.wallets.additionalControllerCount || 0)) {
+      fail(
+        `expected ${manifest.wallets.additionalControllerCount || 0} additional controllers, found ${walletSummaries.additionalControllers.length}`,
+      );
     }
 
     const expectedDelegatorTotal =
@@ -223,10 +253,15 @@ async function main() {
     report.controller = { address: accounts.controller.address };
     report.addresses = {
       controller: accounts.controller.address,
+      additionalControllers: accounts.additionalControllers.map((entry) => ({
+        label: entry.label,
+        address: entry.address,
+      })),
       pureProxy: prior.pureProxy.address,
       rootHotkey: accounts.validatorByNetuid.get(0).address,
     };
     report.proxyLinks = proxyChecks;
+    report.pureProxyControllerLinks = pureProxyControllerChecks;
     report.wallets = walletSummaries;
     report.subnets = subnets;
     report.summary = {
