@@ -12,7 +12,7 @@
   },
   "wallets": {
     "controllerMnemonic": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
-    "additionalControllerCount": 8,
+    "additionalControllerCount": 9,
     "delegatorMnemonic": "legal winner thank year wave sausage worth useful legal winner thank yellow",
     "delegatorCount": 20,
     "seederMnemonic": "letter advice cage absurd amount doctor acoustic avoid letter advice cage above",
@@ -31,6 +31,7 @@
       "//Ferdie"
     ],
     "controllerTargetFreeRao": "9000000000000000000",
+    "parallelControllerTargetFreeRao": "100000000000",
     "pureProxyTargetFreeRao": "5000000000",
     "delegatorTargetTotalRao": "100000000000",
     "delegatorTopUpToleranceRao": "500000000",

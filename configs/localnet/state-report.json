@@ -1,6 +1,6 @@
 {
-  "status": "verified",
-  "generatedAt": "2026-03-17T13:04:52.493Z",
+  "status": "seeded",
+  "generatedAt": "2026-05-01T15:17:30.458Z",
   "manifestPath": "/home/kubernautis/tss/vibenet/configs/localnet/state-manifest.json",
   "rpcUrl": "ws://127.0.0.1:9944",
   "runtime": {
@@ -8,6 +8,8 @@
       "proxyCreatePure": true,
       "proxyAddProxy": true,
       "proxyProxy": true,
+      "proxySetRealPaysFee": true,
+      "proxyRealPaysFee": true,
       "utilityBatch": true,
       "addStake": true,
       "removeStake": true,
@@ -27,872 +29,244 @@
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "controller bootstrap",
-      "txHash": "0x29f8a27a7e2e339b36e97ec5a0fc61cdc1540a04162c4a529b775d5a4d9f9f64",
-      "blockNumber": 70,
+      "txHash": "0x19f09347d918ebb577490c9c4c1aa28b4f43d7496c312e6274cac57ed809b09e",
+      "blockNumber": 19840,
       "address": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "targetFreeRao": "9000000000000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-01",
-      "txHash": "0xcd5eae6d208a6bf31845615db9e0ad53f44d3b8f15ab27191b39ac9b27421cde",
-      "blockNumber": 71,
+      "txHash": "0x62830f7f02756e5f44fa990dab146c00bad68a1787afa10dd36efce70808c094",
+      "blockNumber": 19841,
       "address": "5CCpcaAQgo8Yif4e7Zr8H7Z6jdpD9s4bsEn1Dqdxg2146PAA",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
-      "reason": "liquidity seeder seeder-02",
-      "txHash": "0x8e6524d9cabd5faadfa869241f002bf07bdf3309c5064865b2ecc1cdcc5abd42",
-      "blockNumber": 72,
-      "address": "5C7pvNYUQHdQiboPExc7dvWCy6vL91z61ZEerjPAge44wVUe",
-      "targetFreeRao": "75000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-03",
-      "txHash": "0xdb0225ae8c7d69d5b2342c314fab6c37c047f31e160b2e55d4699c606e4b00d5",
-      "blockNumber": 73,
+      "txHash": "0x2b418f76b2aaa78305dd2b7ffa0d3f10b017b08b3b672d1b52a8244f1cc60b73",
+      "blockNumber": 19842,
       "address": "5H9DcnUXjGSVRZbLyqiEVRVa96UmdbtnGygZCHU2A9Q8beMQ",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-04",
-      "txHash": "0xa93081dbebd2f28a913c2a91474329dddc202bd58e9a7883ef8e41b1c02432e4",
-      "blockNumber": 74,
+      "txHash": "0x36f2e0659304b782ce41b3ee752c614f10382390df6b93559269a328b8c9ca70",
+      "blockNumber": 19843,
       "address": "5EDCHhnD8ACGLSidyqm3B6dF31DwL7mWmLhMZr7XWB93Xdfy",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-05",
-      "txHash": "0xc4a4752b69c8d8e81898835216d98e25338ed0e14c965d3a5088f089dca0fab8",
-      "blockNumber": 75,
+      "txHash": "0x4d51ebdff8c5a993e4762af891c9811c7ce3aad5c66fe81339d35a38c66413ea",
+      "blockNumber": 19844,
       "address": "5C5McDJPYY7CJz5s2Myidj8hhbXvffR6VYye3jd4YWZLFdUe",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-06",
-      "txHash": "0x1b2ae4ad3f7b4ca85de8e2724b1efe6391163ee06a937d091b5fa5b5dd9f38c9",
-      "blockNumber": 76,
+      "txHash": "0xeec20fb3cab486a64acc04a07b3b997771103d0da9f3cc9e7cb3587cf94256e6",
+      "blockNumber": 19845,
       "address": "5EfC28qgW2jaK6ANUTVwasT2XPP53EcaGkaTgHxWsH5RC4dk",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-07",
-      "txHash": "0x1816594ac1db9559cdc3fb0e74023337f8f72a11ca868972ef9fe0e814387ab0",
-      "blockNumber": 77,
+      "txHash": "0x04699b2d19f1b607654114023e6e6a57f68c220e3e68ebb70d25bc677110b72c",
+      "blockNumber": 19846,
       "address": "5Eead8NVhy8uEp7oUUtBBirYihVXgdYsZYLpoTj9Sd21PNkg",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-08",
-      "txHash": "0xb0c68a54cc0613189cc43d05a852bdf0d0f44aa179fcc168a2cba691b46aeee4",
-      "blockNumber": 78,
+      "txHash": "0xc6f0da44507ea191b92fbd5aa775818b3b18980a7e357c98b1b6b879b6c8cdaa",
+      "blockNumber": 19847,
       "address": "5Ge2ViR6Np2W4kAwdqunFeiyab6S2UqicN7bqrcYS12zDSif",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-09",
-      "txHash": "0x44ebd73cdb122a82b89efff7ef6f678add750c9d7aadf12a13a20bb138d7b481",
-      "blockNumber": 79,
+      "txHash": "0xb9c23aa052320da4d12cf871ed4278d44790c137084b7375a05dd4451bd91966",
+      "blockNumber": 19848,
       "address": "5FWjooxVz8sMR7u85CMXFKqwk4SJMAZx1nkoXQpnbncAJBaC",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-10",
-      "txHash": "0x7ce57fd362e389d55970a3a546a489f9fd2033fdb5d2d90ca3f801eb0e57b0a7",
-      "blockNumber": 80,
+      "txHash": "0xeb35678f6f35e891c264c6532fc4a286d7e4483d04c37132d781f51db7cfc082",
+      "blockNumber": 19849,
       "address": "5GF4dJrDVAPU3hequPKm5FWzMAYLsMxEwzKhE9J82ZRJJz1M",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-11",
-      "txHash": "0x27f80ed2ece5419ff32bd582f735a1e4ba71610bdd2e61e166bd6b6ae57b7742",
-      "blockNumber": 81,
+      "txHash": "0x702d65a39c0f953c43fa27029c4c93b4cabe7d496a412a067c63f6e9d2b8555e",
+      "blockNumber": 19850,
       "address": "5DZyL9gjbJd9cLcwDTTvxBZbxDD5o7NPYiSvhaY5jHmCt8oR",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-12",
-      "txHash": "0xb5ef372359398936828da5b8a29ffccc6eff85b6474d539c60fdd7551ae95b8a",
-      "blockNumber": 82,
+      "txHash": "0xc34624ba21a003b9a386c2febb7a799804fac073731365beaba8ac2b59542417",
+      "blockNumber": 19851,
       "address": "5CPNdqqv3MAE5WQG11fWLocXUiEUkzc14rYbWoAQtqBg1C2v",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-13",
-      "txHash": "0x70692db657becc27442e4456e89ce441c80f4d479d78c8837bcae5fd92e8ac52",
-      "blockNumber": 83,
+      "txHash": "0x93898d131136738dd1d386e5c100ffdab2bae80209ceced6fc80fd4b23b4bd75",
+      "blockNumber": 19852,
       "address": "5FWiYNrY8TjsfmMgWxg3ngwKWJ8wUvjpkg5FGR4XJWZAgPyd",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-14",
-      "txHash": "0x235ae458f901b420cac131a09ba535b0ddcc640b43c67a8978a4c161b84195c0",
-      "blockNumber": 84,
+      "txHash": "0xd204cdee6162508791fe5fbd61c52e1c2068adf26f0ad1acadfef151f17f5e94",
+      "blockNumber": 19853,
       "address": "5HT2Hb4khFECyFMnYizFQkrserR7uh8UoGLDx7ZSAKnXAgD9",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-15",
-      "txHash": "0xc5ab2d0c708cf765aa7728a04e5997812f7bea9296cf61e13e88368c403ecbaf",
-      "blockNumber": 85,
+      "txHash": "0x582080986ed4113a40d87f13840ac85c328b29f10a2ea142bb350789b566f455",
+      "blockNumber": 19854,
       "address": "5DFTcCrPobTBkuSfEaugBoGeBZ9Ti7cYqDqXiJofo51Mi8dr",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
       "reason": "liquidity seeder seeder-16",
-      "txHash": "0xf2180a0223fba3e3b2a85e2862dd70f36d88d7ab9290a35faa5aa8166e680336",
-      "blockNumber": 86,
+      "txHash": "0x73f2d91b8bb2e0c946745a23a8f2ce107f6da79f631a3a2439cfd1358136776f",
+      "blockNumber": 19855,
       "address": "5EHsB4fjKt4HH48BoHTfEJFsKZSb1iLQWj1rU5qsGUdBEws9",
       "targetFreeRao": "75000000000"
     },
     {
       "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-01",
-      "txHash": "0xfc35f4aaeba1e0bf97e26e3ca1a9b9fbe8b83234caa77ef717893d5d6560feea",
-      "blockNumber": 87,
-      "address": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-02",
-      "txHash": "0x749df7df65635866ce1351a1f33e9240980b44da985e5a9aa9284ef87e36a5fd",
-      "blockNumber": 88,
-      "address": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-03",
-      "txHash": "0x267a99f8b1bb37b48854c23527ec9637af29abec15cc6794bd2c76f96c00c62a",
-      "blockNumber": 89,
-      "address": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-04",
-      "txHash": "0x99fcd52e04bd0de1e7be332ca626b07b0899f7af043426c5bdbec06534cebb8e",
-      "blockNumber": 90,
-      "address": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-05",
-      "txHash": "0x947ebbd42a8d15390546a84e62efe73290dc32c432d2196dce413d72b01a2249",
-      "blockNumber": 91,
-      "address": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-06",
-      "txHash": "0x86d945664fb9358fab0e3d07be994c6b7f4f2bbceefdaa7dbb7c10af0544317e",
-      "blockNumber": 92,
-      "address": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-07",
-      "txHash": "0xacf9329011c44fb89f3ee52c6066e2e592ae1fea801f4814cb5e1865fc59d547",
-      "blockNumber": 93,
-      "address": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-08",
-      "txHash": "0x9f28e09146e045db4d357aca921a35401899fc966056a52e8ab526e67fc9da09",
-      "blockNumber": 94,
-      "address": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-09",
-      "txHash": "0x3fa15a61a1e9034b3d52d212f2cb897b7be75f3937c42179fa464b7c1ef357dc",
-      "blockNumber": 95,
-      "address": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-10",
-      "txHash": "0xc1ab1840db40f6b6e5f8412ac0abe71c8d79c20992ef4b9a0464a6b74268bd5b",
-      "blockNumber": 96,
-      "address": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-11",
-      "txHash": "0x777a7d020bd62ddb2e8b852264485b5ed341f70ca8c5eb0a768add6279e21472",
-      "blockNumber": 97,
-      "address": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-12",
-      "txHash": "0x33c90e7b907c6fa5ceae8e02c0c03fdbfe64536e37d869f0b6742061cfaeb83f",
-      "blockNumber": 98,
-      "address": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-13",
-      "txHash": "0x27860ef6942f335c80539948a3171ba9ac44128d134e8ea9a015ded15d06ef4a",
-      "blockNumber": 99,
-      "address": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-14",
-      "txHash": "0x54d55d39719e6eb284f6aaa8bde694d927017af14720b9bebcbe43867954b096",
-      "blockNumber": 100,
-      "address": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-15",
-      "txHash": "0x670a5f85cb727a803f5c5e22df37d0d404f09f55c18d3a3407fb5be65e1af70c",
-      "blockNumber": 101,
-      "address": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-16",
-      "txHash": "0xc83737169d4b86fce869ee923a3783e7b159ce627909b82102a4726bc453e083",
-      "blockNumber": 102,
-      "address": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-17",
-      "txHash": "0x611321cb9e0c14e39114e4023b9836bb78b9739bf2b221f9d78d55ce946f4fb6",
-      "blockNumber": 103,
-      "address": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-18",
-      "txHash": "0xfee2e90198e7fcabf23a153ecf5a4fa4f9a1afdee7364280d44837006aabc78d",
-      "blockNumber": 104,
-      "address": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-19",
-      "txHash": "0x69e0e36a0c6d3edd0a1dc67f9db5acdbec063435281987ddb9b14ca3261445d3",
-      "blockNumber": 105,
-      "address": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator delegator-20",
-      "txHash": "0x7a165edf4ceec6b27f9914f14c2ef8e48d0f661d07e002d389361bdb38860e6f",
-      "blockNumber": 106,
-      "address": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-      "targetFreeRao": "100000000000"
-    },
-    {
-      "kind": "proxy.createPure",
-      "txHash": "0x043c2164ed8a5f8002bed904a390e6bfbc40fe8557f71a14d3282e857d086345",
-      "blockNumber": 107,
-      "address": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
       "reason": "pure proxy rent",
-      "txHash": "0xf4c8ae0639261c5aff06af20723ac7800ab9da4f7ecb8aa24ddbd653586e5465",
-      "blockNumber": 108,
-      "address": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
+      "txHash": "0xb3b8f3077e839660612eab91d39ecf591243108dc641c2578a6b394d32c8bf64",
+      "blockNumber": 19857,
+      "address": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
       "targetFreeRao": "5000000000"
     },
     {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-01",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x63e973eb47ece77eabc21a97a9d0d463e9ed1169c89af02294f6911d0a6d3dc9",
-      "blockNumber": 109
+      "kind": "proxy.addPureProxyController",
+      "controller": "controller-10",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "txHash": "0x4c18017678c26fd89036b7546701a89ee3662b706ae9dcbaade8ea8619f41eba",
+      "blockNumber": 19859
     },
     {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-02",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xcf6f74f5ddf113fa464f507010a55bcb17c2555adfbcd24821a2bc20c8287991",
-      "blockNumber": 110
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-03",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xcf4486256b3092e198070f6e0d80ce7f516dc45ac81c5fa3997e3163f772f747",
-      "blockNumber": 111
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-04",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x269ebd8827a62a3f1e81134d0b6355279663daaeb0449338c3cbdeab3fe7fd1f",
-      "blockNumber": 112
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-05",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x03250cc1fcc46fc7bfb8504cebff3071926739cd20d850810647d90d660b0d3d",
-      "blockNumber": 113
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-06",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x8ac21225e2802d375fa0775d1e7ac862f7bdbdd30a1e7faa34661f783eaa77b7",
-      "blockNumber": 114
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-07",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xedc11182f19aff6af874cc047290fc1e95e450398860ed8a792b5fafc952aedc",
-      "blockNumber": 115
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-08",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x0675709e17e77f65c74b2b2a553abcee4195f11c293082fb69b77755c6725df3",
-      "blockNumber": 116
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-09",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xcf6a0eef91144910ee41bf5c9c725bf3b8e3254b7e36f9e65c96e853100572ef",
-      "blockNumber": 117
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-10",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x0b320d467f46f6c69e5c5e4d91a60b19ac1954462df95e938854dbe07275ff86",
-      "blockNumber": 118
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-11",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xa7d8c77ea63d39f78f40bf59ab9da66f361f95f1da1d05b969dc34b82340a80e",
-      "blockNumber": 119
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-12",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xf4980689d4b20682a3dc76028815a8a9fcf5358809c26da24817f43579d79430",
-      "blockNumber": 120
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-13",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x6074bdafa79c463f6606f96d137610be7783fc26839ee6544d3988a1d45e35a8",
-      "blockNumber": 121
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-14",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x4cb566456b63b5dfb1e2e041e58a0b44992805eb9f6622a584d11804632328fc",
-      "blockNumber": 122
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-15",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x1dc0321a55cf4a9fd8eabd986b8a91a32e4037605d1acf9bf758ad69384abab6",
-      "blockNumber": 123
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-16",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xff84e45414219cd4cbf6e76704c2ccc39b4b08062e203e76da72f9a50580bb03",
-      "blockNumber": 124
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-17",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x0295850f600ea39af653fb0e73027c1b128da41b6e2fa9480242d42de3368b71",
-      "blockNumber": 125
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-18",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0x5f1108baf9907841a13e71e6a6b526b2e8152bf22df787fd2c7befa05c463f7c",
-      "blockNumber": 126
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-19",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xedefacedf2460502a7c79e495bd258ca3d07f51dd927a702fff00424ee3ae807",
-      "blockNumber": 127
-    },
-    {
-      "kind": "proxy.addProxy",
-      "delegator": "delegator-20",
-      "delegate": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "txHash": "0xb763c64e72ede9f7a726403adb5fcf2f51d8b752628c16b06cc2cfded1996cda",
-      "blockNumber": 128
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "txHash": "0xdb79ac849ec6cce0476fffb236d0fa71d0828272f6f344cd44c52deeb43a39bf",
-      "blockNumber": 129,
-      "key": "0x658faa385070e074c85bf6b568cf0555e9348e9224ea06c9c2da12ce69e619c50000",
-      "value": "0x01",
-      "netuid": 0
-    },
-    {
-      "kind": "subtensorModule.rootRegister",
-      "hotkey": "5D4dLAfDbPM999gghuecRNtgE1WqYrJAFC55qxDgDFMa6i4P",
-      "txHash": "0x3ef00d3d1b242405e5c97cfe5630ff662e25d918b6d6ae5eac72e23c5b42a18c",
-      "blockNumber": 130
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 2,
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "label": "deep-02",
-      "txHash": "0x919ff4869d05177205f84d43b5b081ccb6c95edcf2b91d3b73f9ab815226cc7d",
-      "blockNumber": 131
+      "kind": "proxy.setPureProxyRealPaysFee",
+      "real": "pureProxy",
+      "delegate": "controller-10",
+      "paysFee": true,
+      "txHash": "0x663fb949e367bf7a0850dcc50e446c6b59af839184c8ce55905c0fd40c51c2ed",
+      "blockNumber": 19860
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 2,
-      "txHash": "0x196581dad348ac0c2a16802ca55277ced5db6bb070177271bf7f2095e4c0d3b6",
-      "blockNumber": 132
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 2,
-      "txHash": "0x0e86e02269bfef71659821e6aae5b772afe5c746d633407cfb390e4bd06b842d",
-      "blockNumber": 133
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 3,
-      "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
-      "label": "deep-03",
-      "txHash": "0x6ef3d20c7fc9e0bc6bf5189398e7b8ed29ec1fecaed05751c53f3ba4b38bcf61",
-      "blockNumber": 134
+      "txHash": "0xffd70ba834f207160ba8f6e0246fc15a38257e3c57ce1e76e5f42a77f726a646",
+      "blockNumber": 19861
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 3,
-      "txHash": "0x22cf2b5696b2c21503e11849f6476652c57479bbed564c93ba31281b1ce70763",
-      "blockNumber": 135
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 3,
-      "txHash": "0x0fae7b3dd14baaa0944f8a4b8c7c93f89e1e50f2119f4d26a2a1be456bfa372f",
-      "blockNumber": 136
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x776ebac8fc5690b7534fd21f453c3d82d8ece647a4fc1f85c5848bf0f8bcd81f",
-      "blockNumber": 137,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 4,
-      "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
-      "label": "mid-04",
-      "txHash": "0x15dda831b21ec7bc997507cfa202ded7f00f3c71475addfe058af929ed142507",
-      "blockNumber": 138
+      "txHash": "0x7a3eec1d99f3152ea8c4951b0a58afb6d6aca9a6ed30287f0720802b450d3368",
+      "blockNumber": 19862
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 4,
-      "txHash": "0x2268631d55ada61614a8994cecdc62bd407ecbd8c0fa3706b6689135f22853e5",
-      "blockNumber": 139
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 4,
-      "txHash": "0x5188a2f8617993c6d748df97c2933ad8e006a47ee8e48596f45b7b81fe826abe",
-      "blockNumber": 140
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xa795c293cef9c3ea7a033705b65765391c83fa1fc5a87629671862edcdb04aa2",
-      "blockNumber": 141,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 5,
-      "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
-      "label": "mid-05",
-      "txHash": "0x2f0ec730a996fddfc0fa71b2c94393f9f18d2b304512c995de41acacc5f6c180",
-      "blockNumber": 142
+      "txHash": "0x6fb16bc2cb92b59c50a4bc2643ccfd9170e167159c194ecd22a9b0c9c5b2f39b",
+      "blockNumber": 19863
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 5,
-      "txHash": "0x0c0e29212b13c617467413249d3b2e88680e8cb51c6a61c19b9983a2c9ec9787",
-      "blockNumber": 143
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 5,
-      "txHash": "0x5bd8be4f88808c0cb7b65f2c7c650e3d7792bbdaa41732a8601bb07809d6d5ac",
-      "blockNumber": 144
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x57f31934dc89a195d6f48cccb6b7bc16d4e9070e0be69db92b0b46fb4edaf185",
-      "blockNumber": 145,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 6,
-      "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
-      "label": "mid-06",
-      "txHash": "0x7cf10a3ccb02edf52cd6dcf125e35e84874ae611e8e69b8a2393820c888ebe80",
-      "blockNumber": 146
+      "txHash": "0xf96d86116ce6935fbf9c24c6f763e33d5ceb158f21aedf3ad8a242a5f1954d73",
+      "blockNumber": 19864
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 6,
-      "txHash": "0x2b898f0d5b5b69977d56eeb434b947e5de0bbc8be9c5399ddbab9c9244af350a",
-      "blockNumber": 147
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 6,
-      "txHash": "0xf2d95edf2f4b9fb7925aca7d113e4038b5033572535a3aae96748bf4cd5530ae",
-      "blockNumber": 148
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xb57ed127acf12bfd3384792a6594e0b02020122357b744198c07e6c11933aebd",
-      "blockNumber": 149,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 7,
-      "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
-      "label": "mid-07",
-      "txHash": "0x6e14ae27e8785b15c7c9eda2e12fd3b7e39b717951e57ee17e567c883369ab5b",
-      "blockNumber": 150
+      "txHash": "0x961906c53fe255c210fd093812eec18a270c3669ebd9032bcd4a752e1ed4d997",
+      "blockNumber": 19865
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 7,
-      "txHash": "0x468337d93a88826e2eb9c3b4a03fe560bbd7fa3b6d082f508e54acca930b1924",
-      "blockNumber": 151
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 7,
-      "txHash": "0x4b57d20dd0b2cae2043a460230bfe305f9322daf3d75ad09a96ea56e0d474e2e",
-      "blockNumber": 152
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x27d833e232bc0277d92acab2a31b75ca7910c0966bb7cdd0eedcb5a8fb2cd00b",
-      "blockNumber": 153,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 8,
-      "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
-      "label": "mid-08",
-      "txHash": "0x25132efcaf9715498d4a2966ce4654fa6316f6bcc61e010a5257275cf5dfc857",
-      "blockNumber": 154
+      "txHash": "0x9eaaa00b3d9dd16041e4739ef243031bb5fdb4dcec96503830244a407becc228",
+      "blockNumber": 19866
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 8,
-      "txHash": "0x295ce6d35d683d49553b606e65d16a1f7b203a4112f9de8d173d602a4aeeb587",
-      "blockNumber": 155
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 8,
-      "txHash": "0x2cd175cfaecea228161b7704ca15523676514ecb8366a9cde83fb16194ba2667",
-      "blockNumber": 156
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x9d9adf181e1cf311ec477cf8928c9a2a4766f48d0cde4a8a87173d53cd72fa13",
-      "blockNumber": 157,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 9,
-      "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
-      "label": "shallow-09",
-      "txHash": "0x0fc380fd1d72de78be960f26fe301e80dd72d2c095597d72b2f10f507bf7475d",
-      "blockNumber": 158
+      "txHash": "0x81ee6c68002cdb91e940f72c886a3c41737b3782391ea85a860d8d8356720cf9",
+      "blockNumber": 19867
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 9,
-      "txHash": "0xb2981f13d3381572bfbceb576e71703d75d1410cd897ac2c4a277db3e6a08510",
-      "blockNumber": 159
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 9,
-      "txHash": "0xf988a01e383c0ef297510cf4f8f75940b9f6ac4cd6d0581706942b20c103fbba",
-      "blockNumber": 160
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xcd5ce4994dee72e41d754873656b2b96d45b0d0f0441a6066fe3df428f718ec2",
-      "blockNumber": 161,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 10,
-      "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
-      "label": "shallow-10",
-      "txHash": "0x750fed1b035acf69af820c1f3a89502a172b1f58034b6c39df09892e3d5140be",
-      "blockNumber": 162
+      "txHash": "0xca6f2e53059a5b00234ff09e1b71045b9bc4d66fe345b1ada8d65ca698944698",
+      "blockNumber": 19868
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 10,
-      "txHash": "0x3bc1080d86231b05e959c371be8ce5fd95e980f1250c16246af2b72830b7a182",
-      "blockNumber": 163
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 10,
-      "txHash": "0x18db2b259d2829fd5ba19b7dba0330d39eb5da52ce65282e1b22b030b8a2d77e",
-      "blockNumber": 164
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xd5762225ecd209c20e4c88e25afd99197becae9d83eea0188962366198404473",
-      "blockNumber": 165,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 11,
-      "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
-      "label": "shallow-11",
-      "txHash": "0xcc8be47831b3eb95c561feccdaa4283e1f8621c4566c464f837434b212d07358",
-      "blockNumber": 166
+      "txHash": "0x10d37aa8adcf5fe4c9fcfd267d4d9955f6971ee137a070ecd31886ff951cc2ef",
+      "blockNumber": 19869
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 11,
-      "txHash": "0xb685e47d088e1cc66a3dba1e7c2acd7ffe2f833fa62708a5a261a8ac3f5d28ce",
-      "blockNumber": 167
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 11,
-      "txHash": "0x58f3020c4db388fde1a5d5c89a3cf385092d2855b30f8f46cbbaabeff78e6a6d",
-      "blockNumber": 168
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xf6c74f83926dc9681b1f02fad2db0ab309471c2a4b5c37c20f718c146dd6f511",
-      "blockNumber": 169,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 12,
-      "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
-      "label": "shallow-12",
-      "txHash": "0x391798e691873b5b34042e6f6d4d9bc954bb4c7492640e81abb8b8ca43db62b7",
-      "blockNumber": 170
+      "txHash": "0x8bf3ff1fcb5127779cb31d11ff3e7cd76c655b7fe2fcd7ea54378edc5301ad02",
+      "blockNumber": 19870
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 12,
-      "txHash": "0x4f9a22dcd4435c720f7355439c51f30927916bf70a297afcb0926b49d52efea0",
-      "blockNumber": 171
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 12,
-      "txHash": "0xf4a8b5514e033ec20f23c990a6b2f497a78f75692cfdddbf7e1ac7c0fe0d54b4",
-      "blockNumber": 172
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x94e3fde1edc63aa1826c0c12fbb8a98769e9b9a25a2b4db3590dca42bfaa8fa7",
-      "blockNumber": 173,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 13,
-      "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
-      "label": "shallow-13",
-      "txHash": "0x953533c8e78d077a7d40ddee27ab2765e97c48f2e07111d1673e5c6cd490990d",
-      "blockNumber": 174
+      "txHash": "0x119b372676d119073ae1c03d55f6e9fa0e6ca3643e461bdec5bc780d7751c7f2",
+      "blockNumber": 19872
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 13,
-      "txHash": "0xa741044617a93e2503648b54ab0daff86baef43a1d91b13a6246da505f854aad",
-      "blockNumber": 175
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 13,
-      "txHash": "0x4b744843a77652494ec047550de49710b657254930f9176491c7ce1e38a8c939",
-      "blockNumber": 176
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xa1babc9495197cae8581a470b93fc53a4293ee5e9abf603cf4f685dae2144d3b",
-      "blockNumber": 177,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 14,
-      "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
-      "label": "shallow-14",
-      "txHash": "0x35c32af2f8a23747836d2044566ea4fada0d1fc289ddec4a699bff61f10a55c4",
-      "blockNumber": 178
+      "txHash": "0x628c845cf53a77c27eaaeb0262e6e684602562222ffb33063e32d71c6532d459",
+      "blockNumber": 19874
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 14,
-      "txHash": "0x065a4012c84e0f08fb86ede576e3331e698ac42a8871c2bae1000f383b7d29ce",
-      "blockNumber": 179
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 14,
-      "txHash": "0x533d3a82420dfd14086a9f11890a10ad2cc225b0e7c0e915425dd79616993f9e",
-      "blockNumber": 180
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0x6fce5c07dc1eae695276991df0d076ec4699275714f1e26ff0963167a4df1a5b",
-      "blockNumber": 181,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 15,
-      "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
-      "label": "shallow-15",
-      "txHash": "0x2cd67b37b466c81daeed1a1b7c3b318162ddb1a39075fafe1e39ea34c4e3bd53",
-      "blockNumber": 182
+      "txHash": "0x2d36b5f3a9356a45df4664ed5ca6c16614591df6c801de38ba98960a3a94487b",
+      "blockNumber": 19875
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 15,
-      "txHash": "0xb320b168933082f010aab197b11cf7c185f2e42150000a0e158be1c8909a78c6",
-      "blockNumber": 183
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 15,
-      "txHash": "0x5b48ac264f84588260142b88fc1f5f68491c1a9ddadf7a180b5a6fa3bc3dc4dc",
-      "blockNumber": 184
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "label": "forceSubnetLockCost",
-      "txHash": "0xf7d74cdc152621357a9eacd6d8008cb993e59f682de43d39ca68125dbe60b1eb",
-      "blockNumber": 185,
-      "targetLockCostRao": "1000000000000"
-    },
-    {
-      "kind": "subtensorModule.registerNetwork",
-      "netuid": 16,
-      "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
-      "label": "very-shallow-16",
-      "txHash": "0x94f05386c8bbaf20d8c76645dbd584cc3bf469a1f18749db3a5868df2711a787",
-      "blockNumber": 186
+      "txHash": "0x9505ce7e496500c28c6ccb4b539fa5467c2bfd91829c7c141922414bbf7f88d3",
+      "blockNumber": 19877
     },
     {
       "kind": "subtensorModule.setSubnetIdentity",
       "netuid": 16,
-      "txHash": "0x064b15b8bf4e76f56aa1f55a86b6831e11f648792e4f68d76e65bb6e26c0d01a",
-      "blockNumber": 187
-    },
-    {
-      "kind": "subtensorModule.startCall",
-      "netuid": 16,
-      "txHash": "0xbff7ef4238c0851172ae0a1c761f0d4a2b6f703ce4b7c16af10c8ceff516b84f",
-      "blockNumber": 188
-    },
-    {
-      "kind": "sudo.system.setStorage",
-      "txHash": "0x8ee51d9d4afabd78e979187284159e802c621002621c37c31d7a936bb0a1fb7c",
-      "blockNumber": 189,
-      "key": "0x658faa385070e074c85bf6b568cf0555e9348e9224ea06c9c2da12ce69e619c50100",
-      "value": "0x01",
-      "netuid": 1
-    },
-    {
-      "kind": "subtensorModule.burnedRegister",
-      "netuid": 1,
-      "hotkey": "5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21",
-      "txHash": "0xa71b60eba2fba3e2cb1885824d8f8e4b42983c3d578b6b04fa2e78f10c4b8b7b",
-      "blockNumber": 190
+      "txHash": "0x5d15d2a8e7844fd675d8a55fc89cb22d267df17a81079ae2343b6adb5d1036bc",
+      "blockNumber": 19878
     },
     {
       "kind": "subtensorModule.addStake",
@@ -900,19 +274,9 @@
       "signer": "5CCpcaAQgo8Yif4e7Zr8H7Z6jdpD9s4bsEn1Dqdxg2146PAA",
       "hotkey": "5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21",
       "netuid": 1,
-      "amountRao": "25000000000",
-      "txHash": "0x6bf7880ab16e14f2a6b681aabebac4714f43eeb17712d457e4e457e9ad7c3a63",
-      "blockNumber": 192
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "liquidity:2:bootstrap",
-      "signer": "5C7pvNYUQHdQiboPExc7dvWCy6vL91z61ZEerjPAge44wVUe",
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "netuid": 2,
-      "amountRao": "25000000000",
-      "txHash": "0x0da0d640d7f1f0c80b352ef78cbc0e5e06fa98965da850aff9e42327ad79ab68",
-      "blockNumber": 193
+      "amountRao": "24172358674",
+      "txHash": "0x40e23973b2537f18ae609a5e992212e01e9fb8a3ae7d9346be84211e5cc13626",
+      "blockNumber": 19880
     },
     {
       "kind": "subtensorModule.addStake",
@@ -920,9 +284,9 @@
       "signer": "5H9DcnUXjGSVRZbLyqiEVRVa96UmdbtnGygZCHU2A9Q8beMQ",
       "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
       "netuid": 3,
-      "amountRao": "25000000000",
-      "txHash": "0x5c2d490e15a23e913dbbb9db46c98314c74999a150c602bf489ebcb338a5fd34",
-      "blockNumber": 195
+      "amountRao": "16480366123",
+      "txHash": "0x03286935962c79191fe7256587e5dc1986346362d0dc35fa0adac3f379cdc70d",
+      "blockNumber": 19881
     },
     {
       "kind": "subtensorModule.addStake",
@@ -930,9 +294,9 @@
       "signer": "5EDCHhnD8ACGLSidyqm3B6dF31DwL7mWmLhMZr7XWB93Xdfy",
       "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
       "netuid": 4,
-      "amountRao": "25000000000",
-      "txHash": "0x9cdeca9a58c054c8f9128030bd5889fcbdf11f030602cc35b8bd218b495a98d0",
-      "blockNumber": 196
+      "amountRao": "18550390682",
+      "txHash": "0x420816a438dabb6c12ff21491bd05bf0fb9982d86f39e21b937defa5df435734",
+      "blockNumber": 19882
     },
     {
       "kind": "subtensorModule.addStake",
@@ -940,9 +304,9 @@
       "signer": "5C5McDJPYY7CJz5s2Myidj8hhbXvffR6VYye3jd4YWZLFdUe",
       "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
       "netuid": 5,
-      "amountRao": "25000000000",
-      "txHash": "0xb2c888a03f022fef421c2c0904c966cc8e73e5e2b45b26d46ee9df7264a94b66",
-      "blockNumber": 197
+      "amountRao": "19598190191",
+      "txHash": "0x6cefd67cebcc77e7082b5f2b93e3fb065242775fffe916efb6e00963547ddef8",
+      "blockNumber": 19884
     },
     {
       "kind": "subtensorModule.addStake",
@@ -950,9 +314,9 @@
       "signer": "5EfC28qgW2jaK6ANUTVwasT2XPP53EcaGkaTgHxWsH5RC4dk",
       "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
       "netuid": 6,
-      "amountRao": "25000000000",
-      "txHash": "0xaf57b2b9eed1c8f1355d583f436d5e45281f1c52bb104cf804fe8669f7eb0c74",
-      "blockNumber": 199
+      "amountRao": "20657270344",
+      "txHash": "0xccbefc04ed38a645ace490cf6e3caa23692a3da63a7d97ae9d2caee75dbf847d",
+      "blockNumber": 19885
     },
     {
       "kind": "subtensorModule.addStake",
@@ -960,9 +324,9 @@
       "signer": "5Eead8NVhy8uEp7oUUtBBirYihVXgdYsZYLpoTj9Sd21PNkg",
       "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
       "netuid": 7,
-      "amountRao": "25000000000",
-      "txHash": "0x9480a0f96405668eb15103b84f497e8e22255313f3a25bfe05271e1a1e4b78a6",
-      "blockNumber": 200
+      "amountRao": "21203584027",
+      "txHash": "0xd6f8ab7d238ff0a3acb674791bf5a2449bd7a706eedd9cfa534ea31aad8c19ed",
+      "blockNumber": 19886
     },
     {
       "kind": "subtensorModule.addStake",
@@ -970,9 +334,9 @@
       "signer": "5Ge2ViR6Np2W4kAwdqunFeiyab6S2UqicN7bqrcYS12zDSif",
       "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
       "netuid": 8,
-      "amountRao": "25000000000",
-      "txHash": "0xc7ee69042ac61521389ab44732d5a920aac6bd59b602e75cde3556472408552d",
-      "blockNumber": 202
+      "amountRao": "21715762088",
+      "txHash": "0x930ce3053fbe9ea91fc7e106c45958cae081b0b390be6bb8a8bf0499cfe52ee8",
+      "blockNumber": 19887
     },
     {
       "kind": "subtensorModule.addStake",
@@ -980,9 +344,9 @@
       "signer": "5FWjooxVz8sMR7u85CMXFKqwk4SJMAZx1nkoXQpnbncAJBaC",
       "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
       "netuid": 9,
-      "amountRao": "25000000000",
-      "txHash": "0x599b2dff9483a10e068c07800cef9c6182fa3b6c7731ec56240d00aea8eecab5",
-      "blockNumber": 204
+      "amountRao": "22381222179",
+      "txHash": "0x4168bb443067344321d0914cb55ded000aa9b34b580ae3acb38f3ab617510073",
+      "blockNumber": 19889
     },
     {
       "kind": "subtensorModule.addStake",
@@ -990,9 +354,9 @@
       "signer": "5GF4dJrDVAPU3hequPKm5FWzMAYLsMxEwzKhE9J82ZRJJz1M",
       "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
       "netuid": 10,
-      "amountRao": "25000000000",
-      "txHash": "0xcd68208c2ecfe1dae30f1285f8341d53afe36bae8d00a202a1d9a51caed03a16",
-      "blockNumber": 205
+      "amountRao": "22820655051",
+      "txHash": "0xb79d86db32438f6dd2da9f5ea4eb703f18e1eb096848a452b58e295973b54be9",
+      "blockNumber": 19890
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1000,9 +364,9 @@
       "signer": "5DZyL9gjbJd9cLcwDTTvxBZbxDD5o7NPYiSvhaY5jHmCt8oR",
       "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
       "netuid": 11,
-      "amountRao": "25000000000",
-      "txHash": "0x6da4e39e5a0b963ea947e7daf019cb473bf4073537dc48645cb1c2c6dd841ad0",
-      "blockNumber": 206
+      "amountRao": "23249451326",
+      "txHash": "0x0acf9808793cb78a59580f49f8f53e5dd3d3420abd1259e78118cccffc2c2281",
+      "blockNumber": 19892
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1010,9 +374,9 @@
       "signer": "5CPNdqqv3MAE5WQG11fWLocXUiEUkzc14rYbWoAQtqBg1C2v",
       "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
       "netuid": 12,
-      "amountRao": "25000000000",
-      "txHash": "0x2688fc0e093a14ee037d9c9294b63d6c8693a416be6f49a8343f6e7e3a689967",
-      "blockNumber": 207
+      "amountRao": "23686749611",
+      "txHash": "0x0f4f19c615d50a12740b0328561a377d47a2ff80ccb5a611dfbb662148f3b194",
+      "blockNumber": 19894
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1020,9 +384,9 @@
       "signer": "5FWiYNrY8TjsfmMgWxg3ngwKWJ8wUvjpkg5FGR4XJWZAgPyd",
       "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
       "netuid": 13,
-      "amountRao": "25000000000",
-      "txHash": "0x8efde0ad37e89e7aeb5b362571bbd3b95fd179ce91a288bcfb9837b6778f270a",
-      "blockNumber": 209
+      "amountRao": "23900721680",
+      "txHash": "0x6c9dac89757f1a61b7e33162fa4f8cbfca1bb48dbbf74fafbabf34a157fd6079",
+      "blockNumber": 19896
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1030,9 +394,9 @@
       "signer": "5HT2Hb4khFECyFMnYizFQkrserR7uh8UoGLDx7ZSAKnXAgD9",
       "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
       "netuid": 14,
-      "amountRao": "25000000000",
-      "txHash": "0x27f40f7aad844c3f0ef452d14d863ee555b01eca57bdeb5350dcf26de3ce1aa9",
-      "blockNumber": 210
+      "amountRao": "24115548810",
+      "txHash": "0x8af8fa1237dd3e615738f3c57d8c8debda49016ea3cc08cd912d604437dc3a82",
+      "blockNumber": 19897
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1040,9 +404,9 @@
       "signer": "5DFTcCrPobTBkuSfEaugBoGeBZ9Ti7cYqDqXiJofo51Mi8dr",
       "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
       "netuid": 15,
-      "amountRao": "25000000000",
-      "txHash": "0x52b9ec73eaaccbc74283a46c55b63fa4ba54238154866e8abf34fb33ee8c4c25",
-      "blockNumber": 212
+      "amountRao": "24334488283",
+      "txHash": "0x25a27202a25ff125c8d8eb5c714c3938d3e7eb9cd38084f4ab72f5f747fab429",
+      "blockNumber": 19899
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1050,19 +414,9 @@
       "signer": "5EHsB4fjKt4HH48BoHTfEJFsKZSb1iLQWj1rU5qsGUdBEws9",
       "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
       "netuid": 16,
-      "amountRao": "25000000000",
-      "txHash": "0x74410dca5aee77ff1da60d57dc27ccc837ead5bd926f1fef646be422ca9ecdf1",
-      "blockNumber": 213
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "delegator-01:sn2",
-      "signer": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "netuid": 2,
-      "amountRao": "1500000000",
-      "txHash": "0x3e41cede9db7e064d043db5e74eb1969e230bc0baa25c4045ab546adebaf0b40",
-      "blockNumber": 215
+      "amountRao": "24553306093",
+      "txHash": "0xb7d881e5dffd1c0f9c6b4887009c8f6160df8baebcc99e2743c8895c858a30bd",
+      "blockNumber": 19901
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1070,9 +424,9 @@
       "signer": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
       "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
       "netuid": 7,
-      "amountRao": "1000000000",
-      "txHash": "0x1d5535ec033c34db7858026c2cf7110e890c7941d4dfd5d036cd8c34b442de04",
-      "blockNumber": 216
+      "amountRao": "999942734",
+      "txHash": "0x33d4c3fe558740ee284cf9376933995e7a1a3e6e27b30450499c9b2d2fcd1434",
+      "blockNumber": 19902
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1080,19 +434,9 @@
       "signer": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
       "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
       "netuid": 12,
-      "amountRao": "500000000",
-      "txHash": "0x6a42a569bcc0f7b88fa9b15c2ff79efbd83b7769d68ad79ac2f83845d42ad25c",
-      "blockNumber": 217
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "delegator-01:root",
-      "signer": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-      "hotkey": "5D4dLAfDbPM999gghuecRNtgE1WqYrJAFC55qxDgDFMa6i4P",
-      "netuid": 0,
-      "amountRao": "1000000000",
-      "txHash": "0xc1ab8ea1e7a0bfe52dde0e423ec0990b4eee975783cd801ba00bc62a0303050c",
-      "blockNumber": 218
+      "amountRao": "499989970",
+      "txHash": "0x97293c7c1f94caaee19f93e981480a4763033e0ab5f4ee1b1b1258160ce3116e",
+      "blockNumber": 19903
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1100,9 +444,9 @@
       "signer": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
       "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
       "netuid": 3,
-      "amountRao": "1500000000",
-      "txHash": "0xfb5069d9e4ad961fbfbbbea6626ab9a374d234a863f63125cef2450c3e4f6f58",
-      "blockNumber": 219
+      "amountRao": "1499046371",
+      "txHash": "0xf24ca5b33e3fd588f646c2c4eb8621d964eae0d476fd643b33e30a07e81cb818",
+      "blockNumber": 19904
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1110,9 +454,9 @@
       "signer": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
       "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
       "netuid": 8,
-      "amountRao": "1000000000",
-      "txHash": "0x3fd58c905bcb3fb037fa79de33454ddc143e4fd231f434b5993315d2cc76bc0b",
-      "blockNumber": 221
+      "amountRao": "871069197",
+      "txHash": "0x544e698d6cdf0f2f3217b203dcacc21848ccd12cbd2c973b6212f4c7670e11e9",
+      "blockNumber": 19905
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1120,9 +464,9 @@
       "signer": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
       "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
       "netuid": 13,
-      "amountRao": "500000000",
-      "txHash": "0xdf71cc607899896423a61437d203cab1f4e30ee041d97665618aed777c18f0fb",
-      "blockNumber": 223
+      "amountRao": "478197473",
+      "txHash": "0x5721486d6db11920337603846250d02af7e562dd90e86ea4164527d903575442",
+      "blockNumber": 19906
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1130,9 +474,9 @@
       "signer": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
       "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
       "netuid": 4,
-      "amountRao": "1500000000",
-      "txHash": "0x75700d877d6331c0672a3a2f2d8bbf04cdf671fea6982f6f6e3731337f807a0e",
-      "blockNumber": 224
+      "amountRao": "1498702091",
+      "txHash": "0x1fe132c9d45edc4e350b8599cfae214e2a2ae1437984d0fea3f53437cb98b77f",
+      "blockNumber": 19907
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1140,9 +484,9 @@
       "signer": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
       "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
       "netuid": 9,
-      "amountRao": "1000000000",
-      "txHash": "0x143ae3a1ea271a70bd116712f1eaa979fcdf61780ed4c2524c076e1059cd4498",
-      "blockNumber": 225
+      "amountRao": "999647076",
+      "txHash": "0x9b1b9d124b21df6d1c5f61dc8d48822b1cca5b755a915af866e51b9c8543bc45",
+      "blockNumber": 19908
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1150,9 +494,9 @@
       "signer": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
       "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
       "netuid": 14,
-      "amountRao": "500000000",
-      "txHash": "0x2bb7f684437aa810db0641e168ddef0246a30d1db8c5b2d7f912bf53f0873708",
-      "blockNumber": 227
+      "amountRao": "482556046",
+      "txHash": "0x2aa59c2873bc84f6aaaf133dcee6011f73f2a1ea4a025e1c20b5e03f8ed66069",
+      "blockNumber": 19909
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1160,9 +504,9 @@
       "signer": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
       "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
       "netuid": 5,
-      "amountRao": "2000000000",
-      "txHash": "0x877fa8d087f2c28d438ce28bb14900aa4aaebf20d65fa3816730d3a4ecce6f85",
-      "blockNumber": 228
+      "amountRao": "1997921576",
+      "txHash": "0xf7407a30c26b1fbf80621a0bcf33f6d70ec25fd3d69cd5faab8e44e2253c8990",
+      "blockNumber": 19910
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1170,9 +514,9 @@
       "signer": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
       "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
       "netuid": 10,
-      "amountRao": "1000000000",
-      "txHash": "0x9ba3d71f5ae0058598ac5144b4e7c320f94d57e1b32996850e083e51392f0686",
-      "blockNumber": 229
+      "amountRao": "999574552",
+      "txHash": "0x8a14b47404e3b5403c444959a6ba38c8050f2ac63134e814e19e941c46a5c98e",
+      "blockNumber": 19911
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1180,9 +524,9 @@
       "signer": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
       "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
       "netuid": 15,
-      "amountRao": "500000000",
-      "txHash": "0x3690d7a04b2423a6e0a1ecf697caa053cf4f5b4bd99abaafadb6e0fd003d4113",
-      "blockNumber": 231
+      "amountRao": "486874098",
+      "txHash": "0x2a1dec35aae3f15b5f1d17d839b8996a46f79921e0cd4491b3549f5c0b948d46",
+      "blockNumber": 19912
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1190,9 +534,9 @@
       "signer": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
       "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
       "netuid": 6,
-      "amountRao": "1500000000",
-      "txHash": "0xf8212c8488f1ea04c4e36dc890a2aa2399395606f1c05fb866b34697f11ce44f",
-      "blockNumber": 232
+      "amountRao": "1498362877",
+      "txHash": "0xd6baf7c45bcc31ae2ac43d8c1404485fdc1fc6410a7231a4a06060de913bc6cc",
+      "blockNumber": 19914
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1200,9 +544,9 @@
       "signer": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
       "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
       "netuid": 11,
-      "amountRao": "1000000000",
-      "txHash": "0x68cab624767735845b2346b1ade1f78c63e7bdf126e2e630f21e54a7e13cd86f",
-      "blockNumber": 234
+      "amountRao": "999556269",
+      "txHash": "0xd7689687abf23269fb6762e5389a65080bfd8f807ca9d96f32b58cf7f47532b5",
+      "blockNumber": 19916
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1210,9 +554,9 @@
       "signer": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
       "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
       "netuid": 16,
-      "amountRao": "500000000",
-      "txHash": "0x9ba08cdde98e57bc06ab97c4e34ff8fa36ac7863efec956da9f6201dcf447187",
-      "blockNumber": 236
+      "amountRao": "491188360",
+      "txHash": "0xf2ce3a8ffac05c6d9013b46a22b875415a1e5daf6a31a4b27df29699a6568672",
+      "blockNumber": 19917
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1220,9 +564,9 @@
       "signer": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
       "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
       "netuid": 7,
-      "amountRao": "1500000000",
-      "txHash": "0x733e3293a49b85fe5425b1e576f8aeaa65984136f1ada8d012ffdb7923e35788",
-      "blockNumber": 238
+      "amountRao": "1498233474",
+      "txHash": "0xbe280a32282b6e5af766679c0d31c52ca4567afe0c3f4b7766afbc54f3b10a83",
+      "blockNumber": 19918
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1230,19 +574,9 @@
       "signer": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
       "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
       "netuid": 12,
-      "amountRao": "1000000000",
-      "txHash": "0x9e975f1f3079f2d91a0eef3daadf745d2cd486c028df1f80481886f88ed57916",
-      "blockNumber": 240
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "delegator-06:sn2",
-      "signer": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "netuid": 2,
-      "amountRao": "500000000",
-      "txHash": "0x33dbf0c084b215ea24d9958ceb7370da5de30f86f87e36b9b95cbc4fa31d4637",
-      "blockNumber": 242
+      "amountRao": "999587280",
+      "txHash": "0xdb7293ddc5350581496189e49a4f8a48932057d33de0673fb98447c5e8e64658",
+      "blockNumber": 19919
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1250,9 +584,9 @@
       "signer": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
       "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
       "netuid": 8,
-      "amountRao": "1500000000",
-      "txHash": "0x97fa3f536310dac11820b235ebf85ce359fa9283eef4349b852f556a3a42a2d7",
-      "blockNumber": 244
+      "amountRao": "1307809649",
+      "txHash": "0xcdab4f23eca0966cb26e1033382bd8e0d402cc2c78c1d463199c023d7dcef459",
+      "blockNumber": 19920
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1260,9 +594,9 @@
       "signer": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
       "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
       "netuid": 13,
-      "amountRao": "1000000000",
-      "txHash": "0xba17e99a73415637658f813401a0c360143b4a149920b20cbdc90c3d61bb5663",
-      "blockNumber": 246
+      "amountRao": "999591697",
+      "txHash": "0xf0be6a2d32e2ad0704ce6bcdb1355466e5133c443629787162d3c699813e9c25",
+      "blockNumber": 19921
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1270,9 +604,9 @@
       "signer": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
       "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
       "netuid": 3,
-      "amountRao": "500000000",
-      "txHash": "0xe3da0b2a4fe02689a2c25b64a109cc83b921435ef7b99756b0083f5ad4108aa7",
-      "blockNumber": 247
+      "amountRao": "498442123",
+      "txHash": "0xc9a35a450dfb2d8692b228bfcec1c5746810c461cca0983c030e725a0e5a6147",
+      "blockNumber": 19922
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1280,9 +614,9 @@
       "signer": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
       "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
       "netuid": 9,
-      "amountRao": "2000000000",
-      "txHash": "0xed3ef274b6ede1c134a65c6f69362c0fcfe4248d25abe6551e46ccd1eaa4ad53",
-      "blockNumber": 248
+      "amountRao": "1997760468",
+      "txHash": "0xce38287e8937ee19681aab9c7180e1899c35e19f1926321b5c24e9d4819bacbb",
+      "blockNumber": 19924
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1290,9 +624,9 @@
       "signer": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
       "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
       "netuid": 14,
-      "amountRao": "1000000000",
-      "txHash": "0x220ad4448ce386f148b60c0b749cb96c71a41b97ac3c4349d4df5420aaed2c94",
-      "blockNumber": 249
+      "amountRao": "999619683",
+      "txHash": "0x2a6c11d7002bb2e5b3284d88e4b4107f5d1a1d426c87fa01ddca44c4a4000f2b",
+      "blockNumber": 19925
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1300,9 +634,9 @@
       "signer": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
       "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
       "netuid": 4,
-      "amountRao": "500000000",
-      "txHash": "0xd9fd32debce320c9bab731672b7604bc07e3cb057456d5d897ba0151c727cd36",
-      "blockNumber": 250
+      "amountRao": "498634219",
+      "txHash": "0xc6dd979d6ccacf4fa38deabf4d4b03c02af2198766bcb93ca300ffe7e72862bd",
+      "blockNumber": 19926
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1310,9 +644,9 @@
       "signer": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
       "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
       "netuid": 10,
-      "amountRao": "1500000000",
-      "txHash": "0xda8ae7b494a7d4a50b04bed002779c73804e220388b26b537af34a18b44d9c3d",
-      "blockNumber": 251
+      "amountRao": "1498413173",
+      "txHash": "0x0684682327e020822ecdd915de08e754c3840631fe278b835f3490b5ad77a59a",
+      "blockNumber": 19928
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1320,9 +654,9 @@
       "signer": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
       "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
       "netuid": 15,
-      "amountRao": "1000000000",
-      "txHash": "0x75ac2514aa8a8e8011514587e27d2422f6292196264b96e4b7386dc80ff375f4",
-      "blockNumber": 252
+      "amountRao": "999676615",
+      "txHash": "0x33f828cb5a2b4ab6ca76df8941dda91b68cdedb0b1d940ab7f6e927a0a96d1c8",
+      "blockNumber": 19929
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1330,9 +664,9 @@
       "signer": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
       "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
       "netuid": 5,
-      "amountRao": "500000000",
-      "txHash": "0x1359e2fd53f81dbeb02338484a19dd5c7615ee8ad9fd6c05c63b3d8a66b91100",
-      "blockNumber": 253
+      "amountRao": "498707309",
+      "txHash": "0x940d09a5258b52b6c80d166acaa35200aa78f4806f4c945f5629cd330a4f2db9",
+      "blockNumber": 19930
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1340,9 +674,9 @@
       "signer": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
       "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
       "netuid": 11,
-      "amountRao": "1500000000",
-      "txHash": "0x2b6732082c6d0af3b1200304b3173c4c0569b35d82c11aab970702e0b2f47257",
-      "blockNumber": 255
+      "amountRao": "1498580644",
+      "txHash": "0x0c6d1ea1f462a90b57848e9ed136f361ab1a1a7a95c8fd54364a25b3044863bf",
+      "blockNumber": 19931
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1350,9 +684,9 @@
       "signer": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
       "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
       "netuid": 16,
-      "amountRao": "1000000000",
-      "txHash": "0xc70d39a46c4ef402b58fd81694ebcbca6d6f1d58d5529de04eafbbcec2de0c90",
-      "blockNumber": 257
+      "amountRao": "982577931",
+      "txHash": "0xe5a42c7486ab798aae3ae1dccad19ef0b6cebf5a78f94123705ab973bded7566",
+      "blockNumber": 19932
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1360,9 +694,9 @@
       "signer": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
       "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
       "netuid": 6,
-      "amountRao": "500000000",
-      "txHash": "0x75bce4149939ca48a97f5b52184b189512279c11bd14293de8a43f30bff07d9d",
-      "blockNumber": 258
+      "amountRao": "498835740",
+      "txHash": "0x0ccf427185df6ad2754ee192c44b490cfaaa66d43fd2d58380b4fd69f007fd84",
+      "blockNumber": 19933
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1370,19 +704,9 @@
       "signer": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
       "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
       "netuid": 12,
-      "amountRao": "1500000000",
-      "txHash": "0x407679c3d1bb5563f62afb74fa6f5460ea0ea6d372abb6579ff9e4a44fadae18",
-      "blockNumber": 259
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "delegator-11:sn2",
-      "signer": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "netuid": 2,
-      "amountRao": "1000000000",
-      "txHash": "0x23e26f47feae921ff5203571e31274491e5f8ffa5469398c0c85d1dccb6fcb9d",
-      "blockNumber": 260
+      "amountRao": "1498844404",
+      "txHash": "0x270c32ffb8128c768ae1356478351b89c45840d9f56b777174133f99f1d69c78",
+      "blockNumber": 19935
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1390,9 +714,9 @@
       "signer": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
       "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
       "netuid": 7,
-      "amountRao": "500000000",
-      "txHash": "0xe2007aeddcbaa31befac73d4e3fa8ae7c8a731028b23687dc0d5a6593cae9531",
-      "blockNumber": 262
+      "amountRao": "498873133",
+      "txHash": "0xb3e273a02befe47ad4e13ee81e614c7d3ade3059efc92dbf904bfc6747d57a70",
+      "blockNumber": 19936
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1400,9 +724,9 @@
       "signer": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
       "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
       "netuid": 13,
-      "amountRao": "2000000000",
-      "txHash": "0xe03ca1c938af0bbbfb969b7c5862c9bb3da5ff9237629d434a69b0d581c1abce",
-      "blockNumber": 264
+      "amountRao": "1998584202",
+      "txHash": "0x14054438d0ea09779c88793118f0246e6d30dd5d07e30aad82476e9e13e9072f",
+      "blockNumber": 19938
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1410,9 +734,9 @@
       "signer": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
       "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
       "netuid": 3,
-      "amountRao": "1000000000",
-      "txHash": "0x267f30c5a5c6c5cc80d744348963a861baf3f2995b50c0433324e202b415586e",
-      "blockNumber": 265
+      "amountRao": "994621340",
+      "txHash": "0x6238dfcac68f63a80656b578d0f55502ea844804e35aa330e184731d3adade2b",
+      "blockNumber": 19939
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1420,9 +744,9 @@
       "signer": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
       "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
       "netuid": 8,
-      "amountRao": "500000000",
-      "txHash": "0x596760394c64efdb0ce1db36954948d4e6cb0aecb9898106dc2818e98d1043cd",
-      "blockNumber": 267
+      "amountRao": "436634965",
+      "txHash": "0x451b5ae72dfc3b0ab2900881dd2ccd66e0358e7a5221759c3ed25f39ab5e52e4",
+      "blockNumber": 19940
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1430,9 +754,9 @@
       "signer": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
       "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
       "netuid": 14,
-      "amountRao": "1500000000",
-      "txHash": "0xfce60d69c1f5c7c2eeb290b6a400b467940f7cb86209dc699bebc1d65bc53b6e",
-      "blockNumber": 268
+      "amountRao": "1499074486",
+      "txHash": "0x403d22b0f3f262987589580ab5d2a45ce1aeaf84364502b1b05c3bc250f431f0",
+      "blockNumber": 19941
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1440,9 +764,9 @@
       "signer": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
       "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
       "netuid": 4,
-      "amountRao": "1000000000",
-      "txHash": "0xe7cc879ddf6657c8288414152db79e471581dda4dad82e05fa4717d1374e369f",
-      "blockNumber": 269
+      "amountRao": "995564949",
+      "txHash": "0xd10377eab9658d9ea0bc1c23a20bab022afc68023561be17bab080a8b4aa6fcf",
+      "blockNumber": 19942
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1450,9 +774,9 @@
       "signer": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
       "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
       "netuid": 9,
-      "amountRao": "500000000",
-      "txHash": "0x6805a8732fabaa4c4a4df52febea9bea82be0224dba5d5191719e455b3bf55f4",
-      "blockNumber": 271
+      "amountRao": "499077981",
+      "txHash": "0x2f1e94f2735e0fdffccd2bbe081451893d74735c72188a2487c0dfbd0bf38df9",
+      "blockNumber": 19943
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1460,9 +784,9 @@
       "signer": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
       "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
       "netuid": 15,
-      "amountRao": "1500000000",
-      "txHash": "0x7d0654084927f38eaa5c74bbf6bba8157ca989a9baa6abff944acfc1eb09a1bf",
-      "blockNumber": 272
+      "amountRao": "1499246846",
+      "txHash": "0xaef1f5294f03c1c40b38328ef8206624a186c969fa66419be29ec973e4fcd41d",
+      "blockNumber": 19945
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1470,9 +794,9 @@
       "signer": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
       "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
       "netuid": 5,
-      "amountRao": "1000000000",
-      "txHash": "0x5a465de0e883146e6fd8c2a0e7d200806b86cd0b10f423c519198b2862329eef",
-      "blockNumber": 273
+      "amountRao": "995929702",
+      "txHash": "0x7bd3367235194084baad8dae6c5ae1ba1887ac72c8b5a7f13a6a77f4c70e2ebd",
+      "blockNumber": 19946
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1480,9 +804,9 @@
       "signer": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
       "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
       "netuid": 10,
-      "amountRao": "500000000",
-      "txHash": "0xfe70b025d84e8a4570648d66394ff37920399e9d22b0ba130b3746c12b1f59c2",
-      "blockNumber": 274
+      "amountRao": "499167016",
+      "txHash": "0xe09cd06ce08aa72411b81176a3a251dd718d7d1bfbe18f564ae8c1442e555c83",
+      "blockNumber": 19948
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1490,9 +814,9 @@
       "signer": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
       "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
       "netuid": 16,
-      "amountRao": "1500000000",
-      "txHash": "0x353df71d776f7dbde8633316a451e95cec88360176afd385e628f664bb5ad75e",
-      "blockNumber": 276
+      "amountRao": "1499459445",
+      "txHash": "0xbb21535a0946b74ba3a8d45d2e34acbd86028bf564fbaaa7054931ee0e0be458",
+      "blockNumber": 19950
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1500,9 +824,9 @@
       "signer": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
       "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
       "netuid": 6,
-      "amountRao": "1000000000",
-      "txHash": "0x7d1bfb8bb06611db9119536fc145e406662ca5886c6730131e6c49c7f2f80594",
-      "blockNumber": 278
+      "amountRao": "996483194",
+      "txHash": "0xae7d9932a100f9297a1050a18fc95d56e516b7bd17cc3ae3d0380cc85c3d89c7",
+      "blockNumber": 19951
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1510,19 +834,9 @@
       "signer": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
       "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
       "netuid": 11,
-      "amountRao": "500000000",
-      "txHash": "0xcc51481a0babaa478ea0c4ad9e15b74542106930000b5d98b1928f7f76f0b1d9",
-      "blockNumber": 279
-    },
-    {
-      "kind": "subtensorModule.addStake",
-      "label": "delegator-16:sn2",
-      "signer": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-      "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "netuid": 2,
-      "amountRao": "2000000000",
-      "txHash": "0x2d61c73f289153d217b7de0a5d66a765a0a426f3059660e7008839865701572d",
-      "blockNumber": 280
+      "amountRao": "499298014",
+      "txHash": "0x5445353f8bf1e16e359c5fc448c9294276ac516ec5d877000fc1d19116d077cb",
+      "blockNumber": 19952
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1530,9 +844,9 @@
       "signer": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
       "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
       "netuid": 7,
-      "amountRao": "1000000000",
-      "txHash": "0x15a702a403a802bbaf027933958bc0bb7d57c0e983e6e730198fd0018f4720d3",
-      "blockNumber": 281
+      "amountRao": "996712981",
+      "txHash": "0xa375baa23ef35748f263a24332c34bf29f8cd3705430c14e9c41b6a7e0e28e72",
+      "blockNumber": 19954
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1540,9 +854,9 @@
       "signer": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
       "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
       "netuid": 12,
-      "amountRao": "500000000",
-      "txHash": "0x69510fb846fe7c79a2e3234c8c4dafd6fc3ec8da76de4c1b54a7c047429cdcbb",
-      "blockNumber": 282
+      "amountRao": "499433435",
+      "txHash": "0x8531864620224e35feaa999e90520687221590273a161e86bccde45b620bce0f",
+      "blockNumber": 19955
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1550,9 +864,9 @@
       "signer": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
       "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
       "netuid": 3,
-      "amountRao": "1500000000",
-      "txHash": "0x839c699aba83b7fc4aa115a786fe5602582deb39abd3b2869ba177a8eb0969d1",
-      "blockNumber": 284
+      "amountRao": "1488440929",
+      "txHash": "0x76a4cd58f42e7cf9867621be1f5a87594800835c3c84154cda5e8e0639ad9db4",
+      "blockNumber": 19957
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1560,9 +874,9 @@
       "signer": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
       "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
       "netuid": 8,
-      "amountRao": "1000000000",
-      "txHash": "0x65a6935efb7441f5b97e350a7cffec89465f01b2a0dad8c697132d447ef4c1e5",
-      "blockNumber": 285
+      "amountRao": "874612855",
+      "txHash": "0xbe0c4d07d5b1b1617c3bdd058ff694a9fcd638147f0c43e6ed08bda7143778dc",
+      "blockNumber": 19958
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1570,9 +884,9 @@
       "signer": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
       "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
       "netuid": 13,
-      "amountRao": "500000000",
-      "txHash": "0x7f27121311142d6c3d4af857745ad009efb6b29f9eebb02f57d568d324faa5d8",
-      "blockNumber": 286
+      "amountRao": "478801777",
+      "txHash": "0x686c1636f50dcb69b30e06c84773d075932194c820766e3456de6ca3c65cefb0",
+      "blockNumber": 19959
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1580,9 +894,9 @@
       "signer": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
       "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
       "netuid": 4,
-      "amountRao": "1500000000",
-      "txHash": "0xe90f85465e6cbb0d1acf5bfa57de848bcc273f63e82e79306e08a8d8491147f4",
-      "blockNumber": 287
+      "amountRao": "1490760331",
+      "txHash": "0x9b547e709968e0508d999c9d405d41b6ebe39ebb625e0fb6ae38bbdc5a8a58bd",
+      "blockNumber": 19961
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1590,9 +904,9 @@
       "signer": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
       "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
       "netuid": 9,
-      "amountRao": "1000000000",
-      "txHash": "0x48c9268a5ae10446d7285629fa09003aa17dac3c30c4082890782ed1e33457bf",
-      "blockNumber": 288
+      "amountRao": "997440173",
+      "txHash": "0x69e9d59ea4067767d7ace5b7516eac8c5e983d305d2e45a2fe0b685a2943b0d9",
+      "blockNumber": 19963
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1600,9 +914,9 @@
       "signer": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
       "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
       "netuid": 14,
-      "amountRao": "500000000",
-      "txHash": "0x3ac4dd6b9d2e94f511e10eb5ed8f8d084cc86a2ba92e8047636203028c3ecf55",
-      "blockNumber": 290
+      "amountRao": "483031926",
+      "txHash": "0xa8fb025e0257852580ef6d39247d63042dedfaf653b3df372e5a870945f4b7b7",
+      "blockNumber": 19964
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1610,9 +924,9 @@
       "signer": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
       "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
       "netuid": 5,
-      "amountRao": "1500000000",
-      "txHash": "0xeb3fe1184541b222e78348eccc456a70c53625eb2f31a54b68b1119b79165f07",
-      "blockNumber": 291
+      "amountRao": "1491824310",
+      "txHash": "0x906afde4e5b6177d3bfe8ad404dfa731d19455413bd495a233a119316d7c48f7",
+      "blockNumber": 19965
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1620,9 +934,9 @@
       "signer": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
       "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
       "netuid": 10,
-      "amountRao": "1000000000",
-      "txHash": "0xee7e20e90038d43d155a8ffbcd3b60f6cb469cecd086f487a719cf2049e61267",
-      "blockNumber": 293
+      "amountRao": "997749501",
+      "txHash": "0x840b5b075c1aa5682f285de53196a85f53327da898a1085553cd4e2b1f7c3678",
+      "blockNumber": 19967
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1630,9 +944,9 @@
       "signer": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
       "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
       "netuid": 15,
-      "amountRao": "500000000",
-      "txHash": "0x485630a6fd380cd2694eea5000c57d199c4b46ca5b1d6c5403a9c0581ba0fc0a",
-      "blockNumber": 295
+      "amountRao": "487236210",
+      "txHash": "0xa2669c49ef360855ffa6833d531f7d30f51772ab71d6db164ec0d5bf0aa683ff",
+      "blockNumber": 19968
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1640,9 +954,9 @@
       "signer": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
       "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
       "netuid": 6,
-      "amountRao": "2000000000",
-      "txHash": "0xd6888e5510aef88dacd5fb846b590e4cea9085167a9cb98b6cba9db8f1f38ca5",
-      "blockNumber": 297
+      "amountRao": "1990803163",
+      "txHash": "0xb02adc9288315a1930e685701b89ab7a17b25bce49c560e6cf279d2202d3287a",
+      "blockNumber": 19970
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1650,9 +964,9 @@
       "signer": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
       "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
       "netuid": 11,
-      "amountRao": "1000000000",
-      "txHash": "0x49692d1563965c0ef458fe29655c03fffcd5a80fa5921f50181d699a0a8cecf9",
-      "blockNumber": 299
+      "amountRao": "998121789",
+      "txHash": "0x7bc98e2039692c473f2ace848d269d99494428f709637b1c4a7d5cda220afe79",
+      "blockNumber": 19972
     },
     {
       "kind": "subtensorModule.addStake",
@@ -1660,15 +974,15 @@
       "signer": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
       "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
       "netuid": 16,
-      "amountRao": "500000000",
-      "txHash": "0xdacca07407d4661771b32c885257e2afd9e7f186f9d8e1e48558ca1c6d1f5ad3",
-      "blockNumber": 301
+      "amountRao": "491476634",
+      "txHash": "0xde5c1921642dd0a8b1ef176aefd68cdc63436e9629423ad43e4b3123690b76db",
+      "blockNumber": 19973
     },
     {
       "kind": "sudo.system.setStorage",
       "netuid": 1,
-      "txHash": "0xe40e532507434f931580b6b6d93e6ee974988b3e3088fd5200ed50279d2235cd",
-      "blockNumber": 303,
+      "txHash": "0x4ce9753fcab76ab79b3df44ef5d7fc7254390924831b30431e57a3e1481d58a0",
+      "blockNumber": 19974,
       "reserves": {
         "taoRao": "200000000000000",
         "alphaRao": "2000000000000000"
@@ -1677,8 +991,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 2,
-      "txHash": "0xa1c91e63fad7b2bd7c509afd68fb3f5c80724a5f9c5de32a76ef153db0f82494",
-      "blockNumber": 304,
+      "txHash": "0xd32e305bd339df196ed2b1dc30f95b7b07e04bf9f811955556334f8ebf3ffbc9",
+      "blockNumber": 19975,
       "reserves": {
         "taoRao": "100000000000000",
         "alphaRao": "2000000000000000"
@@ -1687,8 +1001,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 3,
-      "txHash": "0x005478dfadc95b8e0b3fd325885d69a11293af137be9aae477df048f7ad65a7f",
-      "blockNumber": 305,
+      "txHash": "0x60bdd649752c4a3e98d35483dd7c733cee0fd834e422f1f3a02d5681cd74c782",
+      "blockNumber": 19976,
       "reserves": {
         "taoRao": "50000000000000",
         "alphaRao": "1250000000000000"
@@ -1697,8 +1011,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 4,
-      "txHash": "0x01afceb84d4b7b49ed1b8fdce021ecc88bdf0c3a629b0e47a6b02b87dc9fc9a9",
-      "blockNumber": 306,
+      "txHash": "0x4731d9b586b44835cf49020fa7775e52610e80af211c9621f351cc271d1da32d",
+      "blockNumber": 19977,
       "reserves": {
         "taoRao": "25000000000000",
         "alphaRao": "833333333333333"
@@ -1707,8 +1021,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 5,
-      "txHash": "0xd19debd0bcbe508edded2fa465b972536b38d6f19a1fd0b973e110f545186888",
-      "blockNumber": 307,
+      "txHash": "0xe999a2d0533cd47b1deb723467f9f012e78ac831242bb96452a7296245671e40",
+      "blockNumber": 19979,
       "reserves": {
         "taoRao": "15000000000000",
         "alphaRao": "600000000000000"
@@ -1717,8 +1031,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 6,
-      "txHash": "0xfee82d2d69380135cb1b4236f490154016de517df44ccebb7d4b6a18dd893647",
-      "blockNumber": 308,
+      "txHash": "0x35111258f809a247e9866ce1912241aa2a8887a86faad71501f69cf6efc01744",
+      "blockNumber": 19980,
       "reserves": {
         "taoRao": "10000000000000",
         "alphaRao": "500000000000000"
@@ -1727,8 +1041,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 7,
-      "txHash": "0x80754efa5983996bbb5279086589006c824670ecfa8cdfd50d698662ea63842e",
-      "blockNumber": 309,
+      "txHash": "0x46aa071131aec0746811af9133aef553680127e9891c94a414b56eb8486c0075",
+      "blockNumber": 19981,
       "reserves": {
         "taoRao": "7500000000000",
         "alphaRao": "428571428571428"
@@ -1737,8 +1051,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 8,
-      "txHash": "0x41bb6e27a965db9859e2f6c132f696c6de9c5178d4975d0f7c2e283ee0df4434",
-      "blockNumber": 310,
+      "txHash": "0x91781196d6a141a49bbd45f5c6f0ceff30661d47256a18f15810767ba6d02a10",
+      "blockNumber": 19982,
       "reserves": {
         "taoRao": "5000000000000",
         "alphaRao": "333333333333333"
@@ -1747,8 +1061,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 9,
-      "txHash": "0xa6468f9feb3db42dc47b36722d72a73ae86e7305613d1ad2f7b9be9873781c70",
-      "blockNumber": 311,
+      "txHash": "0x29427ffd0da42fe5a2b2e1ff52a426d191c8b52dc5f6f74ace8feec12c306569",
+      "blockNumber": 19983,
       "reserves": {
         "taoRao": "5000000000000",
         "alphaRao": "416666666666666"
@@ -1757,8 +1071,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 10,
-      "txHash": "0xd29d681a00c0e1f926d6d42db547361e71a56b0818fc5620c44a843489026dd4",
-      "blockNumber": 312,
+      "txHash": "0xb76485826dcc39ffd911e57ef1eb8249adaa18a952427d89df928ad67c6c840a",
+      "blockNumber": 19984,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "250000000000000"
@@ -1767,8 +1081,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 11,
-      "txHash": "0x9113d876bd3057f060f356890c66c0c9f928acc5fea53db5f6dae9ea1372c7da",
-      "blockNumber": 313,
+      "txHash": "0x17597b4e9142a730efec48f85bb5bab5a8b5ff012dd4b719b3fb11a164c1d6c1",
+      "blockNumber": 19985,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "312500000000000"
@@ -1777,8 +1091,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 12,
-      "txHash": "0x858c17c3b051deeb41e3b7ad18529f55eb3bce10ce8fe40796ab79059eefb0c2",
-      "blockNumber": 314,
+      "txHash": "0xc82b6f84fcc76ca079a6dda115e45762c234c515f4c5ed7eaca9c391d1aa3b86",
+      "blockNumber": 19986,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "416666666666666"
@@ -1787,8 +1101,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 13,
-      "txHash": "0x551a4480c5f67b5fe8b832c75d1bdadef9fad8372a069580df4610135e81f327",
-      "blockNumber": 315,
+      "txHash": "0x3db72eca64ce6a48deb798ffa2f85399894bf6dcf249a98e754157f1349a12ab",
+      "blockNumber": 19987,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "500000000000000"
@@ -1797,8 +1111,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 14,
-      "txHash": "0x984b0d99cdfd5569e4246073520df161bd3baec3ca634f908ed840d2577e4a1d",
-      "blockNumber": 316,
+      "txHash": "0xcd8f5c7096d63eb17de3bbc4e05a63d680618f8f3682901ec4917b3e5ca79997",
+      "blockNumber": 19988,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "625000000000000"
@@ -1807,8 +1121,8 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 15,
-      "txHash": "0xad9157f439dded60996c87c88f3ef191ae6c22e53202a5b8b8c1d9dc36c088aa",
-      "blockNumber": 317,
+      "txHash": "0xf2897ee8e99e6d917c186b8b8f403264688b9789d4bfbfcf8bca7e0d0298fae7",
+      "blockNumber": 19989,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "833333333333333"
@@ -1817,304 +1131,547 @@
     {
       "kind": "sudo.system.setStorage",
       "netuid": 16,
-      "txHash": "0x6cf6857ddb22d4fcf05e0dd554afc3b8c90a2f50b03e8539e99d388acb531ecc",
-      "blockNumber": 318,
+      "txHash": "0xc085429b05cb52bb871f524cbd807a908cfa5af85626d02a570c240b9f1763e8",
+      "blockNumber": 19990,
       "reserves": {
         "taoRao": "2500000000000",
         "alphaRao": "1250000000000000"
       }
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-01",
-      "txHash": "0x2e09736396fe56f6e8648e5fd9a61ba36960b7385b54bc56e66d9adc943fd415",
-      "blockNumber": 319,
-      "address": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-      "targetFreeRao": "98847654103"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-02",
-      "txHash": "0x11184451cab5d01ece69b44f47e36fb01268b8f0f336a302ebb90ee22ecb61b1",
-      "blockNumber": 321,
-      "address": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-      "targetFreeRao": "99883691976"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-03",
-      "txHash": "0xbf56527e5c48a1f268452f72035d38ace69873e4fd4d6790c266d06de2135122",
-      "blockNumber": 323,
-      "address": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-      "targetFreeRao": "99908664649"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-04",
-      "txHash": "0x6a55737dcd5ca9e7beb65030a78f7d98380362fd398395e6de1b97cb75d9137f",
-      "blockNumber": 324,
-      "address": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-      "targetFreeRao": "99906776665"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-05",
-      "txHash": "0x051032d796425fc351a92988e466a136361c7f0a225ba665d9fa431b452e6089",
-      "blockNumber": 326,
-      "address": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-      "targetFreeRao": "99940202696"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-06",
-      "txHash": "0xc74df9d1c80d0f98c0fd5bd8b531a1864764ba54d130a98bb256a3bfce9ce420",
-      "blockNumber": 328,
-      "address": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-      "targetFreeRao": "99920659896"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-07",
-      "txHash": "0x13a64386fd2aad77e8aefe9fc916b7da1c18cad7589c85785acb5e31fc092a69",
-      "blockNumber": 329,
-      "address": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-      "targetFreeRao": "99934786766"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-08",
-      "txHash": "0xd46c7e7a18e0c731a4c8c1d2c22fffbcee89d2e93acd3d90171c37e0b9426f28",
-      "blockNumber": 330,
-      "address": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-      "targetFreeRao": "99942178285"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-09",
-      "txHash": "0xe7c5649d4bf2d5e0ff9ba78addc3a10502b44122bedb532dc158fbb98dfbd21b",
-      "blockNumber": 331,
-      "address": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-      "targetFreeRao": "99957432453"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-10",
-      "txHash": "0x5026b6fdb5d7b2ad309e51746993133ca2f0d0f3c2f3a8e174bd0895c4fc7404",
-      "blockNumber": 332,
-      "address": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-      "targetFreeRao": "99968417883"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-11",
-      "txHash": "0x5feb926a1ef5ff75b196a979dcaca759c778b26c0e372d581ef9fcd22c333962",
-      "blockNumber": 333,
-      "address": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-      "targetFreeRao": "99916086843"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-12",
-      "txHash": "0x83c786c53120d75e52cf04fcb507dc54de8259fa61bddff2467605097489d49e",
-      "blockNumber": 334,
-      "address": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-      "targetFreeRao": "99929288621"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-13",
-      "txHash": "0x0fc83f345c823d681427bc02eb05922879ba5901a1ecc5489a3381b030d087b0",
-      "blockNumber": 335,
-      "address": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-      "targetFreeRao": "99949723550"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-14",
-      "txHash": "0x137fac59c800da2763facd110bb952057e4d363261376ce57768ebb2e7134e51",
-      "blockNumber": 336,
-      "address": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-      "targetFreeRao": "99957982308"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-15",
-      "txHash": "0x0e71b6ef86e97807329736859080d9723e3d0bb3b5cbfbbc40800a79f29cc6f7",
-      "blockNumber": 337,
-      "address": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-      "targetFreeRao": "99967986325"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-16",
-      "txHash": "0x2e93892e5be1ce87c2115d28450af668d1d0c52ce215378b3ae7c71b9e0f77bc",
-      "blockNumber": 339,
-      "address": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-      "targetFreeRao": "99857522358"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-17",
-      "txHash": "0x5d62998dd4146da8649d0f5f60bccf1849eff07dbb28b27fa94d1b82ab9cb3f8",
-      "blockNumber": 341,
-      "address": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-      "targetFreeRao": "99911153811"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-18",
-      "txHash": "0x84d210e9aa933ed289c148398c8655176226101505d8b7b3036b83923c4d3d28",
-      "blockNumber": 343,
-      "address": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-      "targetFreeRao": "99932021334"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-19",
-      "txHash": "0x301b0df47090f76964260dc461a5460a3d458660cfb11e10286e5f65eabe054c",
-      "blockNumber": 345,
-      "address": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-      "targetFreeRao": "99945321676"
-    },
-    {
-      "kind": "sudo.balances.forceSetBalance",
-      "reason": "delegator-total-topup:delegator-20",
-      "txHash": "0x36290d9826c3439e14039879559f9e97ceae81f71c2a11bae3f179d2ef8a72ff",
-      "blockNumber": 346,
-      "address": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-      "targetFreeRao": "99944036508"
     }
   ],
   "controller": {
     "address": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533"
   },
   "pureProxy": {
-    "address": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
+    "address": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
     "createdTx": {
-      "txHash": "0x043c2164ed8a5f8002bed904a390e6bfbc40fe8557f71a14d3282e857d086345",
-      "blockNumber": 107
+      "txHash": "0xb9a4eefb274e6cef7b5ce1839da6819ae69cedd4c3bfa3881ace1ba203bcedad",
+      "blockNumber": 419
     }
   },
   "addresses": {
     "controller": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-    "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-    "rootHotkey": "5D4dLAfDbPM999gghuecRNtgE1WqYrJAFC55qxDgDFMa6i4P"
+    "additionalControllers": [
+      {
+        "label": "controller-02",
+        "address": "5F52F5DAaXcreoU8wAz9fKqYTuVo4bqEmhNtgSzEUHUodKKJ"
+      },
+      {
+        "label": "controller-03",
+        "address": "5CcnJodQmJFioE8CdgxJEUj2LR5v43EcXVUKU1BCZEHGUuWQ"
+      },
+      {
+        "label": "controller-04",
+        "address": "5HTtb9dsvzcixmAntLxv3yDcTcZ4pZf4hR9eMSebfSN4doyq"
+      },
+      {
+        "label": "controller-05",
+        "address": "5DFiNEi3b4ajMHvyPzaqH8paSRPrmgvyTSixPJG8qQc8Vsiv"
+      },
+      {
+        "label": "controller-06",
+        "address": "5H9QaE8WWVJUpUvU4JP8cvksk4hpscnEDcp2oVninXStQAnA"
+      },
+      {
+        "label": "controller-07",
+        "address": "5DMG3Z67MBDgcXNFTaiH76JyCwRpo8qjp2cAYWDWV7J46jkt"
+      },
+      {
+        "label": "controller-08",
+        "address": "5HeRMvXUdJQWLEzrJaVsLNiwv8BnrdsXN2sPhEYqnxGscQxD"
+      },
+      {
+        "label": "controller-09",
+        "address": "5Cf6eV1gqvh4hVtP17zSSVk6Kc4ogRTo6kTcrvMQ1XFt3DxZ"
+      },
+      {
+        "label": "controller-10",
+        "address": "5CPaDUkZLUtfSsmwFUbBhfVVaChnDoJcyyhYDtQWB6VcSWHh"
+      }
+    ],
+    "funders": [
+      {
+        "label": "funder-alice",
+        "address": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+      },
+      {
+        "label": "funder-2",
+        "address": "5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty"
+      },
+      {
+        "label": "funder-3",
+        "address": "5FLSigC9HGRKVhB9FiEo4Y3koPsNmBmLJbpXg2mp1hXcS59Y"
+      },
+      {
+        "label": "funder-4",
+        "address": "5DAAnrj7VHTznn2AWBemMuyBwZWs6FNFjdyVXUeYum3PTXFy"
+      },
+      {
+        "label": "funder-5",
+        "address": "5HGjWAeFDfFCWPsjFQdVV2Msvz2XtMktvgocEZcCj68kUMaw"
+      },
+      {
+        "label": "funder-6",
+        "address": "5CiPPseXPECbkjWCa6MnjNokrgYjMqmKndv2rSnekmSK2DjL"
+      }
+    ],
+    "rootHotkey": "5D4dLAfDbPM999gghuecRNtgE1WqYrJAFC55qxDgDFMa6i4P",
+    "delegators": [
+      {
+        "label": "delegator-01",
+        "address": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE"
+      },
+      {
+        "label": "delegator-02",
+        "address": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb"
+      },
+      {
+        "label": "delegator-03",
+        "address": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2"
+      },
+      {
+        "label": "delegator-04",
+        "address": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ"
+      },
+      {
+        "label": "delegator-05",
+        "address": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB"
+      },
+      {
+        "label": "delegator-06",
+        "address": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8"
+      },
+      {
+        "label": "delegator-07",
+        "address": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas"
+      },
+      {
+        "label": "delegator-08",
+        "address": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv"
+      },
+      {
+        "label": "delegator-09",
+        "address": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo"
+      },
+      {
+        "label": "delegator-10",
+        "address": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o"
+      },
+      {
+        "label": "delegator-11",
+        "address": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5"
+      },
+      {
+        "label": "delegator-12",
+        "address": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc"
+      },
+      {
+        "label": "delegator-13",
+        "address": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF"
+      },
+      {
+        "label": "delegator-14",
+        "address": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2"
+      },
+      {
+        "label": "delegator-15",
+        "address": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW"
+      },
+      {
+        "label": "delegator-16",
+        "address": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv"
+      },
+      {
+        "label": "delegator-17",
+        "address": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99"
+      },
+      {
+        "label": "delegator-18",
+        "address": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2"
+      },
+      {
+        "label": "delegator-19",
+        "address": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9"
+      },
+      {
+        "label": "delegator-20",
+        "address": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H"
+      }
+    ],
+    "seeders": [
+      {
+        "label": "seeder-01",
+        "address": "5CCpcaAQgo8Yif4e7Zr8H7Z6jdpD9s4bsEn1Dqdxg2146PAA"
+      },
+      {
+        "label": "seeder-02",
+        "address": "5C7pvNYUQHdQiboPExc7dvWCy6vL91z61ZEerjPAge44wVUe"
+      },
+      {
+        "label": "seeder-03",
+        "address": "5H9DcnUXjGSVRZbLyqiEVRVa96UmdbtnGygZCHU2A9Q8beMQ"
+      },
+      {
+        "label": "seeder-04",
+        "address": "5EDCHhnD8ACGLSidyqm3B6dF31DwL7mWmLhMZr7XWB93Xdfy"
+      },
+      {
+        "label": "seeder-05",
+        "address": "5C5McDJPYY7CJz5s2Myidj8hhbXvffR6VYye3jd4YWZLFdUe"
+      },
+      {
+        "label": "seeder-06",
+        "address": "5EfC28qgW2jaK6ANUTVwasT2XPP53EcaGkaTgHxWsH5RC4dk"
+      },
+      {
+        "label": "seeder-07",
+        "address": "5Eead8NVhy8uEp7oUUtBBirYihVXgdYsZYLpoTj9Sd21PNkg"
+      },
+      {
+        "label": "seeder-08",
+        "address": "5Ge2ViR6Np2W4kAwdqunFeiyab6S2UqicN7bqrcYS12zDSif"
+      },
+      {
+        "label": "seeder-09",
+        "address": "5FWjooxVz8sMR7u85CMXFKqwk4SJMAZx1nkoXQpnbncAJBaC"
+      },
+      {
+        "label": "seeder-10",
+        "address": "5GF4dJrDVAPU3hequPKm5FWzMAYLsMxEwzKhE9J82ZRJJz1M"
+      },
+      {
+        "label": "seeder-11",
+        "address": "5DZyL9gjbJd9cLcwDTTvxBZbxDD5o7NPYiSvhaY5jHmCt8oR"
+      },
+      {
+        "label": "seeder-12",
+        "address": "5CPNdqqv3MAE5WQG11fWLocXUiEUkzc14rYbWoAQtqBg1C2v"
+      },
+      {
+        "label": "seeder-13",
+        "address": "5FWiYNrY8TjsfmMgWxg3ngwKWJ8wUvjpkg5FGR4XJWZAgPyd"
+      },
+      {
+        "label": "seeder-14",
+        "address": "5HT2Hb4khFECyFMnYizFQkrserR7uh8UoGLDx7ZSAKnXAgD9"
+      },
+      {
+        "label": "seeder-15",
+        "address": "5DFTcCrPobTBkuSfEaugBoGeBZ9Ti7cYqDqXiJofo51Mi8dr"
+      },
+      {
+        "label": "seeder-16",
+        "address": "5EHsB4fjKt4HH48BoHTfEJFsKZSb1iLQWj1rU5qsGUdBEws9"
+      }
+    ],
+    "validators": [
+      {
+        "netuid": 0,
+        "label": "validator-root",
+        "address": "5D4dLAfDbPM999gghuecRNtgE1WqYrJAFC55qxDgDFMa6i4P"
+      },
+      {
+        "netuid": 1,
+        "label": "validator-01",
+        "address": "5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21"
+      },
+      {
+        "netuid": 2,
+        "label": "validator-02",
+        "address": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX"
+      },
+      {
+        "netuid": 3,
+        "label": "validator-03",
+        "address": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk"
+      },
+      {
+        "netuid": 4,
+        "label": "validator-04",
+        "address": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp"
+      },
+      {
+        "netuid": 5,
+        "label": "validator-05",
+        "address": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB"
+      },
+      {
+        "netuid": 6,
+        "label": "validator-06",
+        "address": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU"
+      },
+      {
+        "netuid": 7,
+        "label": "validator-07",
+        "address": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF"
+      },
+      {
+        "netuid": 8,
+        "label": "validator-08",
+        "address": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK"
+      },
+      {
+        "netuid": 9,
+        "label": "validator-09",
+        "address": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6"
+      },
+      {
+        "netuid": 10,
+        "label": "validator-10",
+        "address": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza"
+      },
+      {
+        "netuid": 11,
+        "label": "validator-11",
+        "address": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b"
+      },
+      {
+        "netuid": 12,
+        "label": "validator-12",
+        "address": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9"
+      },
+      {
+        "netuid": 13,
+        "label": "validator-13",
+        "address": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa"
+      },
+      {
+        "netuid": 14,
+        "label": "validator-14",
+        "address": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF"
+      },
+      {
+        "netuid": 15,
+        "label": "validator-15",
+        "address": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk"
+      },
+      {
+        "netuid": 16,
+        "label": "validator-16",
+        "address": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie"
+      }
+    ]
   },
   "proxyLinks": [
     {
       "delegator": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
     },
     {
       "delegator": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-      "pureProxy": "5EGTsmjr67YwbLyDeKvJKCuWvYKs6NwdZCqUjSnfwxrNSaA3",
-      "proxyType": "Staking"
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Staking",
+      "delay": 0,
+      "realPaysFee": true
+    }
+  ],
+  "pureProxyControllerLinks": [
+    {
+      "controller": "5F52F5DAaXcreoU8wAz9fKqYTuVo4bqEmhNtgSzEUHUodKKJ",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5CcnJodQmJFioE8CdgxJEUj2LR5v43EcXVUKU1BCZEHGUuWQ",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5HTtb9dsvzcixmAntLxv3yDcTcZ4pZf4hR9eMSebfSN4doyq",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5DFiNEi3b4ajMHvyPzaqH8paSRPrmgvyTSixPJG8qQc8Vsiv",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5H9QaE8WWVJUpUvU4JP8cvksk4hpscnEDcp2oVninXStQAnA",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5DMG3Z67MBDgcXNFTaiH76JyCwRpo8qjp2cAYWDWV7J46jkt",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5HeRMvXUdJQWLEzrJaVsLNiwv8BnrdsXN2sPhEYqnxGscQxD",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5Cf6eV1gqvh4hVtP17zSSVk6Kc4ogRTo6kTcrvMQ1XFt3DxZ",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
+    },
+    {
+      "controller": "5CPaDUkZLUtfSsmwFUbBhfVVaChnDoJcyyhYDtQWB6VcSWHh",
+      "pureProxy": "5DtJN7eZneR2w6jPcJo72bWYND5Yryp3eYo8rx3ZgMPH31hM",
+      "proxyType": "Any",
+      "delay": 0,
+      "realPaysFee": true
     }
   ],
   "wallets": {
     "controller": {
       "address": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-      "freeRao": "8999971000396847784",
-      "totalStakedTaoEquivalentRao": "51426871860",
-      "totalHoldingsRao": "8999971051823719644",
+      "freeRao": "8999999999997735459",
+      "totalStakedTaoEquivalentRao": "4936337679959",
+      "totalHoldingsRao": "9000004936335415418",
       "positions": [
         {
           "netuid": 2,
           "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "224121990514",
-          "taoEquivalentRao": "11206824019",
+          "alphaAmountRao": "18473280211651",
+          "taoEquivalentRao": "923664010582",
           "emissionRao": "7396482476",
           "taoEmissionRao": "0",
           "isRegistered": true
@@ -2123,8 +1680,8 @@
           "netuid": 3,
           "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "229244929259",
-          "taoEquivalentRao": "9170962811",
+          "alphaAmountRao": "20328853655123",
+          "taoEquivalentRao": "813154146204",
           "emissionRao": "7396482413",
           "taoEmissionRao": "0",
           "isRegistered": true
@@ -2133,8 +1690,8 @@
           "netuid": 4,
           "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "215556993875",
-          "taoEquivalentRao": "6468353228",
+          "alphaAmountRao": "20333342759785",
+          "taoEquivalentRao": "610000282793",
           "emissionRao": "7396482341",
           "taoEmissionRao": "0",
           "isRegistered": true
@@ -2143,9 +1700,9 @@
           "netuid": 5,
           "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "214157786629",
-          "taoEquivalentRao": "5356238281",
-          "emissionRao": "7396482242",
+          "alphaAmountRao": "20324300997485",
+          "taoEquivalentRao": "508107524937",
+          "emissionRao": "7396482260",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2153,9 +1710,9 @@
           "netuid": 6,
           "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "199510416625",
-          "taoEquivalentRao": "3992758112",
-          "emissionRao": "7396482179",
+          "alphaAmountRao": "20318282120950",
+          "taoEquivalentRao": "406365642419",
+          "emissionRao": "7396482197",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2163,9 +1720,9 @@
           "netuid": 7,
           "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "205071413188",
-          "taoEquivalentRao": "3591681308",
-          "emissionRao": "7396482116",
+          "alphaAmountRao": "20319815393403",
+          "taoEquivalentRao": "355596769384",
+          "emissionRao": "7396482134",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2173,9 +1730,9 @@
           "netuid": 8,
           "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "190634948885",
-          "taoEquivalentRao": "2862999211",
-          "emissionRao": "7396481989",
+          "alphaAmountRao": "20311918332115",
+          "taoEquivalentRao": "304678774981",
+          "emissionRao": "7396482016",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2183,9 +1740,9 @@
           "netuid": 9,
           "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "189019540611",
-          "taoEquivalentRao": "2271016409",
-          "emissionRao": "7396482107",
+          "alphaAmountRao": "20303863429024",
+          "taoEquivalentRao": "243646361148",
+          "emissionRao": "7396482125",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2193,9 +1750,9 @@
           "netuid": 10,
           "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "172899632052",
-          "taoEquivalentRao": "1733128132",
-          "emissionRao": "7396481791",
+          "alphaAmountRao": "20301272371646",
+          "taoEquivalentRao": "203012723716",
+          "emissionRao": "7396481854",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2203,9 +1760,9 @@
           "netuid": 11,
           "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "171572526006",
-          "taoEquivalentRao": "1375830525",
-          "emissionRao": "7396481944",
+          "alphaAmountRao": "20295558666770",
+          "taoEquivalentRao": "162364469334",
+          "emissionRao": "7396481989",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2213,9 +1770,9 @@
           "netuid": 12,
           "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "179149643618",
-          "taoEquivalentRao": "1077376321",
-          "emissionRao": "7396482107",
+          "alphaAmountRao": "20294075974290",
+          "taoEquivalentRao": "121764455845",
+          "emissionRao": "7396482125",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2223,9 +1780,9 @@
           "netuid": 13,
           "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "171470886073",
-          "taoEquivalentRao": "859345312",
-          "emissionRao": "7396482179",
+          "alphaAmountRao": "20285033288350",
+          "taoEquivalentRao": "101425166441",
+          "emissionRao": "7396482197",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2233,9 +1790,9 @@
           "netuid": 14,
           "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "170249386932",
-          "taoEquivalentRao": "682535456",
-          "emissionRao": "7396482260",
+          "alphaAmountRao": "20282568490435",
+          "taoEquivalentRao": "81130273961",
+          "emissionRao": "7396482269",
           "taoEmissionRao": "0",
           "isRegistered": true
         },
@@ -2243,8 +1800,8 @@
           "netuid": 15,
           "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "150757539470",
-          "taoEquivalentRao": "453283232",
+          "alphaAmountRao": "20287774551438",
+          "taoEquivalentRao": "60863323654",
           "emissionRao": "7396482341",
           "taoEmissionRao": "0",
           "isRegistered": true
@@ -2253,21 +1810,95 @@
           "netuid": 16,
           "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
           "coldkey": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
-          "alphaAmountRao": "161911817790",
-          "taoEquivalentRao": "324539503",
+          "alphaAmountRao": "20281877280301",
+          "taoEquivalentRao": "40563754560",
           "emissionRao": "7396482413",
           "taoEmissionRao": "0",
           "isRegistered": true
         }
       ]
     },
+    "additionalControllers": [
+      {
+        "label": "controller-02",
+        "address": "5F52F5DAaXcreoU8wAz9fKqYTuVo4bqEmhNtgSzEUHUodKKJ",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-03",
+        "address": "5CcnJodQmJFioE8CdgxJEUj2LR5v43EcXVUKU1BCZEHGUuWQ",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-04",
+        "address": "5HTtb9dsvzcixmAntLxv3yDcTcZ4pZf4hR9eMSebfSN4doyq",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-05",
+        "address": "5DFiNEi3b4ajMHvyPzaqH8paSRPrmgvyTSixPJG8qQc8Vsiv",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-06",
+        "address": "5H9QaE8WWVJUpUvU4JP8cvksk4hpscnEDcp2oVninXStQAnA",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-07",
+        "address": "5DMG3Z67MBDgcXNFTaiH76JyCwRpo8qjp2cAYWDWV7J46jkt",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-08",
+        "address": "5HeRMvXUdJQWLEzrJaVsLNiwv8BnrdsXN2sPhEYqnxGscQxD",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-09",
+        "address": "5Cf6eV1gqvh4hVtP17zSSVk6Kc4ogRTo6kTcrvMQ1XFt3DxZ",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      },
+      {
+        "label": "controller-10",
+        "address": "5CPaDUkZLUtfSsmwFUbBhfVVaChnDoJcyyhYDtQWB6VcSWHh",
+        "freeRao": "0",
+        "totalStakedTaoEquivalentRao": "0",
+        "totalHoldingsRao": "0",
+        "positions": []
+      }
+    ],
     "delegators": [
       {
         "label": "delegator-01",
         "address": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-        "freeRao": "98847654103",
-        "totalStakedTaoEquivalentRao": "1194337039",
-        "totalHoldingsRao": "100041991142",
+        "freeRao": "110024447850",
+        "totalStakedTaoEquivalentRao": "3563358114",
+        "totalHoldingsRao": "113587805964",
         "positions": [
           {
             "netuid": 0,
@@ -2283,8 +1914,8 @@
             "netuid": 2,
             "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
             "coldkey": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-            "alphaAmountRao": "3021802235",
-            "taoEquivalentRao": "151099983",
+            "alphaAmountRao": "50872684228",
+            "taoEquivalentRao": "2543634211",
             "emissionRao": "7396482476",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2293,9 +1924,9 @@
             "netuid": 7,
             "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
             "coldkey": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-            "alphaAmountRao": "2083857717",
-            "taoEquivalentRao": "36497621",
-            "emissionRao": "7396482116",
+            "alphaAmountRao": "962965632",
+            "taoEquivalentRao": "16851898",
+            "emissionRao": "7396482134",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2303,9 +1934,9 @@
             "netuid": 12,
             "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
             "coldkey": "5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE",
-            "alphaAmountRao": "1120626172",
-            "taoEquivalentRao": "6739435",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "478667561",
+            "taoEquivalentRao": "2872005",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2314,16 +1945,16 @@
       {
         "label": "delegator-02",
         "address": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-        "freeRao": "99883691976",
-        "totalStakedTaoEquivalentRao": "149041766",
-        "totalHoldingsRao": "100032733742",
+        "freeRao": "109375960787",
+        "totalStakedTaoEquivalentRao": "224063074",
+        "totalHoldingsRao": "109600023861",
         "positions": [
           {
             "netuid": 3,
             "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
             "coldkey": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-            "alphaAmountRao": "2818259711",
-            "taoEquivalentRao": "112744870",
+            "alphaAmountRao": "1476204132",
+            "taoEquivalentRao": "59048165",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2332,9 +1963,9 @@
             "netuid": 8,
             "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
             "coldkey": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-            "alphaAmountRao": "2014602443",
-            "taoEquivalentRao": "30256160",
-            "emissionRao": "7396481989",
+            "alphaAmountRao": "9390933827",
+            "taoEquivalentRao": "140864007",
+            "emissionRao": "7396482016",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2342,9 +1973,9 @@
             "netuid": 13,
             "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
             "coldkey": "5HBYZy2XRYhoqxNt6Uizdg3x5wf8jGLUpf8zyUJj3CejvwJb",
-            "alphaAmountRao": "1205316376",
-            "taoEquivalentRao": "6040736",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "4830180523",
+            "taoEquivalentRao": "24150902",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2353,16 +1984,16 @@
       {
         "label": "delegator-03",
         "address": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-        "freeRao": "99908664649",
-        "totalStakedTaoEquivalentRao": "116969248",
-        "totalHoldingsRao": "100025633897",
+        "freeRao": "118168515905",
+        "totalStakedTaoEquivalentRao": "75910104",
+        "totalHoldingsRao": "118244426009",
         "positions": [
           {
             "netuid": 4,
             "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
             "coldkey": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-            "alphaAmountRao": "2943323408",
-            "taoEquivalentRao": "88322380",
+            "alphaAmountRao": "1490716191",
+            "taoEquivalentRao": "44721485",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2371,9 +2002,9 @@
             "netuid": 9,
             "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
             "coldkey": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-            "alphaAmountRao": "2021465500",
-            "taoEquivalentRao": "24287664",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "990558695",
+            "taoEquivalentRao": "11886704",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2381,9 +2012,9 @@
             "netuid": 14,
             "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
             "coldkey": "5GE4WAKSy7zVz3cZmsosFrzMFAsK5hqYba1y77qHxkKyFCW2",
-            "alphaAmountRao": "1087317280",
-            "taoEquivalentRao": "4359204",
-            "emissionRao": "7396482260",
+            "alphaAmountRao": "4825478962",
+            "taoEquivalentRao": "19301915",
+            "emissionRao": "7396482269",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2392,17 +2023,17 @@
       {
         "label": "delegator-04",
         "address": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-        "freeRao": "99906776665",
-        "totalStakedTaoEquivalentRao": "116365527",
-        "totalHoldingsRao": "100023142192",
+        "freeRao": "121920940665",
+        "totalStakedTaoEquivalentRao": "74917011",
+        "totalHoldingsRao": "121995857676",
         "positions": [
           {
             "netuid": 5,
             "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
             "coldkey": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-            "alphaAmountRao": "3651648337",
-            "taoEquivalentRao": "91330734",
-            "emissionRao": "7396482242",
+            "alphaAmountRao": "2015564312",
+            "taoEquivalentRao": "50389107",
+            "emissionRao": "7396482260",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2410,9 +2041,9 @@
             "netuid": 10,
             "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
             "coldkey": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-            "alphaAmountRao": "2146563979",
-            "taoEquivalentRao": "21517505",
-            "emissionRao": "7396481791",
+            "alphaAmountRao": "999764896",
+            "taoEquivalentRao": "9997648",
+            "emissionRao": "7396481854",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2420,8 +2051,8 @@
             "netuid": 15,
             "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
             "coldkey": "5G3uaUCNpvb41E89zUD5YMqGeKRCxWuq7GUqSk4e9DAJ2BXQ",
-            "alphaAmountRao": "1169785181",
-            "taoEquivalentRao": "3517288",
+            "alphaAmountRao": "4843418758",
+            "taoEquivalentRao": "14530256",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2431,17 +2062,17 @@
       {
         "label": "delegator-05",
         "address": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-        "freeRao": "99940202696",
-        "totalStakedTaoEquivalentRao": "75610713",
-        "totalHoldingsRao": "100015813409",
+        "freeRao": "118379775562",
+        "totalStakedTaoEquivalentRao": "48386906",
+        "totalHoldingsRao": "118428162468",
         "positions": [
           {
             "netuid": 6,
             "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
             "coldkey": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-            "alphaAmountRao": "2861870272",
-            "taoEquivalentRao": "57274758",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "1528826565",
+            "taoEquivalentRao": "30576531",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2449,9 +2080,9 @@
             "netuid": 11,
             "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
             "coldkey": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-            "alphaAmountRao": "2023031603",
-            "taoEquivalentRao": "16223432",
-            "emissionRao": "7396481944",
+            "alphaAmountRao": "1012133575",
+            "taoEquivalentRao": "8097068",
+            "emissionRao": "7396481989",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2459,8 +2090,8 @@
             "netuid": 16,
             "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
             "coldkey": "5GN2gTgokbY82Y862mmZyk5x3XZEHMDsdB1J3CjfojdEx7BB",
-            "alphaAmountRao": "1053877121",
-            "taoEquivalentRao": "2112523",
+            "alphaAmountRao": "4856653695",
+            "taoEquivalentRao": "9713307",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2470,16 +2101,16 @@
       {
         "label": "delegator-06",
         "address": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-        "freeRao": "99920659896",
-        "totalStakedTaoEquivalentRao": "98961282",
-        "totalHoldingsRao": "100019621178",
+        "freeRao": "118348912721",
+        "totalStakedTaoEquivalentRao": "773976618",
+        "totalHoldingsRao": "119122889339",
         "positions": [
           {
             "netuid": 2,
             "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
             "coldkey": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-            "alphaAmountRao": "822293159",
-            "taoEquivalentRao": "41117371",
+            "alphaAmountRao": "14819028898",
+            "taoEquivalentRao": "740951444",
             "emissionRao": "7396482476",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2488,9 +2119,9 @@
             "netuid": 7,
             "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
             "coldkey": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-            "alphaAmountRao": "2661820090",
-            "taoEquivalentRao": "46620719",
-            "emissionRao": "7396482116",
+            "alphaAmountRao": "1536988063",
+            "taoEquivalentRao": "26897291",
+            "emissionRao": "7396482134",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2498,9 +2129,9 @@
             "netuid": 12,
             "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
             "coldkey": "5GU8mdfRCuADy8GrtPNFtA7sF1t5Hr9Ji1Xsk26sji1m9kS8",
-            "alphaAmountRao": "1866132282",
-            "taoEquivalentRao": "11223192",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "1021313900",
+            "taoEquivalentRao": "6127883",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2509,16 +2140,16 @@
       {
         "label": "delegator-07",
         "address": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-        "freeRao": "99934786766",
-        "totalStakedTaoEquivalentRao": "81531765",
-        "totalHoldingsRao": "100016318531",
+        "freeRao": "109810822745",
+        "totalStakedTaoEquivalentRao": "235970361",
+        "totalHoldingsRao": "110046793106",
         "positions": [
           {
             "netuid": 3,
             "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
             "coldkey": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-            "alphaAmountRao": "825037132",
-            "taoEquivalentRao": "33005767",
+            "alphaAmountRao": "521129377",
+            "taoEquivalentRao": "20845175",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2527,9 +2158,9 @@
             "netuid": 8,
             "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
             "coldkey": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-            "alphaAmountRao": "2578032783",
-            "taoEquivalentRao": "38718503",
-            "emissionRao": "7396481989",
+            "alphaAmountRao": "13998681547",
+            "taoEquivalentRao": "209980223",
+            "emissionRao": "7396482016",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2537,9 +2168,9 @@
             "netuid": 13,
             "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
             "coldkey": "5GxFgzizcZqpYFYTE4v2U5PERhNn5S38KLaYYbahQxPhHQas",
-            "alphaAmountRao": "1956851483",
-            "taoEquivalentRao": "9807495",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "1028992661",
+            "taoEquivalentRao": "5144963",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2548,16 +2179,16 @@
       {
         "label": "delegator-08",
         "address": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-        "freeRao": "99942178285",
-        "totalStakedTaoEquivalentRao": "72670799",
-        "totalHoldingsRao": "100014849084",
+        "freeRao": "126271129667",
+        "totalStakedTaoEquivalentRao": "45195257",
+        "totalHoldingsRao": "126316324924",
         "positions": [
           {
             "netuid": 4,
             "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
             "coldkey": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-            "alphaAmountRao": "801462403",
-            "taoEquivalentRao": "24050110",
+            "alphaAmountRao": "526384809",
+            "taoEquivalentRao": "15791544",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2566,9 +2197,9 @@
             "netuid": 9,
             "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
             "coldkey": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-            "alphaAmountRao": "3442216907",
-            "taoEquivalentRao": "41358371",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "2103856725",
+            "taoEquivalentRao": "25246280",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2576,9 +2207,9 @@
             "netuid": 14,
             "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
             "coldkey": "5EporZD9ftP4sWJfKucgzU6j75E2GGtp1P2mHV5LhPn8PEYv",
-            "alphaAmountRao": "1811394653",
-            "taoEquivalentRao": "7262318",
-            "emissionRao": "7396482260",
+            "alphaAmountRao": "1039358486",
+            "taoEquivalentRao": "4157433",
+            "emissionRao": "7396482269",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2587,17 +2218,17 @@
       {
         "label": "delegator-09",
         "address": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-        "freeRao": "99957432453",
-        "totalStakedTaoEquivalentRao": "53540836",
-        "totalHoldingsRao": "100010973289",
+        "freeRao": "122536878104",
+        "totalStakedTaoEquivalentRao": "32403741",
+        "totalHoldingsRao": "122569281845",
         "positions": [
           {
             "netuid": 5,
             "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
             "coldkey": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-            "alphaAmountRao": "801945855",
-            "taoEquivalentRao": "20057505",
-            "emissionRao": "7396482242",
+            "alphaAmountRao": "533219455",
+            "taoEquivalentRao": "13330486",
+            "emissionRao": "7396482260",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2605,9 +2236,9 @@
             "netuid": 10,
             "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
             "coldkey": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-            "alphaAmountRao": "2770127544",
-            "taoEquivalentRao": "27769663",
-            "emissionRao": "7396481791",
+            "alphaAmountRao": "1591885855",
+            "taoEquivalentRao": "15918858",
+            "emissionRao": "7396481854",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2615,8 +2246,8 @@
             "netuid": 15,
             "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
             "coldkey": "5Hpaw9E61EjTxRRXECRKNP1BN1nzKrFCE3qwJ6PasX6m2Xzo",
-            "alphaAmountRao": "1900162013",
-            "taoEquivalentRao": "5713668",
+            "alphaAmountRao": "1051465916",
+            "taoEquivalentRao": "3154397",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2626,17 +2257,17 @@
       {
         "label": "delegator-10",
         "address": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-        "freeRao": "99968417883",
-        "totalStakedTaoEquivalentRao": "39858094",
-        "totalHoldingsRao": "100008275977",
+        "freeRao": "113877771616",
+        "totalStakedTaoEquivalentRao": "42877422",
+        "totalHoldingsRao": "113920649038",
         "positions": [
           {
             "netuid": 6,
             "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
             "coldkey": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-            "alphaAmountRao": "779537645",
-            "taoEquivalentRao": "15601032",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "539398064",
+            "taoEquivalentRao": "10787961",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2644,9 +2275,9 @@
             "netuid": 11,
             "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
             "coldkey": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-            "alphaAmountRao": "2585702639",
-            "taoEquivalentRao": "20736242",
-            "emissionRao": "7396481944",
+            "alphaAmountRao": "1609364464",
+            "taoEquivalentRao": "12874915",
+            "emissionRao": "7396481989",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2654,8 +2285,8 @@
             "netuid": 16,
             "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
             "coldkey": "5EFJVSxvFAZ4YL36t1Cg7VxsLongKqfcW92zadPehVjdY54o",
-            "alphaAmountRao": "1756390156",
-            "taoEquivalentRao": "3520820",
+            "alphaAmountRao": "9607273376",
+            "taoEquivalentRao": "19214546",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2665,16 +2296,16 @@
       {
         "label": "delegator-11",
         "address": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-        "freeRao": "99916086843",
-        "totalStakedTaoEquivalentRao": "103076623",
-        "totalHoldingsRao": "100019163466",
+        "freeRao": "114113707938",
+        "totalStakedTaoEquivalentRao": "1346701782",
+        "totalHoldingsRao": "115460409720",
         "positions": [
           {
             "netuid": 2,
             "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
             "coldkey": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-            "alphaAmountRao": "1476313639",
-            "taoEquivalentRao": "73820601",
+            "alphaAmountRao": "26550134549",
+            "taoEquivalentRao": "1327506727",
             "emissionRao": "7396482476",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2683,9 +2314,9 @@
             "netuid": 7,
             "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
             "coldkey": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-            "alphaAmountRao": "780358705",
-            "taoEquivalentRao": "13667790",
-            "emissionRao": "7396482116",
+            "alphaAmountRao": "541813250",
+            "taoEquivalentRao": "9481731",
+            "emissionRao": "7396482134",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2693,9 +2324,9 @@
             "netuid": 12,
             "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
             "coldkey": "5HYhhXrKvQjEbmTF6rSfvg7okvbH4Qm2DN6A7ryM6X8NpQX5",
-            "alphaAmountRao": "2591860652",
-            "taoEquivalentRao": "15588232",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "1618887474",
+            "taoEquivalentRao": "9713324",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2704,16 +2335,16 @@
       {
         "label": "delegator-12",
         "address": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-        "freeRao": "99929288621",
-        "totalStakedTaoEquivalentRao": "87313022",
-        "totalHoldingsRao": "100016601643",
+        "freeRao": "121511984103",
+        "totalStakedTaoEquivalentRao": "123916555",
+        "totalHoldingsRao": "121635900658",
         "positions": [
           {
             "netuid": 3,
             "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
             "coldkey": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-            "alphaAmountRao": "1480413470",
-            "taoEquivalentRao": "59224299",
+            "alphaAmountRao": "1095311255",
+            "taoEquivalentRao": "43812450",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2722,9 +2353,9 @@
             "netuid": 8,
             "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
             "coldkey": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-            "alphaAmountRao": "756671910",
-            "taoEquivalentRao": "11364318",
-            "emissionRao": "7396481989",
+            "alphaAmountRao": "4615629499",
+            "taoEquivalentRao": "69234442",
+            "emissionRao": "7396482016",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2732,9 +2363,9 @@
             "netuid": 13,
             "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
             "coldkey": "5HGJAbxtSVFSPsr4K7ycSHR7jvg75ZKubyLRkXq2SNG5jGEc",
-            "alphaAmountRao": "3336867823",
-            "taoEquivalentRao": "16724405",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "2173932644",
+            "taoEquivalentRao": "10869663",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2743,16 +2374,16 @@
       {
         "label": "delegator-13",
         "address": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-        "freeRao": "99949723550",
-        "totalStakedTaoEquivalentRao": "62374571",
-        "totalHoldingsRao": "100012098121",
+        "freeRao": "121963950151",
+        "totalStakedTaoEquivalentRao": "46445941",
+        "totalHoldingsRao": "122010396092",
         "positions": [
           {
             "netuid": 4,
             "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
             "coldkey": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-            "alphaAmountRao": "1439307571",
-            "taoEquivalentRao": "43190543",
+            "alphaAmountRao": "1106935199",
+            "taoEquivalentRao": "33208055",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2761,9 +2392,9 @@
             "netuid": 9,
             "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
             "coldkey": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-            "alphaAmountRao": "757025095",
-            "taoEquivalentRao": "9095807",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "554962556",
+            "taoEquivalentRao": "6659550",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2771,9 +2402,9 @@
             "netuid": 14,
             "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
             "coldkey": "5ELyRgCpJKgY99v8ygKdCchMHrgbBgPJBvJviDfyrH7KzYBF",
-            "alphaAmountRao": "2516176888",
-            "taoEquivalentRao": "10088221",
-            "emissionRao": "7396482260",
+            "alphaAmountRao": "1644584125",
+            "taoEquivalentRao": "6578336",
+            "emissionRao": "7396482269",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2782,17 +2413,17 @@
       {
         "label": "delegator-14",
         "address": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-        "freeRao": "99957982308",
-        "totalStakedTaoEquivalentRao": "50903473",
-        "totalHoldingsRao": "100008885781",
+        "freeRao": "122051841644",
+        "totalStakedTaoEquivalentRao": "38679436",
+        "totalHoldingsRao": "122090521080",
         "positions": [
           {
             "netuid": 5,
             "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
             "coldkey": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-            "alphaAmountRao": "1439706168",
-            "taoEquivalentRao": "36008559",
-            "emissionRao": "7396482242",
+            "alphaAmountRao": "1123496020",
+            "taoEquivalentRao": "28087400",
+            "emissionRao": "7396482260",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2800,9 +2431,9 @@
             "netuid": 10,
             "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
             "coldkey": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-            "alphaAmountRao": "756320900",
-            "taoEquivalentRao": "7581880",
-            "emissionRao": "7396481791",
+            "alphaAmountRao": "560013123",
+            "taoEquivalentRao": "5600131",
+            "emissionRao": "7396481854",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2810,8 +2441,8 @@
             "netuid": 15,
             "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
             "coldkey": "5HKNRWX5Lc5gXBvhD5XSMNHZ1t4X6DQxemQu4wACsxoB8NJ2",
-            "alphaAmountRao": "2432053854",
-            "taoEquivalentRao": "7313034",
+            "alphaAmountRao": "1663968501",
+            "taoEquivalentRao": "4991905",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2821,17 +2452,17 @@
       {
         "label": "delegator-15",
         "address": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-        "freeRao": "99967986325",
-        "totalStakedTaoEquivalentRao": "38993894",
-        "totalHoldingsRao": "100006980219",
+        "freeRao": "122250896773",
+        "totalStakedTaoEquivalentRao": "30567693",
+        "totalHoldingsRao": "122281464466",
         "positions": [
           {
             "netuid": 6,
             "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
             "coldkey": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-            "alphaAmountRao": "1400125450",
-            "taoEquivalentRao": "28020971",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "1135777907",
+            "taoEquivalentRao": "22715558",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2839,9 +2470,9 @@
             "netuid": 11,
             "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
             "coldkey": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-            "alphaAmountRao": "758338446",
-            "taoEquivalentRao": "6081553",
-            "emissionRao": "7396481944",
+            "alphaAmountRao": "564115716",
+            "taoEquivalentRao": "4512925",
+            "emissionRao": "7396481989",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2849,8 +2480,8 @@
             "netuid": 16,
             "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
             "coldkey": "5D5PGrWTkm7bqfs7Gu9C98qb3Ct7arV96A7pkvfXd38m1dfW",
-            "alphaAmountRao": "2440100438",
-            "taoEquivalentRao": "4891370",
+            "alphaAmountRao": "1669605126",
+            "taoEquivalentRao": "3339210",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2860,16 +2491,16 @@
       {
         "label": "delegator-16",
         "address": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-        "freeRao": "99857522358",
-        "totalStakedTaoEquivalentRao": "169541934",
-        "totalHoldingsRao": "100027064292",
+        "freeRao": "109421046163",
+        "totalStakedTaoEquivalentRao": "2439586459",
+        "totalHoldingsRao": "111860632622",
         "positions": [
           {
             "netuid": 2,
             "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
             "coldkey": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-            "alphaAmountRao": "2808266915",
-            "taoEquivalentRao": "140422703",
+            "alphaAmountRao": "48324202642",
+            "taoEquivalentRao": "2416210132",
             "emissionRao": "7396482476",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2878,9 +2509,9 @@
             "netuid": 7,
             "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
             "coldkey": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-            "alphaAmountRao": "1401652358",
-            "taoEquivalentRao": "24549596",
-            "emissionRao": "7396482116",
+            "alphaAmountRao": "1140749272",
+            "taoEquivalentRao": "19963112",
+            "emissionRao": "7396482134",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2888,9 +2519,9 @@
             "netuid": 12,
             "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
             "coldkey": "5HE2e43732kYZHG4Txx5vAAf6y4ToTq16Se719mXkwAeCZpv",
-            "alphaAmountRao": "759794782",
-            "taoEquivalentRao": "4569635",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "568869317",
+            "taoEquivalentRao": "3413215",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2899,16 +2530,16 @@
       {
         "label": "delegator-17",
         "address": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-        "freeRao": "99911153811",
-        "totalStakedTaoEquivalentRao": "106020005",
-        "totalHoldingsRao": "100017173816",
+        "freeRao": "108734432622",
+        "totalStakedTaoEquivalentRao": "229487014",
+        "totalHoldingsRao": "108963919636",
         "positions": [
           {
             "netuid": 3,
             "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
             "coldkey": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-            "alphaAmountRao": "2020995258",
-            "taoEquivalentRao": "80850405",
+            "alphaAmountRao": "1724685151",
+            "taoEquivalentRao": "68987406",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2917,9 +2548,9 @@
             "netuid": 8,
             "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
             "coldkey": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-            "alphaAmountRao": "1430754284",
-            "taoEquivalentRao": "21488240",
-            "emissionRao": "7396481989",
+            "alphaAmountRao": "9135421325",
+            "taoEquivalentRao": "137031319",
+            "emissionRao": "7396482016",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2927,9 +2558,9 @@
             "netuid": 13,
             "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
             "coldkey": "5F1fwY9TGFXNdcytD1FMohFpYsPaGu7TK36zhGKK1ySgrx99",
-            "alphaAmountRao": "734508340",
-            "taoEquivalentRao": "3681360",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "4693657993",
+            "taoEquivalentRao": "23468289",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2938,16 +2569,16 @@
       {
         "label": "delegator-18",
         "address": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-        "freeRao": "99932021334",
-        "totalStakedTaoEquivalentRao": "80957875",
-        "totalHoldingsRao": "100012979209",
+        "freeRao": "116951186798",
+        "totalStakedTaoEquivalentRao": "85023058",
+        "totalHoldingsRao": "117036209856",
         "positions": [
           {
             "netuid": 4,
             "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
             "coldkey": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-            "alphaAmountRao": "2054605456",
-            "taoEquivalentRao": "61654317",
+            "alphaAmountRao": "1741346518",
+            "taoEquivalentRao": "52240395",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -2956,9 +2587,9 @@
             "netuid": 9,
             "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
             "coldkey": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-            "alphaAmountRao": "1360414728",
-            "taoEquivalentRao": "16345654",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "1167932958",
+            "taoEquivalentRao": "14015195",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2966,9 +2597,9 @@
             "netuid": 14,
             "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
             "coldkey": "5EuwqQrVnrfuYGn39x9TqyuQzjoRbXHCNNTzhajjsUQzB5v2",
-            "alphaAmountRao": "737752418",
-            "taoEquivalentRao": "2957904",
-            "emissionRao": "7396482260",
+            "alphaAmountRao": "4691867039",
+            "taoEquivalentRao": "18767468",
+            "emissionRao": "7396482269",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -2977,17 +2608,17 @@
       {
         "label": "delegator-19",
         "address": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-        "freeRao": "99945321676",
-        "totalStakedTaoEquivalentRao": "65659481",
-        "totalHoldingsRao": "100010981157",
+        "freeRao": "117041447987",
+        "totalStakedTaoEquivalentRao": "69971683",
+        "totalHoldingsRao": "117111419670",
         "positions": [
           {
             "netuid": 5,
             "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
             "coldkey": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-            "alphaAmountRao": "1966152676",
-            "taoEquivalentRao": "49175537",
-            "emissionRao": "7396482242",
+            "alphaAmountRao": "1763269516",
+            "taoEquivalentRao": "44081737",
+            "emissionRao": "7396482260",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -2995,9 +2626,9 @@
             "netuid": 10,
             "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
             "coldkey": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-            "alphaAmountRao": "1430194455",
-            "taoEquivalentRao": "14337252",
-            "emissionRao": "7396481791",
+            "alphaAmountRao": "1176621648",
+            "taoEquivalentRao": "11766216",
+            "emissionRao": "7396481854",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -3005,8 +2636,8 @@
             "netuid": 15,
             "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
             "coldkey": "5FxQk46bhkHDe9mqrFo2ZiYMiifApuxbE2VTM14oAfRksJt9",
-            "alphaAmountRao": "713913090",
-            "taoEquivalentRao": "2146692",
+            "alphaAmountRao": "4707910248",
+            "taoEquivalentRao": "14123730",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3016,17 +2647,17 @@
       {
         "label": "delegator-20",
         "address": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-        "freeRao": "99944036508",
-        "totalStakedTaoEquivalentRao": "65594124",
-        "totalHoldingsRao": "100009630632",
+        "freeRao": "120642197872",
+        "totalStakedTaoEquivalentRao": "66353945",
+        "totalHoldingsRao": "120708551817",
         "positions": [
           {
             "netuid": 6,
             "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
             "coldkey": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-            "alphaAmountRao": "2663755513",
-            "taoEquivalentRao": "53310235",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "2373437309",
+            "taoEquivalentRao": "47468746",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -3034,9 +2665,9 @@
             "netuid": 11,
             "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
             "coldkey": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-            "alphaAmountRao": "1362472821",
-            "taoEquivalentRao": "10926456",
-            "emissionRao": "7396481944",
+            "alphaAmountRao": "1186087095",
+            "taoEquivalentRao": "9488696",
+            "emissionRao": "7396481989",
             "taoEmissionRao": "0",
             "isRegistered": true
           },
@@ -3044,8 +2675,8 @@
             "netuid": 16,
             "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
             "coldkey": "5GsMwx7Hga9X8VeaizcNrhJwQRooGK7qY1yGaPH9Z3J6FX4H",
-            "alphaAmountRao": "677166862",
-            "taoEquivalentRao": "1357433",
+            "alphaAmountRao": "4698251815",
+            "taoEquivalentRao": "9396503",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3057,16 +2688,16 @@
       {
         "label": "seeder-01",
         "address": "5CCpcaAQgo8Yif4e7Zr8H7Z6jdpD9s4bsEn1Dqdxg2146PAA",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "709617949",
-        "totalHoldingsRao": "50709486601",
+        "freeRao": "50826241971",
+        "totalStakedTaoEquivalentRao": "876455162",
+        "totalHoldingsRao": "51702697133",
         "positions": [
           {
             "netuid": 1,
             "hotkey": "5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21",
             "coldkey": "5CCpcaAQgo8Yif4e7Zr8H7Z6jdpD9s4bsEn1Dqdxg2146PAA",
-            "alphaAmountRao": "7096179498",
-            "taoEquivalentRao": "709617949",
+            "alphaAmountRao": "8764551622",
+            "taoEquivalentRao": "876455162",
             "emissionRao": "0",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3076,16 +2707,16 @@
       {
         "label": "seeder-02",
         "address": "5C7pvNYUQHdQiboPExc7dvWCy6vL91z61ZEerjPAge44wVUe",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "3097195987",
-        "totalHoldingsRao": "53097064639",
+        "freeRao": "75000000000",
+        "totalStakedTaoEquivalentRao": "47118676621",
+        "totalHoldingsRao": "122118676621",
         "positions": [
           {
             "netuid": 2,
             "hotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
             "coldkey": "5C7pvNYUQHdQiboPExc7dvWCy6vL91z61ZEerjPAge44wVUe",
-            "alphaAmountRao": "61939791824",
-            "taoEquivalentRao": "3097195987",
+            "alphaAmountRao": "942373532423",
+            "taoEquivalentRao": "47118676621",
             "emissionRao": "7396482476",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3095,16 +2726,16 @@
       {
         "label": "seeder-03",
         "address": "5H9DcnUXjGSVRZbLyqiEVRVa96UmdbtnGygZCHU2A9Q8beMQ",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "2264677696",
-        "totalHoldingsRao": "52264546348",
+        "freeRao": "58518234522",
+        "totalStakedTaoEquivalentRao": "9204829938",
+        "totalHoldingsRao": "67723064460",
         "positions": [
           {
             "netuid": 3,
             "hotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
             "coldkey": "5H9DcnUXjGSVRZbLyqiEVRVa96UmdbtnGygZCHU2A9Q8beMQ",
-            "alphaAmountRao": "56609449652",
-            "taoEquivalentRao": "2264677696",
+            "alphaAmountRao": "230120748458",
+            "taoEquivalentRao": "9204829938",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3114,16 +2745,16 @@
       {
         "label": "seeder-04",
         "address": "5EDCHhnD8ACGLSidyqm3B6dF31DwL7mWmLhMZr7XWB93Xdfy",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "1808978732",
-        "totalHoldingsRao": "51808847384",
+        "freeRao": "56448209963",
+        "totalStakedTaoEquivalentRao": "7028298782",
+        "totalHoldingsRao": "63476508745",
         "positions": [
           {
             "netuid": 4,
             "hotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
             "coldkey": "5EDCHhnD8ACGLSidyqm3B6dF31DwL7mWmLhMZr7XWB93Xdfy",
-            "alphaAmountRao": "60283334479",
-            "taoEquivalentRao": "1808978732",
+            "alphaAmountRao": "234276626075",
+            "taoEquivalentRao": "7028298782",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3133,17 +2764,17 @@
       {
         "label": "seeder-05",
         "address": "5C5McDJPYY7CJz5s2Myidj8hhbXvffR6VYye3jd4YWZLFdUe",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "1516504095",
-        "totalHoldingsRao": "51516372747",
+        "freeRao": "55400410454",
+        "totalStakedTaoEquivalentRao": "5915892537",
+        "totalHoldingsRao": "61316302991",
         "positions": [
           {
             "netuid": 5,
             "hotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
             "coldkey": "5C5McDJPYY7CJz5s2Myidj8hhbXvffR6VYye3jd4YWZLFdUe",
-            "alphaAmountRao": "60633099669",
-            "taoEquivalentRao": "1516504095",
-            "emissionRao": "7396482242",
+            "alphaAmountRao": "236635701511",
+            "taoEquivalentRao": "5915892537",
+            "emissionRao": "7396482260",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3152,17 +2783,17 @@
       {
         "label": "seeder-06",
         "address": "5EfC28qgW2jaK6ANUTVwasT2XPP53EcaGkaTgHxWsH5RC4dk",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "1311164422",
-        "totalHoldingsRao": "51311033074",
+        "freeRao": "54341330301",
+        "totalStakedTaoEquivalentRao": "4780575676",
+        "totalHoldingsRao": "59121905977",
         "positions": [
           {
             "netuid": 6,
             "hotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
             "coldkey": "5EfC28qgW2jaK6ANUTVwasT2XPP53EcaGkaTgHxWsH5RC4dk",
-            "alphaAmountRao": "65514585181",
-            "taoEquivalentRao": "1311164422",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "239028783836",
+            "taoEquivalentRao": "4780575676",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3171,17 +2802,17 @@
       {
         "label": "seeder-07",
         "address": "5Eead8NVhy8uEp7oUUtBBirYihVXgdYsZYLpoTj9Sd21PNkg",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "1031418921",
-        "totalHoldingsRao": "51031287573",
+        "freeRao": "53795016618",
+        "totalStakedTaoEquivalentRao": "4187897558",
+        "totalHoldingsRao": "57982914176",
         "positions": [
           {
             "netuid": 7,
             "hotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
             "coldkey": "5Eead8NVhy8uEp7oUUtBBirYihVXgdYsZYLpoTj9Sd21PNkg",
-            "alphaAmountRao": "58888063687",
-            "taoEquivalentRao": "1031418921",
-            "emissionRao": "7396482116",
+            "alphaAmountRao": "239308431931",
+            "taoEquivalentRao": "4187897558",
+            "emissionRao": "7396482134",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3190,17 +2821,17 @@
       {
         "label": "seeder-08",
         "address": "5Ge2ViR6Np2W4kAwdqunFeiyab6S2UqicN7bqrcYS12zDSif",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "954489990",
-        "totalHoldingsRao": "50954358642",
+        "freeRao": "53282838557",
+        "totalStakedTaoEquivalentRao": "3601982320",
+        "totalHoldingsRao": "56884820877",
         "positions": [
           {
             "netuid": 8,
             "hotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
             "coldkey": "5Ge2ViR6Np2W4kAwdqunFeiyab6S2UqicN7bqrcYS12zDSif",
-            "alphaAmountRao": "63552101530",
-            "taoEquivalentRao": "954489990",
-            "emissionRao": "7396481989",
+            "alphaAmountRao": "240132154675",
+            "taoEquivalentRao": "3601982320",
+            "emissionRao": "7396482016",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3209,17 +2840,17 @@
       {
         "label": "seeder-09",
         "address": "5FWjooxVz8sMR7u85CMXFKqwk4SJMAZx1nkoXQpnbncAJBaC",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "789752857",
-        "totalHoldingsRao": "50789621509",
+        "freeRao": "52617378466",
+        "totalStakedTaoEquivalentRao": "2909943671",
+        "totalHoldingsRao": "55527322137",
         "positions": [
           {
             "netuid": 9,
             "hotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
             "coldkey": "5FWjooxVz8sMR7u85CMXFKqwk4SJMAZx1nkoXQpnbncAJBaC",
-            "alphaAmountRao": "65728608558",
-            "taoEquivalentRao": "789752857",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "242495305921",
+            "taoEquivalentRao": "2909943671",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3228,17 +2859,17 @@
       {
         "label": "seeder-10",
         "address": "5GF4dJrDVAPU3hequPKm5FWzMAYLsMxEwzKhE9J82ZRJJz1M",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "725156765",
-        "totalHoldingsRao": "50725025417",
+        "freeRao": "52177945594",
+        "totalStakedTaoEquivalentRao": "2438025728",
+        "totalHoldingsRao": "54615971322",
         "positions": [
           {
             "netuid": 10,
             "hotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
             "coldkey": "5GF4dJrDVAPU3hequPKm5FWzMAYLsMxEwzKhE9J82ZRJJz1M",
-            "alphaAmountRao": "72333303861",
-            "taoEquivalentRao": "725156765",
-            "emissionRao": "7396481791",
+            "alphaAmountRao": "243802572856",
+            "taoEquivalentRao": "2438025728",
+            "emissionRao": "7396481854",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3247,17 +2878,17 @@
       {
         "label": "seeder-11",
         "address": "5DZyL9gjbJd9cLcwDTTvxBZbxDD5o7NPYiSvhaY5jHmCt8oR",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "587201430",
-        "totalHoldingsRao": "50587070082",
+        "freeRao": "51749149319",
+        "totalStakedTaoEquivalentRao": "1961522462",
+        "totalHoldingsRao": "53710671781",
         "positions": [
           {
             "netuid": 11,
             "hotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
             "coldkey": "5DZyL9gjbJd9cLcwDTTvxBZbxDD5o7NPYiSvhaY5jHmCt8oR",
-            "alphaAmountRao": "73217150548",
-            "taoEquivalentRao": "587201430",
-            "emissionRao": "7396481944",
+            "alphaAmountRao": "245190307825",
+            "taoEquivalentRao": "1961522462",
+            "emissionRao": "7396481989",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3266,17 +2897,17 @@
       {
         "label": "seeder-12",
         "address": "5CPNdqqv3MAE5WQG11fWLocXUiEUkzc14rYbWoAQtqBg1C2v",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "387389812",
-        "totalHoldingsRao": "50387258464",
+        "freeRao": "51311851034",
+        "totalStakedTaoEquivalentRao": "1471453700",
+        "totalHoldingsRao": "52783304734",
         "positions": [
           {
             "netuid": 12,
             "hotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
             "coldkey": "5CPNdqqv3MAE5WQG11fWLocXUiEUkzc14rYbWoAQtqBg1C2v",
-            "alphaAmountRao": "64408105776",
-            "taoEquivalentRao": "387389812",
-            "emissionRao": "7396482107",
+            "alphaAmountRao": "245242283383",
+            "taoEquivalentRao": "1471453700",
+            "emissionRao": "7396482125",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3285,17 +2916,17 @@
       {
         "label": "seeder-13",
         "address": "5FWiYNrY8TjsfmMgWxg3ngwKWJ8wUvjpkg5FGR4XJWZAgPyd",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "354480663",
-        "totalHoldingsRao": "50354349315",
+        "freeRao": "51097878965",
+        "totalStakedTaoEquivalentRao": "1229638654",
+        "totalHoldingsRao": "52327517619",
         "positions": [
           {
             "netuid": 13,
             "hotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
             "coldkey": "5FWiYNrY8TjsfmMgWxg3ngwKWJ8wUvjpkg5FGR4XJWZAgPyd",
-            "alphaAmountRao": "70722565991",
-            "taoEquivalentRao": "354480663",
-            "emissionRao": "7396482179",
+            "alphaAmountRao": "245927730959",
+            "taoEquivalentRao": "1229638654",
+            "emissionRao": "7396482197",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3304,17 +2935,17 @@
       {
         "label": "seeder-14",
         "address": "5HT2Hb4khFECyFMnYizFQkrserR7uh8UoGLDx7ZSAKnXAgD9",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "287295437",
-        "totalHoldingsRao": "50287164089",
+        "freeRao": "50883051835",
+        "totalStakedTaoEquivalentRao": "987435740",
+        "totalHoldingsRao": "51870487575",
         "positions": [
           {
             "netuid": 14,
             "hotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
             "coldkey": "5HT2Hb4khFECyFMnYizFQkrserR7uh8UoGLDx7ZSAKnXAgD9",
-            "alphaAmountRao": "71652737712",
-            "taoEquivalentRao": "287295437",
-            "emissionRao": "7396482260",
+            "alphaAmountRao": "246858935174",
+            "taoEquivalentRao": "987435740",
+            "emissionRao": "7396482269",
             "taoEmissionRao": "0",
             "isRegistered": true
           }
@@ -3323,16 +2954,16 @@
       {
         "label": "seeder-15",
         "address": "5DFTcCrPobTBkuSfEaugBoGeBZ9Ti7cYqDqXiJofo51Mi8dr",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "244065827",
-        "totalHoldingsRao": "50243934479",
+        "freeRao": "50664112362",
+        "totalStakedTaoEquivalentRao": "743391713",
+        "totalHoldingsRao": "51407504075",
         "positions": [
           {
             "netuid": 15,
             "hotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
             "coldkey": "5DFTcCrPobTBkuSfEaugBoGeBZ9Ti7cYqDqXiJofo51Mi8dr",
-            "alphaAmountRao": "81161260038",
-            "taoEquivalentRao": "244065827",
+            "alphaAmountRao": "247797237709",
+            "taoEquivalentRao": "743391713",
             "emissionRao": "7396482341",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3342,16 +2973,16 @@
       {
         "label": "seeder-16",
         "address": "5EHsB4fjKt4HH48BoHTfEJFsKZSb1iLQWj1rU5qsGUdBEws9",
-        "freeRao": "49999868652",
-        "totalStakedTaoEquivalentRao": "139119207",
-        "totalHoldingsRao": "50138987859",
+        "freeRao": "50445294552",
+        "totalStakedTaoEquivalentRao": "497082428",
+        "totalHoldingsRao": "50942376980",
         "positions": [
           {
             "netuid": 16,
             "hotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
             "coldkey": "5EHsB4fjKt4HH48BoHTfEJFsKZSb1iLQWj1rU5qsGUdBEws9",
-            "alphaAmountRao": "69395360844",
-            "taoEquivalentRao": "139119207",
+            "alphaAmountRao": "248541214279",
+            "taoEquivalentRao": "497082428",
             "emissionRao": "7396482413",
             "taoEmissionRao": "0",
             "isRegistered": true
@@ -3371,10 +3002,10 @@
       "taoRao": "200000000000000",
       "alphaRao": "2000000000000000",
       "impliedPrice": 0.1,
+      "targetImpliedPrice": 0.1,
       "owner": "5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM",
       "ownerHotkey": "5C4hrfjw9DjXZTzV3MwzrrAr9P1MJhSrvWGWqi1eSuyUpnhM",
-      "firstEmissionBlockNumber": null,
-      "totalTrackedValidatorAlphaRao": "7096179498"
+      "firstEmissionBlockNumber": null
     },
     {
       "netuid": 2,
@@ -3383,13 +3014,13 @@
       "targetPoolTao": "100000",
       "targetAlphaPriceTao": "0.05",
       "validatorHotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "taoRao": "100007199813985",
-      "alphaRao": "2000006787203675",
-      "impliedPrice": 0.05000343021525984,
+      "taoRao": "100000000000000",
+      "alphaRao": "2000000000000000",
+      "impliedPrice": 0.05,
+      "targetImpliedPrice": 0.05,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5GYxEAh7Xp7mHkGvFJ5PB1tWh5AJgHJSuW1t2BTzZ8Nz46zX",
-      "firstEmissionBlockNumber": 134,
-      "totalTrackedValidatorAlphaRao": "294190458286"
+      "firstEmissionBlockNumber": 454
     },
     {
       "netuid": 3,
@@ -3398,13 +3029,13 @@
       "targetPoolTao": "50000",
       "targetAlphaPriceTao": "0.04",
       "validatorHotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
-      "taoRao": "50007012413928",
-      "alphaRao": "1250006616807392",
-      "impliedPrice": 0.04000539816473096,
+      "taoRao": "50000000000000",
+      "alphaRao": "1250000000000000",
+      "impliedPrice": 0.04,
+      "targetImpliedPrice": 0.04,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5F6tcWUfP9Zg5fdwRJhzut2dWeXf2LyofvwVSmKw3AKJTNQk",
-      "firstEmissionBlockNumber": 137,
-      "totalTrackedValidatorAlphaRao": "292999084482"
+      "firstEmissionBlockNumber": 457
     },
     {
       "netuid": 4,
@@ -3413,13 +3044,13 @@
       "targetPoolTao": "25000",
       "targetAlphaPriceTao": "0.03",
       "validatorHotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
-      "taoRao": "25006945018904",
-      "alphaRao": "833339886533336",
-      "impliedPrice": 0.030008098043802982,
+      "taoRao": "25000000000000",
+      "alphaRao": "833333333333333",
+      "impliedPrice": 0.030000000000000013,
+      "targetImpliedPrice": 0.03,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5H9LTWgdk8SsWzRpU3AQkx8Hge6d8RrwdtGhYNYCbmismDHp",
-      "firstEmissionBlockNumber": 141,
-      "totalTrackedValidatorAlphaRao": "283079027192"
+      "firstEmissionBlockNumber": 461
     },
     {
       "netuid": 5,
@@ -3428,13 +3059,13 @@
       "targetPoolTao": "15000",
       "targetAlphaPriceTao": "0.025",
       "validatorHotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
-      "taoRao": "15006994201200",
-      "alphaRao": "600006593221044",
-      "impliedPrice": 0.025011382159381347,
+      "taoRao": "15000000000000",
+      "alphaRao": "600000000000000",
+      "impliedPrice": 0.025,
+      "targetImpliedPrice": 0.025,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5CVbAiv6iJDq4jgVNWXJrTmCKWirkUHgqN5UbQudoLTpQRjB",
-      "firstEmissionBlockNumber": 145,
-      "totalTrackedValidatorAlphaRao": "282650339334"
+      "firstEmissionBlockNumber": 465
     },
     {
       "netuid": 6,
@@ -3443,13 +3074,13 @@
       "targetPoolTao": "10000",
       "targetAlphaPriceTao": "0.02",
       "validatorHotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
-      "taoRao": "10006925709784",
-      "alphaRao": "500006528668179",
-      "impliedPrice": 0.020013590095390395,
+      "taoRao": "10000000000000",
+      "alphaRao": "500000000000000",
+      "impliedPrice": 0.02,
+      "targetImpliedPrice": 0.02,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5GhM9GH75nR6Xy1BpbpwczViKNhu8QgB4VU7XiFbVmoBHuPU",
-      "firstEmissionBlockNumber": 149,
-      "totalTrackedValidatorAlphaRao": "272730290686"
+      "firstEmissionBlockNumber": 469
     },
     {
       "netuid": 7,
@@ -3458,13 +3089,13 @@
       "targetPoolTao": "7500",
       "targetAlphaPriceTao": "0.0175",
       "validatorHotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
-      "taoRao": "7506628473100",
-      "alphaRao": "428577689045128",
-      "impliedPrice": 0.01751521057903127,
+      "taoRao": "7500000000000",
+      "alphaRao": "428571428571428",
+      "impliedPrice": 0.017500000000000022,
+      "targetImpliedPrice": 0.0175,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5HR2S61Zq9Q1cPgWAGu2xEStuvjhsXYk9ejYZ9WNJFAWQfnF",
-      "firstEmissionBlockNumber": 153,
-      "totalTrackedValidatorAlphaRao": "270887165745"
+      "firstEmissionBlockNumber": 473
     },
     {
       "netuid": 8,
@@ -3473,13 +3104,13 @@
       "targetPoolTao": "5000",
       "targetAlphaPriceTao": "0.015",
       "validatorHotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
-      "taoRao": "5006562239552",
-      "alphaRao": "333339531250014",
-      "impliedPrice": 0.015019407451548067,
+      "taoRao": "5000000000000",
+      "alphaRao": "333333333333333",
+      "impliedPrice": 0.015000000000000015,
+      "targetImpliedPrice": 0.015,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK",
-      "firstEmissionBlockNumber": 157,
-      "totalTrackedValidatorAlphaRao": "260967111835"
+      "firstEmissionBlockNumber": 478
     },
     {
       "netuid": 9,
@@ -3488,13 +3119,13 @@
       "targetPoolTao": "5000",
       "targetAlphaPriceTao": "0.012",
       "validatorHotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
-      "taoRao": "5006608014364",
-      "alphaRao": "416672901775546",
-      "impliedPrice": 0.012015679428706807,
+      "taoRao": "5000000000000",
+      "alphaRao": "416666666666666",
+      "impliedPrice": 0.01200000000000002,
+      "targetImpliedPrice": 0.012,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5CiGrGLyueKy3dZvv6htSbJiJVVfau6kefA5BWZEsB2i4Se6",
-      "firstEmissionBlockNumber": 161,
-      "totalTrackedValidatorAlphaRao": "262329271399"
+      "firstEmissionBlockNumber": 482
     },
     {
       "netuid": 10,
@@ -3503,13 +3134,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.01",
       "validatorHotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
-      "taoRao": "2506429743746",
-      "alphaRao": "250006072779187",
-      "impliedPrice": 0.010025475444989511,
+      "taoRao": "2500000000000",
+      "alphaRao": "250000000000000",
+      "impliedPrice": 0.01,
+      "targetImpliedPrice": 0.01,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5GKtKzHBFLEY8qNzqH388arwpXAHahBmB2MAUyCmaSnFYiza",
-      "firstEmissionBlockNumber": 165,
-      "totalTrackedValidatorAlphaRao": "252336142791"
+      "firstEmissionBlockNumber": 486
     },
     {
       "netuid": 11,
@@ -3518,13 +3149,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.008",
       "validatorHotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
-      "taoRao": "2506429775465",
-      "alphaRao": "312506072817696",
-      "impliedPrice": 0.008020419420544043,
+      "taoRao": "2500000000000",
+      "alphaRao": "312500000000000",
+      "impliedPrice": 0.008,
+      "targetImpliedPrice": 0.008,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5CAP5cuHU7JJiUmLdGAXDQV9PFfQaKE7fzqCKqCGp26oZx6b",
-      "firstEmissionBlockNumber": 169,
-      "totalTrackedValidatorAlphaRao": "251519222063"
+      "firstEmissionBlockNumber": 490
     },
     {
       "netuid": 12,
@@ -3533,13 +3164,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.006",
       "validatorHotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
-      "taoRao": "2506253742112",
-      "alphaRao": "416672578907498",
-      "impliedPrice": 0.006014923633043758,
+      "taoRao": "2500000000000",
+      "alphaRao": "416666666666666",
+      "impliedPrice": 0.00600000000000001,
+      "targetImpliedPrice": 0.006,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5GHajqW3JtzypGNed8ETjdwBPDgrw1QPETxRDqkWMnT6QLm9",
-      "firstEmissionBlockNumber": 173,
-      "totalTrackedValidatorAlphaRao": "249896163282"
+      "firstEmissionBlockNumber": 494
     },
     {
       "netuid": 13,
@@ -3548,13 +3179,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.005",
       "validatorHotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
-      "taoRao": "2506297236595",
-      "alphaRao": "500005947605150",
-      "impliedPrice": 0.005012534848033846,
+      "taoRao": "2500000000000",
+      "alphaRao": "500000000000000",
+      "impliedPrice": 0.005,
+      "targetImpliedPrice": 0.005,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5Et6rjZ9aMeXVd7pcMjngYXE23qSRjq5fbzzAQHh1FE8y4pa",
-      "firstEmissionBlockNumber": 177,
-      "totalTrackedValidatorAlphaRao": "249426996086"
+      "firstEmissionBlockNumber": 498
     },
     {
       "netuid": 14,
@@ -3563,13 +3194,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.004",
       "validatorHotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
-      "taoRao": "2506123529232",
-      "alphaRao": "625005789149612",
-      "impliedPrice": 0.004009760505805638,
+      "taoRao": "2500000000000",
+      "alphaRao": "625000000000000",
+      "impliedPrice": 0.004,
+      "targetImpliedPrice": 0.004,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5Hj31EcJiymvAN5f6v2xCimfiYYYM3uZe3VA14AE5nk681PF",
-      "firstEmissionBlockNumber": 181,
-      "totalTrackedValidatorAlphaRao": "248054765883"
+      "firstEmissionBlockNumber": 502
     },
     {
       "netuid": 15,
@@ -3578,13 +3209,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.003",
       "validatorHotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
-      "taoRao": "2506058428642",
-      "alphaRao": "833339060940329",
-      "impliedPrice": 0.003007249445158848,
+      "taoRao": "2500000000000",
+      "alphaRao": "833333333333333",
+      "impliedPrice": 0.0030000000000000014,
+      "targetImpliedPrice": 0.003,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5ERzGEiHA3FZo73tZgDFYYXMp6bzVWFPrCdnJtvAoVTr5sSk",
-      "firstEmissionBlockNumber": 185,
-      "totalTrackedValidatorAlphaRao": "238134713646"
+      "firstEmissionBlockNumber": 506
     },
     {
       "netuid": 16,
@@ -3593,21 +3224,13 @@
       "targetPoolTao": "2500",
       "targetAlphaPriceTao": "0.002",
       "validatorHotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
-      "taoRao": "2505993312216",
-      "alphaRao": "1250005666054324",
-      "impliedPrice": 0.0020047855623936766,
+      "taoRao": "2500000000000",
+      "alphaRao": "1250000000000000",
+      "impliedPrice": 0.002,
+      "targetImpliedPrice": 0.002,
       "owner": "5EnaYwnk3LvyLNcQtDWDFEsXkM2vtHC9AzyrX3C2CBgcY533",
       "ownerHotkey": "5FW4W6ewDJqeNbccGgkWG2BEwrz6aWuf53ZpRBePsKsmaFie",
-      "firstEmissionBlockNumber": 189,
-      "totalTrackedValidatorAlphaRao": "237234713211"
+      "firstEmissionBlockNumber": 510
     }
-  ],
-  "summary": {
-    "totalDelegatorHoldingsRao": "2000350910777",
-    "expectedDelegatorHoldingsRao": "2000000000000",
-    "totalDelegatorHoldingsTao": 2000.350910777,
-    "reserveVarianceRatio": 79.80867268282691,
-    "distinctPriceBands": 16,
-    "rootStakeDelegatorCount": 1
-  }
+  ]
 }

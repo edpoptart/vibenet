@@ -16,6 +16,7 @@ const {
   getSubnetTargetPrice,
   getSubnetTargetTaoRao,
   hasProxyDelegation,
+  hasRealPaysFee,
   isBenignAlreadyExists,
   isNetworkMember,
   loadManifest,
@@ -58,6 +59,53 @@ async function addProxyIfMissing(api, delegator, pureProxyAddress, manifest, txL
     kind: 'proxy.addProxy',
     delegator: delegator.label,
     delegate: pureProxyAddress,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+  });
+}
+
+async function setRealPaysFeeIfMissing(api, real, delegateAddress, txSigner, label, txLog) {
+  const exists = await hasRealPaysFee(api, real.address, delegateAddress);
+  if (exists) {
+    return;
+  }
+
+  const receipt = await signAndSend(
+    api,
+    api.tx.proxy.setRealPaysFee(delegateAddress, true),
+    txSigner.pair,
+    `proxy.setRealPaysFee(${label})`,
+  );
+
+  txLog.push({
+    kind: 'proxy.setRealPaysFee',
+    real: real.label,
+    delegate: delegateAddress,
+    paysFee: true,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+  });
+}
+
+async function setPureProxyRealPaysFeeIfMissing(api, controller, pureProxyAddress, delegate, manifest, txLog) {
+  const exists = await hasRealPaysFee(api, pureProxyAddress, delegate.address);
+  if (exists) {
+    return;
+  }
+
+  const setRealPaysFeeCall = api.tx.proxy.setRealPaysFee(delegate.address, true);
+  const receipt = await signAndSend(
+    api,
+    api.tx.proxy.proxy(pureProxyAddress, manifest.proxy.pureProxyType, setRealPaysFeeCall),
+    controller.pair,
+    `proxy.proxy(${delegate.label}.setRealPaysFee)`,
+  );
+
+  txLog.push({
+    kind: 'proxy.setPureProxyRealPaysFee',
+    real: 'pureProxy',
+    delegate: delegate.label,
+    paysFee: true,
     txHash: receipt.txHash,
     blockNumber: receipt.blockNumber,
   });
@@ -394,6 +442,14 @@ async function main() {
       'controller bootstrap',
     );
 
+    for (const controller of accounts.additionalControllers) {
+      await ensureFunding(
+        controller.address,
+        toBigInt(manifest.funding.parallelControllerTargetFreeRao),
+        `parallel controller ${controller.label}`,
+      );
+    }
+
     for (const subnet of manifest.subnets) {
       const seeder = accounts.seeders[subnet.netuid - 1];
       const targetSeederFree =
@@ -431,10 +487,34 @@ async function main() {
 
     for (const delegator of accounts.delegators) {
       await addProxyIfMissing(api, delegator, pureProxy.address, manifest, txLog);
+      await setRealPaysFeeIfMissing(
+        api,
+        delegator,
+        pureProxy.address,
+        delegator,
+        `${delegator.label}->pureProxy`,
+        txLog,
+      );
     }
 
+    await setPureProxyRealPaysFeeIfMissing(
+      api,
+      accounts.controller,
+      pureProxy.address,
+      accounts.controller,
+      manifest,
+      txLog,
+    );
     for (const additionalController of accounts.additionalControllers) {
       await addPureProxyControllerIfMissing(
+        api,
+        accounts.controller,
+        pureProxy.address,
+        additionalController,
+        manifest,
+        txLog,
+      );
+      await setPureProxyRealPaysFeeIfMissing(
         api,
         accounts.controller,
         pureProxy.address,
@@ -576,12 +656,14 @@ async function main() {
       pureProxy: pureProxy.address,
       proxyType: manifest.proxy.delegatorProxyType,
       delay: manifest.proxy.delay,
+      realPaysFee: true,
     }));
     report.pureProxyControllerLinks = accounts.additionalControllers.map((controller) => ({
       controller: controller.address,
       pureProxy: pureProxy.address,
       proxyType: manifest.proxy.pureProxyType,
       delay: manifest.proxy.delay,
+      realPaysFee: true,
     }));
 
     report.wallets.controller = await summarizeWallet(api, accounts.controller.address);

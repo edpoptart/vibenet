@@ -1,0 +1,17 @@
+services:
+  localnet-fixture:
+    build:
+      context: .
+      dockerfile: Dockerfile.fixture
+    container_name: vibenet-localnet-fixture
+    ports:
+      - "127.0.0.1:9080:9080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      FIXTURE_PORT: "9080"
+      LOCALNET_RPC_URL: ws://host.docker.internal:9944
+      LOCALNET_PUBLIC_RPC_URL: ws://127.0.0.1:9944
+      NODE_PATH: /workspace/node_modules
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

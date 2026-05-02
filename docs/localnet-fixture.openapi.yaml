@@ -1,0 +1,424 @@
+openapi: 3.0.3
+info:
+  title: Vibenet Localnet Fixture API
+  version: 1.0.0
+  description: >
+    Sidecar API for hard-resetting, initializing, verifying, and reporting the
+    deterministic local Bittensor fixture used by the rebalancer smoke tests.
+servers:
+  - url: http://127.0.0.1:9080
+paths:
+  /health:
+    get:
+      summary: Read fixture manager health and operation status.
+      operationId: getHealth
+      responses:
+        "200":
+          description: Fixture manager health.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthResponse"
+  /reset:
+    post:
+      summary: Hard-reset the local chain container.
+      description: >
+        Stops and removes the local chain container, starts a fresh chain from
+        the configured image, waits for RPC, and waits for block production to
+        advance. The fixture report is cleared before reset.
+      operationId: resetChain
+      responses:
+        "200":
+          description: Reset completed.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResetResponse"
+        "409":
+          $ref: "#/components/responses/OperationConflict"
+        "500":
+          $ref: "#/components/responses/Error"
+  /init:
+    post:
+      summary: Initialize on-chain fixture state.
+      description: >
+        Ensures the chain is live, seeds subnets, validators, liquidity,
+        delegator balances and stakes, the pure-proxy graph, controller
+        permissions, and real_pays_fee flags, then verifies the fixture.
+      operationId: initFixture
+      responses:
+        "200":
+          description: Fixture initialized and verified.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/InitResponse"
+        "409":
+          $ref: "#/components/responses/OperationConflict"
+        "500":
+          $ref: "#/components/responses/Error"
+  /reset-and-init:
+    post:
+      summary: Hard-reset the chain and initialize the fixture.
+      operationId: resetAndInitFixture
+      responses:
+        "200":
+          description: Fresh chain reset, initialized, verified, and reported.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResetAndInitResponse"
+        "409":
+          $ref: "#/components/responses/OperationConflict"
+        "500":
+          $ref: "#/components/responses/Error"
+  /fixture:
+    get:
+      summary: Read actual on-chain fixture facts.
+      description: >
+        Returns the current fixture facts from the generated state report. This
+        endpoint reports actual initialized chain state; it does not derive a
+        planned fixture from configuration alone.
+      operationId: getFixture
+      responses:
+        "200":
+          description: Current fixture facts.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Fixture"
+        "409":
+          description: Fixture has not been initialized yet.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /verify:
+    get:
+      summary: Verify the current on-chain fixture.
+      description: Runs the strict localnet verifier and returns the verified fixture facts.
+      operationId: verifyFixture
+      responses:
+        "200":
+          description: Fixture verified.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VerifyResponse"
+        "409":
+          $ref: "#/components/responses/OperationConflict"
+        "500":
+          $ref: "#/components/responses/Error"
+components:
+  responses:
+    OperationConflict:
+      description: Another long-running operation is already active.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Error:
+      description: Request failed.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+  schemas:
+    HealthResponse:
+      type: object
+      required:
+        - ok
+        - reportAvailable
+      properties:
+        ok:
+          type: boolean
+          example: true
+        activeOperation:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/OperationStatus"
+        lastOperation:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/CompletedOperationStatus"
+        reportAvailable:
+          type: boolean
+          example: true
+    OperationStatus:
+      type: object
+      required:
+        - name
+        - startedAt
+      properties:
+        name:
+          type: string
+          enum:
+            - reset
+            - init
+            - reset-and-init
+            - verify
+        startedAt:
+          type: string
+          format: date-time
+    CompletedOperationStatus:
+      allOf:
+        - $ref: "#/components/schemas/OperationStatus"
+        - type: object
+          required:
+            - finishedAt
+            - ok
+          properties:
+            finishedAt:
+              type: string
+              format: date-time
+            ok:
+              type: boolean
+            error:
+              type: string
+              nullable: true
+            result:
+              nullable: true
+              allOf:
+                - $ref: "#/components/schemas/CommandResult"
+    CommandResult:
+      type: object
+      required:
+        - command
+        - startedAt
+        - finishedAt
+        - code
+        - stdout
+        - stderr
+      properties:
+        command:
+          type: string
+          example: node scripts/localnet/verify-state.js
+        startedAt:
+          type: string
+          format: date-time
+        finishedAt:
+          type: string
+          format: date-time
+        code:
+          type: integer
+          nullable: true
+          example: 0
+        signal:
+          type: string
+          nullable: true
+        stdout:
+          type: string
+        stderr:
+          type: string
+    ResetResponse:
+      type: object
+      required:
+        - ok
+        - reset
+      properties:
+        ok:
+          type: boolean
+          example: true
+        reset:
+          $ref: "#/components/schemas/CommandResult"
+    InitResponse:
+      type: object
+      required:
+        - ok
+        - up
+        - seed
+        - verify
+        - fixture
+      properties:
+        ok:
+          type: boolean
+          example: true
+        up:
+          $ref: "#/components/schemas/CommandResult"
+        seed:
+          $ref: "#/components/schemas/CommandResult"
+        verify:
+          $ref: "#/components/schemas/CommandResult"
+        fixture:
+          $ref: "#/components/schemas/Fixture"
+    ResetAndInitResponse:
+      type: object
+      required:
+        - ok
+        - reset
+        - init
+        - fixture
+      properties:
+        ok:
+          type: boolean
+          example: true
+        reset:
+          type: object
+          properties:
+            reset:
+              $ref: "#/components/schemas/CommandResult"
+        init:
+          $ref: "#/components/schemas/InitPayload"
+        fixture:
+          $ref: "#/components/schemas/Fixture"
+    InitPayload:
+      type: object
+      required:
+        - up
+        - seed
+        - verify
+        - fixture
+      properties:
+        up:
+          $ref: "#/components/schemas/CommandResult"
+        seed:
+          $ref: "#/components/schemas/CommandResult"
+        verify:
+          $ref: "#/components/schemas/CommandResult"
+        fixture:
+          $ref: "#/components/schemas/Fixture"
+    VerifyResponse:
+      type: object
+      required:
+        - ok
+        - verify
+        - fixture
+      properties:
+        ok:
+          type: boolean
+          example: true
+        verify:
+          $ref: "#/components/schemas/CommandResult"
+        fixture:
+          $ref: "#/components/schemas/Fixture"
+    Fixture:
+      type: object
+      required:
+        - rpcUrl
+        - pureProxy
+        - controllers
+        - delegators
+        - subnets
+      properties:
+        rpcUrl:
+          type: string
+          example: ws://127.0.0.1:9944
+        pureProxy:
+          type: string
+          example: 5GUPGdg8XcNcfW8ipFrhSymVQ6UGS1AA44y9XSXCy4NsXj2V
+        controllers:
+          $ref: "#/components/schemas/Controllers"
+        delegators:
+          type: array
+          items:
+            $ref: "#/components/schemas/Wallet"
+        subnets:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/SubnetFixture"
+          example:
+            "1":
+              validatorHotkey: 5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21
+              liquidityProfile: deep
+            "8":
+              validatorHotkey: 5GpFKM8jiqCPxfHV5LkZpZpQXetVBnbMfZ5mDj7HWdKLwynK
+              liquidityProfile: medium
+    Controllers:
+      type: object
+      required:
+        - single
+        - parallel
+      properties:
+        single:
+          type: array
+          minItems: 1
+          maxItems: 1
+          items:
+            $ref: "#/components/schemas/ControllerWallet"
+        parallel:
+          type: array
+          minItems: 9
+          maxItems: 9
+          items:
+            $ref: "#/components/schemas/ControllerWallet"
+    Wallet:
+      type: object
+      required:
+        - label
+        - address
+      properties:
+        label:
+          type: string
+          example: delegator-01
+        address:
+          type: string
+          example: 5CY2Qq7jCC7iopnyWc7Wk7Tfsk7Z4ZvsXEeJRDSxubovewzE
+    ControllerWallet:
+      allOf:
+        - $ref: "#/components/schemas/Wallet"
+        - type: object
+          required:
+            - uri
+          properties:
+            uri:
+              type: string
+              example: abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about//controller//02
+    SubnetFixture:
+      type: object
+      required:
+        - validatorHotkey
+        - liquidityProfile
+      properties:
+        validatorHotkey:
+          type: string
+          example: 5GTrKr1cBWpwAo2VVjqaRXoAXGCxGALhQ7xfLYqbbzxCQH21
+        liquidityProfile:
+          type: string
+          enum:
+            - deep
+            - medium
+            - shallow
+        depthTier:
+          type: string
+          example: mega-deep
+        label:
+          type: string
+          example: apex-01
+        targetPoolTao:
+          type: string
+          example: "200000"
+        targetAlphaPriceTao:
+          type: string
+          example: "0.1"
+        taoRao:
+          type: string
+          example: "200000000000000"
+        alphaRao:
+          type: string
+          example: "2000000000000000"
+        impliedPrice:
+          type: number
+          example: 0.1
+    ErrorResponse:
+      type: object
+      required:
+        - ok
+        - error
+      properties:
+        ok:
+          type: boolean
+          example: false
+        error:
+          type: string
+        result:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/CommandResult"
+        activeOperation:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/OperationStatus"
+        lastOperation:
+          nullable: true
+          allOf:
+            - $ref: "#/components/schemas/CompletedOperationStatus"

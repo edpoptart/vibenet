@@ -10,6 +10,7 @@ const {
   getSubnetTargetPriceScaled,
   getSubnetTargetTaoRao,
   hasProxyDelegation,
+  hasRealPaysFee,
   isNetworkMember,
   loadManifest,
   loadReport,
@@ -77,6 +78,14 @@ async function main() {
 
     const proxyChecks = [];
     const pureProxyControllerChecks = [];
+    const controllerDelegates = [accounts.controller, ...accounts.additionalControllers];
+    for (const controller of controllerDelegates) {
+      const ok = await hasRealPaysFee(api, prior.pureProxy.address, controller.address);
+      if (!ok) {
+        fail(`pure proxy ${prior.pureProxy.address} has not enabled real_pays_fee for controller ${controller.address}`);
+      }
+    }
+
     for (const controller of accounts.additionalControllers) {
       const ok = await hasProxyDelegation(
         api,
@@ -91,6 +100,7 @@ async function main() {
         controller: controller.address,
         pureProxy: prior.pureProxy.address,
         proxyType: manifest.proxy.pureProxyType,
+        realPaysFee: true,
       });
     }
 
@@ -104,10 +114,15 @@ async function main() {
       if (!ok) {
         fail(`delegator ${delegator.address} is missing its Staking proxy to ${prior.pureProxy.address}`);
       }
+      const realPaysFeeOk = await hasRealPaysFee(api, delegator.address, prior.pureProxy.address);
+      if (!realPaysFeeOk) {
+        fail(`delegator ${delegator.address} has not enabled real_pays_fee for ${prior.pureProxy.address}`);
+      }
       proxyChecks.push({
         delegator: delegator.address,
         pureProxy: prior.pureProxy.address,
         proxyType: manifest.proxy.delegatorProxyType,
+        realPaysFee: true,
       });
     }
 
@@ -129,6 +144,16 @@ async function main() {
         label: controller.label,
         ...(await summarizeWallet(api, controller.address)),
       });
+    }
+    const parallelControllerTargetFree = toBigInt(
+      manifest.funding.parallelControllerTargetFreeRao || '0',
+    );
+    for (const controller of walletSummaries.additionalControllers) {
+      if (BigInt(controller.freeRao) < parallelControllerTargetFree) {
+        fail(
+          `parallel controller ${controller.address} free balance below target: expected at least ${formatTao(parallelControllerTargetFree)}, got ${formatTao(BigInt(controller.freeRao))}`,
+        );
+      }
     }
 
     for (const delegator of accounts.delegators) {

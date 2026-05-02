@@ -1,0 +1,5 @@
+.git
+.codex
+node_modules
+npm-debug.log
+configs/localnet/state-report.json

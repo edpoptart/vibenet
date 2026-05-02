@@ -1,0 +1,19 @@
+FROM node:20-bookworm-slim
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends bash ca-certificates docker.io \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /workspace
+
+COPY package*.json ./
+RUN npm ci --omit=dev
+
+COPY . .
+
+ENV FIXTURE_PORT=9080
+ENV NODE_PATH=/workspace/node_modules
+
+EXPOSE 9080
+
+CMD ["node", "scripts/localnet/fixture-server.js"]

@@ -6,6 +6,13 @@
     "localnet:up": "bash scripts/localnet/bootstrap-chain.sh up",
     "localnet:seed": "NODE_PATH=../trusted-stake-api/node_modules node scripts/localnet/seed-state.js",
     "localnet:verify": "NODE_PATH=../trusted-stake-api/node_modules node scripts/localnet/verify-state.js",
-    "localnet:down": "bash scripts/localnet/bootstrap-chain.sh down"
+    "localnet:down": "bash scripts/localnet/bootstrap-chain.sh down",
+    "localnet:reset": "bash scripts/localnet/bootstrap-chain.sh reset",
+    "fixture:serve": "node scripts/localnet/fixture-server.js"
+  },
+  "dependencies": {
+    "@polkadot/api": "^16.5.4",
+    "@polkadot/util": "^14.0.1",
+    "@polkadot/util-crypto": "^14.0.1"
   }
 }

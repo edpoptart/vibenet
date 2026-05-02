@@ -51,7 +51,11 @@ function decimalToScaledBigInt(value, decimals = 9) {
 }
 
 function loadManifest() {
-  return readJson(MANIFEST_PATH);
+  const manifest = readJson(MANIFEST_PATH);
+  if (process.env.LOCALNET_RPC_URL) {
+    manifest.network.rpcUrl = process.env.LOCALNET_RPC_URL;
+  }
+  return manifest;
 }
 
 function loadReport() {
@@ -180,6 +184,8 @@ function getRequiredRuntimeContract(api) {
     proxyCreatePure: typeof api.tx?.proxy?.createPure === 'function',
     proxyAddProxy: typeof api.tx?.proxy?.addProxy === 'function',
     proxyProxy: typeof api.tx?.proxy?.proxy === 'function',
+    proxySetRealPaysFee: typeof api.tx?.proxy?.setRealPaysFee === 'function',
+    proxyRealPaysFee: typeof api.query?.proxy?.realPaysFee === 'function',
     utilityBatch:
       typeof api.tx?.utility?.forceBatch === 'function' ||
       typeof api.tx?.utility?.batch === 'function',
@@ -362,6 +368,25 @@ async function hasProxyDelegation(api, real, delegate, proxyType) {
       entryDelay === 0
     );
   });
+}
+
+function realPaysFeeEnabled(rawValue) {
+  if (rawValue?.isSome === true) {
+    return true;
+  }
+  if (rawValue?.isEmpty === true) {
+    return false;
+  }
+  const json = rawValue?.toJSON?.() ?? rawValue;
+  if (json === null || json === undefined || json === false) {
+    return false;
+  }
+  return json === true || (typeof json === 'object' && Object.keys(json).length > 0);
+}
+
+async function hasRealPaysFee(api, real, delegate) {
+  const raw = await api.query.proxy.realPaysFee(real, delegate);
+  return realPaysFeeEnabled(raw);
 }
 
 function getPureCreatedAddress(events) {
@@ -838,6 +863,8 @@ module.exports = {
   queryExistingNetuids,
   querySubnetSnapshot,
   ratioFromReserves,
+  hasRealPaysFee,
+  realPaysFeeEnabled,
   readJson,
   reportSkeleton,
   reserveTolerance,

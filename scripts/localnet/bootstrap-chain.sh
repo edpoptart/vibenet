@@ -25,9 +25,10 @@ FAST_BLOCKS="${MANIFEST_VALUES[2]}"
 PORT_1="${MANIFEST_VALUES[3]}"
 PORT_2="${MANIFEST_VALUES[4]}"
 ACTION="${1:-up}"
+RPC_URL="${LOCALNET_RPC_URL:-ws://127.0.0.1:9944}"
 
 wait_for_chain() {
-  NODE_PATH="${NODE_DEPS_ROOT}" node - <<'NODE'
+  RPC_URL="${RPC_URL}" NODE_PATH="${NODE_DEPS_ROOT}" node - <<'NODE'
 const { ApiPromise, WsProvider } = require('@polkadot/api');
 
 async function getBlock(api) {
@@ -36,7 +37,8 @@ async function getBlock(api) {
 }
 
 (async () => {
-  const provider = new WsProvider('ws://127.0.0.1:9944', 5000);
+  const rpcUrl = process.env.RPC_URL || 'ws://127.0.0.1:9944';
+  const provider = new WsProvider(rpcUrl, 5000);
   const api = await ApiPromise.create({ provider });
   const first = await getBlock(api);
   await new Promise((resolve) => setTimeout(resolve, 2500));
@@ -45,7 +47,7 @@ async function getBlock(api) {
   if (!(second > first)) {
     throw new Error(`block production did not advance: ${first} -> ${second}`);
   }
-  console.log(`local chain is live at ws://127.0.0.1:9944 (${first} -> ${second})`);
+  console.log(`local chain is live at ${rpcUrl} (${first} -> ${second})`);
 })().catch((error) => {
   console.error(String(error && error.stack || error));
   process.exit(1);
@@ -94,6 +96,21 @@ case "${ACTION}" in
       echo "${CONTAINER_NAME} is not running"
     fi
     ;;
+  reset)
+    if docker ps --filter "name=^/${CONTAINER_NAME}$" --format '{{.Names}}' | grep -qx "${CONTAINER_NAME}"; then
+      docker stop "${CONTAINER_NAME}" >/dev/null
+      echo "stopped ${CONTAINER_NAME}"
+    fi
+
+    if docker ps -a --filter "name=^/${CONTAINER_NAME}$" --format '{{.Names}}' | grep -qx "${CONTAINER_NAME}"; then
+      docker rm "${CONTAINER_NAME}" >/dev/null
+      echo "removed ${CONTAINER_NAME}"
+    else
+      echo "${CONTAINER_NAME} did not exist"
+    fi
+
+    bash "${BASH_SOURCE[0]}" up
+    ;;
   status)
     docker ps -a --filter "name=^/${CONTAINER_NAME}$"
     ;;
@@ -101,7 +118,7 @@ case "${ACTION}" in
     docker logs --tail 200 "${CONTAINER_NAME}"
     ;;
   *)
-    echo "usage: $0 {up|down|status|logs}" >&2
+    echo "usage: $0 {up|down|reset|status|logs}" >&2
     exit 1
     ;;
 esac

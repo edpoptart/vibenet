@@ -18,7 +18,8 @@ Defaults:
 - Websocket RPC: `ws://127.0.0.1:9944`
 - Docker container: `vibenet-local-chain`
 - Fast blocks: enabled
-- Pure proxy controllers: the primary controller plus 8 deterministic additional controller wallets with `ProxyType=Any`
+- Pure proxy controllers: the primary controller plus 9 deterministic additional controller wallets with `ProxyType=Any`
+- Parallel controller free balance target: 100 TAO each, so smoke-test fee retries do not become the bottleneck
 
 Notes:
 
@@ -27,3 +28,24 @@ Notes:
 - The seeded market shape now includes a `200k TAO @ 0.1`, a `100k TAO @ 0.05`, then progressively smaller and cheaper subnets down to `2.5k TAO @ 0.002`, as defined in [`configs/localnet/state-manifest.json`](/home/kubernautis/tss/vibenet/configs/localnet/state-manifest.json).
 - To make those deep low-price pools reproducible on the devnet image, reserve targets are applied with dev-only `sudo.system.setStorage` writes during seeding.
 - `verify-state.js` rewrites [`configs/localnet/state-report.json`](/home/kubernautis/tss/vibenet/configs/localnet/state-report.json) with a fresh on-chain summary and exits non-zero on the first failed assertion.
+
+## Fixture Manager Container
+
+The fixture manager is a side container that owns the local chain lifecycle and exposes HTTP endpoints for tests:
+
+```bash
+docker compose -f docker-compose.fixture.yml up --build
+```
+
+It uses host networking and mounts `/var/run/docker.sock`, so it can hard-reset and recreate the sibling `vibenet-local-chain` container.
+
+Endpoints:
+
+- `GET /health`
+- `POST /reset`
+- `POST /init`
+- `POST /reset-and-init`
+- `GET /fixture`
+- `GET /verify`
+
+`GET /fixture` reports the actual on-chain fixture facts from `state-report.json`: RPC URL, pure proxy, controller URIs/addresses, delegator addresses, and subnet validator/liquidity profiles.

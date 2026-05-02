@@ -4,7 +4,7 @@
 Stand up a **real local Bittensor chain instance** (not mocks), then seed deterministic on-chain state for integration/rebalance testing with:
 
 - 1 controller wallet (tx submitter / spawner)
-- 1 pure proxy controlled by the controller wallet plus 8 additional controller wallets
+- 1 pure proxy controlled by the controller wallet plus 9 additional controller wallets
 - 20 delegator wallets with **total 2000 TAO** (target: 100 TAO each before fees/stakes)
 - Each delegator authorizes the pure proxy with `ProxyType=Staking`, `delay=0`
 - Root subnet (`netuid=0`) plus 16 additional subnets (`netuid=1..16`)
@@ -28,6 +28,7 @@ The seeded chain must expose APIs used by this codebase:
 - `proxy.createPure`
 - `proxy.addProxy`
 - `proxy.proxy`
+- `proxy.setRealPaysFee`
 - `utility.forceBatch` or `utility.batch` (prefer `forceBatch` if available)
 - `subtensorModule.addStake`
 - `subtensorModule.removeStake`
@@ -80,14 +81,16 @@ Do not generate random keys at runtime unless explicitly passed a seed; state mu
 
 ### Phase 1: Base Funding
 1. Fund controller and seeder wallets from dev account.
-2. Fund 20 delegators to target total 2000 TAO (100 TAO each target).
-3. Fund controller/pure-proxy enough for tx fees.
+2. Fund all 9 parallel controller wallets to generous fee balances.
+3. Fund 20 delegators to target total 2000 TAO (100 TAO each target).
+4. Fund controller/pure-proxy enough for tx fees.
 
 ### Phase 2: Proxy Topology
 1. Controller executes `proxy.createPure(Any, 0, index=0)` and records pure proxy address.
-2. Through the pure proxy, controller grants 8 additional controller wallets `ProxyType=Any`, `delay=0`.
-3. For each delegator wallet, submit `proxy.addProxy(delegate=pureProxy, proxyType=Staking, delay=0)`.
-4. Verify on-chain each additional controller can act through the pure proxy with `Any`, and each delegator includes pure proxy delegate with `Staking`.
+2. Through the pure proxy, controller grants 9 additional controller wallets `ProxyType=Any`, `delay=0`.
+3. For each delegator wallet, submit `proxy.addProxy(delegate=pureProxy, proxyType=Staking, delay=0)` and `proxy.setRealPaysFee(delegate=pureProxy, paysFee=true)`.
+4. Through the pure proxy, enable `real_pays_fee` for each controller delegate.
+5. Verify on-chain each additional controller can act through the pure proxy with `Any`, each delegator includes pure proxy delegate with `Staking`, and both proxy hops have `real_pays_fee`.
 
 ### Phase 3: Subnet Topology
 1. Ensure root subnet (`netuid=0`) exists.
@@ -145,11 +148,12 @@ To make rebalance tests meaningful, seed delegator positions across multiple sub
 3. Exactly 20 delegator wallets present.
 4. Sum of delegator holdings (free + staked in TAO terms) is ~2000 TAO (allow fee drift).
 5. Pure proxy exists and is controlled by controller.
-6. All 8 additional controllers have `Any` proxy delegation from pure proxy.
-7. All 20 delegators have `Staking` proxy delegation to pure proxy.
-8. Subnets include `0..16` (17 total).
-9. All 16 created subnets have non-zero reserves and at least one staked validator.
-10. Liquidity profile variance is real:
+6. All 9 additional controllers have `Any` proxy delegation from pure proxy, and the pure proxy has enabled `real_pays_fee` for all 10 controllers.
+7. All 9 additional controllers have enough free TAO for smoke-test batches and retries.
+8. All 20 delegators have `Staking` proxy delegation to pure proxy and `real_pays_fee` enabled for it.
+9. Subnets include `0..16` (17 total).
+10. All 16 created subnets have non-zero reserves and at least one staked validator.
+11. Liquidity profile variance is real:
    - max/min `subnetTAO` >= 10x
    - at least 4 distinct price bands by `subnetTAO/subnetAlphaIn`.
 10. Emit `state-report.json` containing:
