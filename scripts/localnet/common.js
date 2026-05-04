@@ -50,6 +50,31 @@ function decimalToScaledBigInt(value, decimals = 9) {
   return BigInt(integerPart) * 10n ** BigInt(decimals) + BigInt(paddedFraction || '0');
 }
 
+function sqrtBigInt(value) {
+  if (value < 0n) {
+    throw new Error('cannot calculate square root of a negative bigint');
+  }
+  if (value < 2n) {
+    return value;
+  }
+
+  let x0 = value;
+  let x1 = (value >> 1n) + 1n;
+  while (x1 < x0) {
+    x0 = x1;
+    x1 = (x1 + value / x1) >> 1n;
+  }
+  return x0;
+}
+
+function u64f64SqrtPriceBitsFromScaledPrice(priceScaled) {
+  const scaled = toBigInt(priceScaled);
+  if (scaled <= 0n) {
+    return 0n;
+  }
+  return sqrtBigInt((scaled << 128n) / RAO_PER_TAO);
+}
+
 function loadManifest() {
   const manifest = readJson(MANIFEST_PATH);
   if (process.env.LOCALNET_RPC_URL) {
@@ -145,6 +170,109 @@ function toBigInt(value) {
   throw new Error(`unable to convert value to bigint: ${String(value)}`);
 }
 
+function rpcParamFromBigInt(value) {
+  const big = toBigInt(value);
+  if (big <= BigInt(Number.MAX_SAFE_INTEGER)) {
+    return Number(big);
+  }
+  return big.toString();
+}
+
+function unwrapRpcValue(value) {
+  if (value && typeof value.toJSON === 'function') {
+    return value.toJSON();
+  }
+  if (value && typeof value.valueOf === 'function' && typeof value !== 'string') {
+    const primitive = value.valueOf();
+    if (primitive !== value) {
+      return primitive;
+    }
+  }
+  return value;
+}
+
+function rpcIntegerToBigInt(value) {
+  const unwrapped = unwrapRpcValue(value);
+  if (typeof unwrapped === 'number' && !Number.isInteger(unwrapped)) {
+    throw new Error(`expected integer RPC value, got decimal number: ${unwrapped}`);
+  }
+  return toBigInt(unwrapped);
+}
+
+function rpcPriceToScaledBigInt(value) {
+  const unwrapped = unwrapRpcValue(value);
+  if (typeof unwrapped === 'number' && !Number.isInteger(unwrapped)) {
+    return decimalToScaledBigInt(String(unwrapped), 9);
+  }
+  if (typeof unwrapped === 'string' && unwrapped.includes('.')) {
+    return decimalToScaledBigInt(unwrapped, 9);
+  }
+  return toBigInt(unwrapped);
+}
+
+function getObjectValue(object, names) {
+  for (const name of names) {
+    if (object && object[name] !== undefined && object[name] !== null) {
+      return object[name];
+    }
+  }
+  return undefined;
+}
+
+function normalizeSimSwapResult(raw) {
+  const value = unwrapRpcValue(raw);
+  if (Array.isArray(value)) {
+    if (value.length >= 48 && value.every((item) => Number.isInteger(item))) {
+      const bytes = Buffer.from(value);
+      return {
+        taoAmountRao: bytes.readBigUInt64LE(0),
+        alphaAmountRao: bytes.readBigUInt64LE(8),
+        taoFeeRao: bytes.readBigUInt64LE(16),
+        alphaFeeRao: bytes.readBigUInt64LE(24),
+        taoSlippageRao: bytes.readBigUInt64LE(32),
+        alphaSlippageRao: bytes.readBigUInt64LE(40),
+        raw: value,
+      };
+    }
+
+    return {
+      taoAmountRao: rpcIntegerToBigInt(value[0] || 0),
+      alphaAmountRao: rpcIntegerToBigInt(value[1] || 0),
+      taoFeeRao: rpcIntegerToBigInt(value[2] || 0),
+      alphaFeeRao: rpcIntegerToBigInt(value[3] || 0),
+      taoSlippageRao: rpcIntegerToBigInt(value[4] || 0),
+      alphaSlippageRao: rpcIntegerToBigInt(value[5] || 0),
+      raw: value,
+    };
+  }
+
+  if (!value || typeof value !== 'object') {
+    throw new Error(`unexpected sim swap result: ${String(value)}`);
+  }
+
+  return {
+    taoAmountRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['tao_amount', 'taoAmount', 'taoAmountRao', 'tao']),
+    ),
+    alphaAmountRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['alpha_amount', 'alphaAmount', 'alphaAmountRao', 'alpha']),
+    ),
+    taoFeeRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['tao_fee', 'taoFee', 'taoFeeRao']) || 0,
+    ),
+    alphaFeeRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['alpha_fee', 'alphaFee', 'alphaFeeRao']) || 0,
+    ),
+    taoSlippageRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['tao_slippage', 'taoSlippage', 'taoSlippageRao']) || 0,
+    ),
+    alphaSlippageRao: rpcIntegerToBigInt(
+      getObjectValue(value, ['alpha_slippage', 'alphaSlippage', 'alphaSlippageRao']) || 0,
+    ),
+    raw: value,
+  };
+}
+
 function reserveTolerance(manifest) {
   return BigInt(manifest.verification.reserveToleranceBps);
 }
@@ -214,7 +342,7 @@ function assertRuntimeContract(api) {
       removeStakeLimit: typeof api.tx?.subtensorModule?.removeStakeLimit === 'function',
       swapStakeLimit: typeof api.tx?.subtensorModule?.swapStakeLimit === 'function',
       swapCurrentAlphaPrice:
-        typeof api.rpc?.state?.call === 'function' || typeof api.rpc?.provider?.send === 'function',
+        typeof api.rpc?.state?.call === 'function' || typeof api._rpcCore?.provider?.send === 'function',
     },
   };
 }
@@ -604,6 +732,33 @@ async function querySubnetSnapshot(api, netuid) {
   };
 }
 
+async function querySwapCurrentAlphaPrice(api, netuid) {
+  if (typeof api.rpc?.swap?.currentAlphaPrice === 'function') {
+    return rpcPriceToScaledBigInt(await api.rpc.swap.currentAlphaPrice(netuid));
+  }
+  if (typeof api._rpcCore?.provider?.send === 'function') {
+    return rpcPriceToScaledBigInt(
+      await api._rpcCore.provider.send('swap_currentAlphaPrice', [netuid]),
+    );
+  }
+  throw new Error('swap_currentAlphaPrice RPC is unavailable');
+}
+
+async function querySwapSimTaoForAlpha(api, netuid, taoAmountRao) {
+  const params = [netuid, rpcParamFromBigInt(taoAmountRao)];
+  if (typeof api.rpc?.swap?.simSwapTaoForAlpha === 'function') {
+    return normalizeSimSwapResult(
+      await api.rpc.swap.simSwapTaoForAlpha(params[0], params[1]),
+    );
+  }
+  if (typeof api._rpcCore?.provider?.send === 'function') {
+    return normalizeSimSwapResult(
+      await api._rpcCore.provider.send('swap_simSwapTaoForAlpha', params),
+    );
+  }
+  throw new Error('swap_simSwapTaoForAlpha RPC is unavailable');
+}
+
 function stakeInfoToWalletPositions(stakeInfo, reservesByNetuid) {
   return stakeInfo.map((item) => {
     const alphaAmount = toBigInt(item.stake);
@@ -720,6 +875,20 @@ async function forceSubnetReserves(api, signer, netuid, targetTaoRao, targetAlph
       encodeStorageValue(api.registry.createType(currentAlpha.toRawType(), targetAlphaInRao)),
     ],
   ];
+  if (typeof api.query.subtensorModule.subnetTaoProvided === 'function') {
+    const currentTaoProvided = await api.query.subtensorModule.subnetTaoProvided(netuid);
+    entries.push([
+      api.query.subtensorModule.subnetTaoProvided.key(netuid).toString(),
+      encodeStorageValue(api.registry.createType(currentTaoProvided.toRawType(), 0n)),
+    ]);
+  }
+  if (typeof api.query.subtensorModule.subnetAlphaInProvided === 'function') {
+    const currentAlphaInProvided = await api.query.subtensorModule.subnetAlphaInProvided(netuid);
+    entries.push([
+      api.query.subtensorModule.subnetAlphaInProvided.key(netuid).toString(),
+      encodeStorageValue(api.registry.createType(currentAlphaInProvided.toRawType(), 0n)),
+    ]);
+  }
 
   const receipt = await signAndSend(
     api,
@@ -740,6 +909,175 @@ async function forceSubnetReserves(api, signer, netuid, targetTaoRao, targetAlph
   });
 
   return querySubnetSnapshot(api, netuid);
+}
+
+async function forceSubnetAlphaIn(api, signer, netuid, targetAlphaInRao, txLog) {
+  if (!api.tx?.sudo?.sudo || !api.tx?.system?.setStorage) {
+    throw new Error('forced subnet alpha seeding requested but sudo.system.setStorage is unavailable');
+  }
+
+  const currentAlpha = await api.query.subtensorModule.subnetAlphaIn(netuid);
+  const entries = [
+    [
+      api.query.subtensorModule.subnetAlphaIn.key(netuid).toString(),
+      encodeStorageValue(api.registry.createType(currentAlpha.toRawType(), targetAlphaInRao)),
+    ],
+  ];
+
+  if (typeof api.query.subtensorModule.subnetAlphaInProvided === 'function') {
+    const currentAlphaInProvided = await api.query.subtensorModule.subnetAlphaInProvided(netuid);
+    entries.push([
+      api.query.subtensorModule.subnetAlphaInProvided.key(netuid).toString(),
+      encodeStorageValue(api.registry.createType(currentAlphaInProvided.toRawType(), 0n)),
+    ]);
+  }
+
+  const receipt = await signAndSend(
+    api,
+    api.tx.sudo.sudo(api.tx.system.setStorage(entries)),
+    signer.pair,
+    `sudo.system.setStorage(subnet alpha ${netuid})`,
+  );
+
+  txLog.push({
+    kind: 'sudo.system.setStorage',
+    label: 'forceSubnetAlphaIn',
+    netuid,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+    alphaRao: targetAlphaInRao.toString(),
+  });
+
+  return querySubnetSnapshot(api, netuid);
+}
+
+async function forceSwapV3ProtocolState(api, signer, netuid, priceScaled, liquidity, txLog) {
+  if (!api.tx?.sudo?.sudo || !api.tx?.system?.setStorage || !api.query?.swap) {
+    throw new Error('forced swap v3 seeding requested but sudo.system.setStorage is unavailable');
+  }
+
+  const swap = api.query.swap;
+  const entries = [];
+  const alphaSqrtPrice = await swap.alphaSqrtPrice(netuid);
+  entries.push([
+    swap.alphaSqrtPrice.key(netuid).toString(),
+    encodeStorageValue(
+      api.registry.createType(alphaSqrtPrice.toRawType(), {
+        bits: u64f64SqrtPriceBitsFromScaledPrice(priceScaled),
+      }),
+    ),
+  ]);
+
+  const currentLiquidity = await swap.currentLiquidity(netuid);
+  entries.push([
+    swap.currentLiquidity.key(netuid).toString(),
+    encodeStorageValue(api.registry.createType(currentLiquidity.toRawType(), liquidity)),
+  ]);
+
+  const initialized = await swap.swapV3Initialized(netuid);
+  entries.push([
+    swap.swapV3Initialized.key(netuid).toString(),
+    encodeStorageValue(api.registry.createType(initialized.toRawType(), true)),
+  ]);
+
+  const positionEntries = await swap.positions.entries(netuid);
+  for (const [storageKey, value] of positionEntries) {
+    const next = value.toJSON();
+    next.liquidity = liquidity.toString();
+    entries.push([
+      storageKey.toString(),
+      encodeStorageValue(api.registry.createType(value.toRawType(), next)),
+    ]);
+  }
+
+  const tickEntries = await swap.ticks.entries(netuid);
+  for (const [storageKey, value] of tickEntries) {
+    const next = value.toJSON();
+    const liquidityNet = toBigInt(next.liquidityNet || 0);
+    next.liquidityGross = liquidity.toString();
+    next.liquidityNet =
+      liquidityNet < 0n ? `-${liquidity.toString()}` : liquidity.toString();
+    entries.push([
+      storageKey.toString(),
+      encodeStorageValue(api.registry.createType(value.toRawType(), next)),
+    ]);
+  }
+
+  const receipt = await signAndSend(
+    api,
+    api.tx.sudo.sudo(api.tx.system.setStorage(entries)),
+    signer.pair,
+    `sudo.system.setStorage(swap-v3 protocol ${netuid})`,
+  );
+
+  txLog.push({
+    kind: 'sudo.system.setStorage',
+    label: 'forceSwapV3ProtocolState',
+    netuid,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+    priceScaled: priceScaled.toString(),
+    liquidity: liquidity.toString(),
+    positionCount: positionEntries.length,
+    tickCount: tickEntries.length,
+  });
+
+  return true;
+}
+
+async function resetSwapV3State(api, signer, netuid, txLog) {
+  if (!api.tx?.sudo?.sudo || !api.tx?.system?.killStorage || !api.query?.swap) {
+    return false;
+  }
+
+  const swap = api.query.swap;
+  const keys = [];
+  for (const name of [
+    'alphaSqrtPrice',
+    'currentLiquidity',
+    'currentTick',
+    'feeGlobalAlpha',
+    'feeGlobalTao',
+    'scrapReservoirAlpha',
+    'scrapReservoirTao',
+    'swapV3Initialized',
+  ]) {
+    if (typeof swap[name] === 'function') {
+      keys.push(swap[name].key(netuid).toString());
+    }
+  }
+
+  for (const name of ['positions', 'ticks', 'tickIndexBitmapWords']) {
+    if (typeof swap[name]?.entries === 'function') {
+      const entries = await swap[name].entries(netuid);
+      for (const [storageKey] of entries) {
+        keys.push(storageKey.toString());
+      }
+    }
+  }
+
+  const uniqueKeys = [...new Set(keys)];
+  if (uniqueKeys.length === 0) {
+    return false;
+  }
+
+  const receipt = await signAndSend(
+    api,
+    api.tx.sudo.sudo(api.tx.system.killStorage(uniqueKeys)),
+    signer.pair,
+    `sudo.system.killStorage(swap-v3 ${netuid})`,
+  );
+
+  txLog.push({
+    kind: 'sudo.system.killStorage',
+    label: 'resetSwapV3State',
+    netuid,
+    txHash: receipt.txHash,
+    blockNumber: receipt.blockNumber,
+    keyCount: uniqueKeys.length,
+  });
+
+  return true;
 }
 
 async function forceSubnetLockCost(api, signer, targetLockCostRao, txLog) {
@@ -841,6 +1179,8 @@ module.exports = {
   ensureBalanceFromFunders,
   ensureBalanceViaSudo,
   forceSubnetReserves,
+  forceSubnetAlphaIn,
+  forceSwapV3ProtocolState,
   forceSubnetLockCost,
   findWalletPosition,
   formatTao,
@@ -862,12 +1202,15 @@ module.exports = {
   priceTolerance,
   queryExistingNetuids,
   querySubnetSnapshot,
+  querySwapCurrentAlphaPrice,
+  querySwapSimTaoForAlpha,
   ratioFromReserves,
   hasRealPaysFee,
   realPaysFeeEnabled,
   readJson,
   reportSkeleton,
   reserveTolerance,
+  resetSwapV3State,
   saveReport,
   signAndSend,
   sleep,

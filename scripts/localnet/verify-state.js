@@ -25,6 +25,7 @@ const {
   waitForBlockProgress,
   withinBps,
   priceTolerance,
+  querySwapCurrentAlphaPrice,
 } = require('./common');
 
 function fail(message) {
@@ -48,6 +49,22 @@ function distinctPriceBands(subnets) {
       .map((value) => (Math.round(value * 1000) / 1000).toFixed(3)),
   );
   return bands.size;
+}
+
+function getRuntimePriceTolerance(manifest) {
+  return BigInt(
+    manifest.verification.runtimePriceToleranceBps ||
+      manifest.verification.priceToleranceBps ||
+      1000,
+  );
+}
+
+function scaledPriceToNumber(priceScaled) {
+  return Number(priceScaled) / Number(RAO_PER_TAO);
+}
+
+function formatAlpha(valueRao) {
+  return `${(Number(valueRao) / Number(RAO_PER_TAO)).toFixed(4)} alpha`;
 }
 
 async function main() {
@@ -196,6 +213,7 @@ async function main() {
       );
     }
 
+    const runtimePriceToleranceBps = getRuntimePriceTolerance(manifest);
     const subnets = [];
     for (const subnet of manifest.subnets) {
       const snapshot = await querySubnetSnapshot(api, subnet.netuid);
@@ -204,17 +222,41 @@ async function main() {
       }
 
       const expectedTaoRao = getSubnetTargetTaoRao(subnet);
-      if (!withinBps(snapshot.taoRao, expectedTaoRao, reserveTolerance(manifest))) {
+      const permittedShortfallRao =
+        (expectedTaoRao * reserveTolerance(manifest)) / 10_000n;
+      if (snapshot.taoRao + permittedShortfallRao < expectedTaoRao) {
         fail(
-          `subnet ${subnet.netuid} tao reserve drifted: expected ${formatTao(expectedTaoRao)}, got ${formatTao(snapshot.taoRao)}`,
+          `subnet ${subnet.netuid} tao reserve is below target: expected at least ${formatTao(expectedTaoRao)}, got ${formatTao(snapshot.taoRao)}`,
+        );
+      }
+
+      const expectedPriceScaled = getSubnetTargetPriceScaled(subnet);
+      const expectedAlphaInRao = (snapshot.taoRao * RAO_PER_TAO) / expectedPriceScaled;
+      const permittedAlphaShortfallRao =
+        (expectedAlphaInRao * priceTolerance(manifest)) / 10_000n;
+      if (snapshot.alphaRao + permittedAlphaShortfallRao < expectedAlphaInRao) {
+        fail(
+          `subnet ${subnet.netuid} alpha reserve is below target: expected at least ${formatAlpha(expectedAlphaInRao)}, got ${formatAlpha(snapshot.alphaRao)}`,
         );
       }
 
       const actualPriceScaled = (snapshot.taoRao * RAO_PER_TAO) / snapshot.alphaRao;
-      const expectedPriceScaled = getSubnetTargetPriceScaled(subnet);
       if (!withinBps(actualPriceScaled, expectedPriceScaled, priceTolerance(manifest))) {
         fail(
           `subnet ${subnet.netuid} alpha price drifted: expected ${getSubnetTargetPrice(subnet).toFixed(6)} TAO, got ${snapshot.impliedPrice.toFixed(6)} TAO`,
+        );
+      }
+
+      let runtimePriceScaled;
+      try {
+        runtimePriceScaled = await querySwapCurrentAlphaPrice(api, subnet.netuid);
+      } catch (error) {
+        fail(`subnet ${subnet.netuid} swap runtime API check failed: ${String(error.message || error)}`);
+      }
+
+      if (!withinBps(runtimePriceScaled, actualPriceScaled, runtimePriceToleranceBps)) {
+        fail(
+          `subnet ${subnet.netuid} runtime price is incoherent with reserves: reserve ${scaledPriceToNumber(actualPriceScaled).toFixed(6)} TAO/alpha, runtime ${scaledPriceToNumber(runtimePriceScaled).toFixed(6)} TAO/alpha`,
         );
       }
 
@@ -247,6 +289,8 @@ async function main() {
         taoRao: snapshot.taoRao.toString(),
         alphaRao: snapshot.alphaRao.toString(),
         impliedPrice: snapshot.impliedPrice,
+        runtimePrice: scaledPriceToNumber(runtimePriceScaled),
+        runtimePriceScaled: runtimePriceScaled.toString(),
         owner: snapshot.owner,
         ownerHotkey: snapshot.ownerHotkey,
         firstEmissionBlockNumber: snapshot.firstEmissionBlockNumber,
@@ -296,6 +340,7 @@ async function main() {
       reserveVarianceRatio: Number(maxTao) / Number(minTao),
       distinctPriceBands: priceBands,
       rootStakeDelegatorCount: rootWallets.length,
+      runtimePriceToleranceBps: runtimePriceToleranceBps.toString(),
     };
 
     saveReport(report);

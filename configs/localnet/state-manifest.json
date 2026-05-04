@@ -50,7 +50,8 @@
     "rootStakePerDelegatorRao": "1000000000"
   },
   "liquidity": {
-    "useSudoSetReserves": true,
+    "useSudoSetReserves": false,
+    "bootstrapAlphaInViaSudo": true,
     "bootstrapSeederStakeRao": "25000000000"
   },
   "portfolio": {
@@ -70,7 +71,8 @@
   "verification": {
     "reserveToleranceBps": 500,
     "priceToleranceBps": 300,
-    "delegatorTotalToleranceRao": "25000000000"
+    "runtimePriceToleranceBps": 300,
+    "delegatorTotalToleranceRao": "100000000000"
   },
   "subnets": [
     {

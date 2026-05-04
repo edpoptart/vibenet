@@ -7,13 +7,14 @@ const {
   enableSubtokenIfNeeded,
   ensureBalanceFromFunders,
   ensureBalanceViaSudo,
-  forceSubnetReserves,
+  forceSubnetAlphaIn,
+  forceSwapV3ProtocolState,
   formatTao,
   forceSubnetLockCost,
   getCurrentPositionTaoEquivalent,
   getOrCreatePureProxy,
-  getSubnetTargetAlphaInRao,
   getSubnetTargetPrice,
+  getSubnetTargetPriceScaled,
   getSubnetTargetTaoRao,
   hasProxyDelegation,
   hasRealPaysFee,
@@ -324,17 +325,64 @@ async function addStakeAmount(api, signer, hotkeyAddress, netuid, amountRao, txL
 }
 
 async function primeSubnetLiquidity(api, subnet, seeder, validatorHotkey, manifest, txLog) {
-  const bootstrapStakeRao = toBigInt(manifest.liquidity.bootstrapSeederStakeRao);
+  const targetPoolRao = getSubnetTargetTaoRao(subnet);
+  const minimumBootstrapRao = toBigInt(manifest.liquidity.bootstrapSeederStakeRao);
+  const targetStakeRao =
+    targetPoolRao > minimumBootstrapRao ? targetPoolRao : minimumBootstrapRao;
   await addStakeUpTo(
     api,
     seeder,
     validatorHotkey.address,
     subnet.netuid,
-    bootstrapStakeRao,
+    targetStakeRao,
     txLog,
-    `liquidity:${subnet.netuid}:bootstrap`,
+    `liquidity:${subnet.netuid}:pool-target`,
   );
   return querySubnetSnapshot(api, subnet.netuid);
+}
+
+async function ensureSubnetAlphaDepth(api, subnet, signer, txLog) {
+  const snapshot = await querySubnetSnapshot(api, subnet.netuid);
+  const targetPriceScaled = getSubnetTargetPriceScaled(subnet);
+  const targetAlphaInRao = (snapshot.taoRao * 1_000_000_000n) / targetPriceScaled;
+  const finalSnapshot =
+    snapshot.alphaRao >= targetAlphaInRao
+      ? snapshot
+      : await forceSubnetAlphaIn(
+        api,
+        signer,
+        subnet.netuid,
+        targetAlphaInRao,
+        txLog,
+      );
+
+  const liquidity = sqrtBigInt(finalSnapshot.taoRao * finalSnapshot.alphaRao);
+  await forceSwapV3ProtocolState(
+    api,
+    signer,
+    subnet.netuid,
+    targetPriceScaled,
+    liquidity,
+    txLog,
+  );
+  return querySubnetSnapshot(api, subnet.netuid);
+}
+
+function sqrtBigInt(value) {
+  if (value < 0n) {
+    throw new Error('cannot calculate square root of a negative bigint');
+  }
+  if (value < 2n) {
+    return value;
+  }
+
+  let x0 = value;
+  let x1 = (value >> 1n) + 1n;
+  while (x1 < x0) {
+    x0 = x1;
+    x1 = (x1 + value / x1) >> 1n;
+  }
+  return x0;
 }
 
 function selectSubnetIds(index, manifest) {
@@ -453,7 +501,7 @@ async function main() {
     for (const subnet of manifest.subnets) {
       const seeder = accounts.seeders[subnet.netuid - 1];
       const targetSeederFree =
-        toBigInt(manifest.liquidity.bootstrapSeederStakeRao) +
+        getSubnetTargetTaoRao(subnet) +
         toBigInt(manifest.funding.liquiditySeederBufferRao);
       await ensureFunding(
         seeder.address,
@@ -613,15 +661,8 @@ async function main() {
 
     report.subnets = [];
     for (const subnet of manifest.subnets) {
-      const snapshot = manifest.liquidity.useSudoSetReserves
-        ? await forceSubnetReserves(
-          api,
-          accounts.funder,
-          subnet.netuid,
-          getSubnetTargetTaoRao(subnet),
-          getSubnetTargetAlphaInRao(subnet),
-          txLog,
-        )
+      const snapshot = manifest.liquidity.bootstrapAlphaInViaSudo
+        ? await ensureSubnetAlphaDepth(api, subnet, accounts.funder, txLog)
         : await querySubnetSnapshot(api, subnet.netuid);
       report.subnets.push({
         netuid: subnet.netuid,
